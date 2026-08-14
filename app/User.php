@@ -101,15 +101,47 @@ class User extends Authenticatable
         
     }
 
+    /**
+     * First profile image filename for a user, or "" when there isn't one.
+     *
+     * The `image` column holds a JSON array of filenames, but it is NULL for
+     * the vast majority of users (they never uploaded a picture). The previous
+     * one-liner assumed the user exists, that `image` is valid JSON, and that
+     * the decoded array is non-empty — on PHP 8 a NULL image made
+     * json_decode() return null and `[0]` threw "Trying to access array offset
+     * on null", taking down the whole blog detail page over one commenter with
+     * no avatar. Callers already treat "" as "use the default avatar".
+     */
     public static function getUserImage($id)
     {
-        return json_decode(User::find($id)->image)[0];
+        $user = User::find($id);
+
+        if ($user === null || empty($user->image)) {
+            return "";
+        }
+
+        $images = json_decode($user->image);
+
+        if (!is_array($images) || empty($images)) {
+            return "";
+        }
+
+        return reset($images);
     }
 
-     public static function getUserName($id)
+    /**
+     * Display name for a user, or "" when the account no longer exists
+     * (deleted users still leave their id behind on old comments).
+     */
+    public static function getUserName($id)
     {
-        $user= User::find($id);
-        return $user->first_name .' '.$user->last_name;
+        $user = User::find($id);
+
+        if ($user === null) {
+            return "";
+        }
+
+        return trim($user->first_name . ' ' . $user->last_name);
     }
 
     public function properties()
