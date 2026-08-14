@@ -218,7 +218,14 @@ html{scroll-behavior:smooth}
 .ab-cta .ab-btn{margin:0 6px 8px}
 
 /* ---------- Footer ---------- */
-.ab-footer{background:#1c130c;color:#c9b6a6;padding:52px 0 26px;font-size:14px;margin-top:56px;display:block;position:relative}
+/* Legacy pages wrap their content in .main-section{float:left;width:100%}
+   (public/assets/css/style.css) with no clearfix after it. Without `clear:both`
+   here, .ab-footer renders alongside that float instead of below it, squeezing
+   its grid into whatever horizontal space is left next to the floated content —
+   the "footer disturbed" bug reproducing on every legacy page (blog listing,
+   blog detail, etc.), not just the calculator pages this stylesheet was
+   originally written for. */
+.ab-footer{background:#1c130c;color:#c9b6a6;padding:52px 0 26px;font-size:14px;margin-top:56px;display:block;position:relative;clear:both}
 .ab-fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px}
 .ab-fgrid>div{min-width:0}
 .ab-footer h4{color:#fff;font-size:15px;margin:0 0 14px;font-weight:700}

@@ -40,7 +40,7 @@
                 <a href="/#filesRates" id="filesRatesLink">Files Rates</a>
                 <a href="/blog">Blog</a>
                 <a href="/news">News</a>
-                <a href="/#calculator" style="color:var(--ab-orange-dark);font-weight:600">Calculator</a>
+                <a href="/property-transfer-calculator" style="color:var(--ab-orange-dark);font-weight:600">Calculator</a>
             </nav>
 
             <div class="ab-head-actions">
@@ -74,8 +74,9 @@
         }
     }
     (function () {
-        // Smooth-scroll for homepage anchor links (Calculator, Files Rates, …)
-        // when the target section is already on the current page.
+        // Smooth-scroll for homepage anchor links (Files Rates, …) when the
+        // target section is already on the current page. Calculator is no
+        // longer one of these — it navigates to /property-transfer-calculator.
         document.querySelectorAll('.ab-nav a[href^="/#"]').forEach(function (link) {
             link.addEventListener('click', function (e) {
                 var target = document.getElementById(link.getAttribute('href').slice(2));

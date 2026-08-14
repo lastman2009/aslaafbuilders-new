@@ -1961,6 +1961,20 @@ optgroup {
     color: #000;
 }
 
+/* blog_front/blog_listing.blade.php puts .col-md-8 (posts) and .col-md-4.sidebar
+   directly inside .col-md-12.blogs with no intervening .row, so Bootstrap's own
+   .row clearfix never applies. Both children float and escape .blogs, which
+   collapses to the height of the search form; the floats then overflow past
+   </main> and .ab-footer renders alongside them instead of below — the footer
+   appearing pushed over to the right. .ab-footer's clear:both alone can't fix
+   it, because .main-section is itself float:left, so clear only affects floats
+   in the same formatting context, not ones escaping from inside it. */
+.blogs::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .blogs .family-house figure img {
     padding: 5px;
     float: left
@@ -3853,6 +3867,39 @@ h4.panel-title i {
     background: #fff;
 }
 
+/* aslaaf-theme.css (loaded on every page, including this legacy sign-in view)
+   sets body{background:var(--ab-bg)} — a cream tone for the newer calculator
+   pages. main.main-section itself is transparent, so before #fullscreens
+   starts, that cream shows through as a visible band/seam above the white
+   sign-in panel. Matching the panel's white here removes the seam
+   (signin.blade.php/signinpage.blade.php both render #fullscreens inside
+   <main class="main-section detail-page ...">). */
+main.main-section.detail-page,
+main.main-section:has(#fullscreens) {
+    background: #fff;
+}
+
+/* Sticky footer for the sign-in/sign-up family of pages only (the only
+   pages using .signin-pagetop). Scoped via :has() so body only becomes a
+   flex column when one of these short-content pages is active — every other
+   page's layout (floats, sticky nav, etc.) is completely unaffected. Without
+   this, short pages leave visible cream body background between the panel
+   and the footer instead of the footer sitting at the bottom of the
+   viewport. */
+body:has(.signin-pagetop) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body:has(.signin-pagetop) .signin-pagetop {
+    flex: 1 0 auto;
+}
+
+body:has(.signin-pagetop) .ab-footer {
+    flex-shrink: 0;
+}
+
 #fullscreens #regContainer .feature-heading, #fullscreens #regContainer .feature-heading p {
     color: #000
 }
@@ -3879,7 +3926,16 @@ h4.panel-title i {
 }
 
 .signin-pagetop {
-    margin-top: 40px !important;
+    margin-top: 0 !important;
+}
+
+/* aslaaf-theme.css's .ab-footer has margin-top:56px sitewide — fine on pages
+   whose body matches that cream tone, but on this flex-column sign-in page
+   (see body:has(.signin-pagetop) above) that margin is transparent space
+   between the white panel and the black footer, showing the cream body
+   background as a visible stripe. Scoped removal, this page only. */
+body:has(.signin-pagetop) .ab-footer {
+    margin-top: 0;
 }
 
 .signin-panelheading {
