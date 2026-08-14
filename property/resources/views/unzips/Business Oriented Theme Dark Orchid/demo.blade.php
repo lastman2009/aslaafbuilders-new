@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Default Theme</title>
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/font-awesome.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/owl.carousel.min.css">
+
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/theme.css" rel="stylesheet">
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/flexslider.css">
+  
+
+
+</head>
+<body>
+
+
+    <header class="header" id="home1">
+        <div class="container-fluid top-border">
+            <div class="row">
+                <div class="container">
+                   <div class="col-md-12 col-sm-12 col-xs-12  topnav pr">
+                       <div class="col-md-6 col-sm-6 col-xs-6 home no-padding">
+                           <ul class="list-unstyled list-inline">
+                               <li><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/logo_YourLogoHere_03.png"></li>
+                               <li class="hidden-xs">Your Best Real Estate  Solution</li>
+                           </ul>
+                       </div>
+
+                       <div class="col-md-6 col-sm-6 col-xs-6 sociall no-padding">
+                           <span><i class="fa fa-phone fon" aria-hidden="true"></i>1800-222-222</span>
+                           <p>INFO@GMAIL.COM</p>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row secondary-nav">
+                <div class="container pr">
+                    <div class="col-lg-12 col-md-12 col-sm-12 no-padding">
+                        <nav class="navbar navbar-default top-nav">
+
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
+                            
+                            </div>
+                            <div class="collapse navbar-collapse no-padding" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="">HOME</a></li>
+                                    <li><a href="">CEO MESSAGE</a></li>
+                                    <li><a href="">OUR WORK</a></li>                    
+                                    <li><a href="">CONTACT</a></li>
+                                    <li><a href="">ABOUT US</a></li>
+                                    <li><a href="">OUR TEAM</a></li>
+                                    <li><a href="">OUR OFFICES</a></li>
+
+                                </ul>
+
+                            </div>
+
+                        </nav>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid banner no-padding">
+            <div id="text-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6 col-md-offset-3 slider-content">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="carousel-content">
+                                    <div class="text-center">
+                                        <p>Family House In Defence</p>
+                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/border_03.jpg" >
+                                        <p class="address"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Dha, Phase 5, Lahore</p>
+                                        <p class="color">30,50,00000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="carousel-content">
+                                   <div class="text-center">
+                                        <p>Family House In Defence</p>
+                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/border_03.jpg" >
+                                        <p class="address"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Dha, Phase 5, Lahore</p>
+                                        <p class="color">30,50,00000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="carousel-content">
+                                     <div class="text-center">
+                                        <p>Family House In Defence</p>
+                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/border_03.jpg" >
+                                        <p class="address"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Dha, Phase 5, Lahore</p>
+                                        <p class="color">30,50,00000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+             <a class="right carousel-control" href="#text-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+
+            </div>
+             
+        </div>
+    </header>
+
+    
+
+
+    <div class="main">
+
+        <section class="ceo-msg-sect" id="ceo">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ceo-msg">
+                          <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#home">ABOUT US</a></li>
+                                <li><a data-toggle="tab" href="#menu1">CEO MESSAGE</a></li>
+                                
+                              </ul>
+
+                              <div class="tab-content">
+                                    <div id="home" class="tab-pane fade in active text-center aboutus">
+                                      <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</P>
+                                    </div>
+
+                                    <div id="menu1" class="tab-pane fade">
+                                       <div class="col-md-4 col-sm-6 col-xs-12 ceo-img">
+                                            <figure>
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/ceo-img_03.jpg" alt="ceo-image" />
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-8 col-sm-6 col-xs-12 ceo-text">
+                                            <h2>CEO MESSAGE</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
+
+                                        </div>
+                                    </div>
+                                
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-sect" id="contact">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 form-line">
+                         
+                            <div class="form-group">
+                               <input type="text" class="form-control" id="" placeholder=" Enter Name">
+                            </div>
+                            <div class="form-group">
+                              <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+                            </div>  
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="form-group">
+                               <textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                             <button type="button" class="btn btn-default submit">Send Message</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="team" id="team">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                                <div class="team-content">
+                                    <div class="team-heading text-center">
+                                        <h2>Our Team</h2>
+                                       
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
+                                            <div class="team-members">
+                                                <div class="team-avatar">
+                                                    <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-1_03.png" alt="">
+                                                </div>
+                                                <div class="team-desc text-center">
+                                                  
+                                                  <h4>0300-1234567</h4>
+                                                  <p>infopropertyonline.com</p>
+
+                                                  <ul class="list-unstyled list-inline">
+                                                      <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                                      <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                                  </ul>
+                                                </div>
+                                                <div class="team-detail text-center">
+                                                    <h2>James Morrison</h2>
+                                                    <p>Operations Manager</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                         <div class="col-md-3 col-sm-6 col-xs-12">
+                                            <div class="team-members">
+                                                <div class="team-avatar">
+                                                    <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-1_03.png" alt="">
+                                                </div>
+                                                <div class="team-desc text-center">
+                                                  
+                                                  <h4>0300-1234567</h4>
+                                                  <p>infopropertyonline.com</p>
+
+                                                  <ul class="list-unstyled list-inline">
+                                                      <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                                      <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                                  </ul>
+                                                </div>
+                                                <div class="team-detail text-center">
+                                                    <h2>James Morrison</h2>
+                                                    <p>Operations Manager</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
+                                            <div class="team-members">
+                                                <div class="team-avatar">
+                                                    <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-1_03.png" alt="">
+                                                </div>
+                                                <div class="team-desc text-center">
+                                                 
+                                                  <h4>0300-1234567</h4>
+                                                  <p>infopropertyonline.com</p>
+
+                                                  <ul class="list-unstyled list-inline">
+                                                      <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                                      <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                                  </ul>
+                                                </div>
+                                                <div class="team-detail text-center">
+                                                    <h2>James Morrison</h2>
+                                                    <p>Operations Manager</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
+                                            <div class="team-members">
+                                                <div class="team-avatar">
+                                                    <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-1_03.png" alt="">
+                                                </div>
+                                                <div class="team-desc text-center">
+                                                  
+                                                  <h4>0300-1234567</h4>
+                                                  <p>infopropertyonline.com</p>
+
+                                                  <ul class="list-unstyled list-inline">
+                                                      <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                                      <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                                  </ul>
+                                                </div>
+                                                <div class="team-detail text-center">
+                                                    <h2>James Morrison</h2>
+                                                    <p>Operations Manager</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </section>
+
+
+
+        <section class="team hidden-md hidden-lg hidden-sm" id="team">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                           
+                        </div>
+                    </div>       
+                </div>
+            </div>    
+        </section>
+
+
+
+
+
+        <section class="map-sect" id="office">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <div class="col-md-8 map">
+                            <div class="container-fluid no-padding">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.7227736383365!2d74.32938531522932!3d31.504303081374974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190468fac707b5%3A0xccf10281e353bf7f!2sKalma+Chowk+Flyover!5e0!3m2!1sen!2s!4v1502435999670" width="100%" height="410" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 location">
+                           <div class="flexslider">
+                                  <ul class="slides">
+                                    <li>
+                                        <div class="address-office">
+                                            <h3>Lahore Office</h3>
+                                            <ul>
+                                                <li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+                                                <li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+                                                <li><i class="fa fa-map-marker"></i>G1, Center point, Next to Ehsas Clinic Gulberg, Lahore</li> 
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="address-office">
+                                            <h3>Karachi Office</h3>
+                                            <ul>
+                                                <li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+                                                <li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+                                                <li><i class="fa fa-map-marker"></i>G1, Center point, Next to Ehsas Clinic Gulberg, Lahore</li> 
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="address-office">
+                                            <h3>Islamabad Office</h3>
+                                            <ul>
+                                                <li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+                                                <li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+                                                <li><i class="fa fa-map-marker"></i>G1, Center point, Next to Ehsas Clinic Gulberg, Lahore</li> 
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    
+                                  </ul>
+                            </div>
+
+                            <div class="follow-on">
+                                <h2><span>FOLLOW ON</span> </h2>
+                                <ul class="no-padding list-unstyled">
+                                    <li>(609) 349-6391  (609) 924-4291</li>
+                                    <li>nicole.muk@foxroach.com</li>
+                                    <li>Princeton Home Marketing Center</li>
+                                </ul>
+                                <ul class="list-inline follow-social">
+                                    <li><a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span></a></li>
+                                    <li><a href="#"><span><i class="fa fa-envelope" aria-hidden="true"></i></span></a>  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <footer>
+            <div class="footer">
+                <div class="container-fluid footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-6 col-md-offset-3 text-center">
+                                <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/logo_YourLogoHere.png">
+                                <p>Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest , in service provision.</p>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid footer-btm">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                    <p class="copyright">ALL REWARDS ARE CLEAR TECHNOLOGICALINC.</p>                
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+    </html>
+
+    <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery-3.2.1.min.js"></script>
+    <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/bootstrap.min.js"></script>
+
+
+
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.flexslider.js"></script>
+  
+<script type="text/javascript">
+    $(document).ready( function() {
+
+         $('.flexslider').flexslider();
+
+    });
+
+
+</script>

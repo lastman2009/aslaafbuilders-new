@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Fancy Redish Theme</title>
+
+        <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/font-awesome.css" rel="stylesheet">
+
+
+
+
+
+        <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/owl.carousel.min.css">
+
+		<link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/jquery.mCustomScrollbar.css" />
+
+		
+
+        <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/theme.css" rel="stylesheet">
+
+        <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/custom.css" rel="stylesheet">
+
+
+
+    </head>
+
+    <body>
+
+ 
+
+
+
+        <header class="header" id="home">
+
+            <div class="container-fluid">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-12 pr">
+
+                            <div class="top-bar">
+
+                                <div class="col-md-6 col-sm-12">
+
+								</div>
+
+								<div class="col-md-6 col-sm-12 social-media">
+
+                                    <ul>
+
+                                        <li><i class="fa fa-map-marker"></i> Choose Location</li> 
+
+                                        <li><i class="fa fa-phone"></i> Call Us At : 1800-222-222</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container-fluid menu-bar" id="header">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-12 pr">
+
+                            <div class="primary-menu">
+
+                                <nav class="navbar navbar-inverse mb">
+
+
+
+                                    <div class="container-fluid">
+
+                                        <!-- Brand and toggle get grouped for better mobile display -->
+
+                                        <div class="navbar-header">
+
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                                                <span class="sr-only">Toggle navigation</span>
+
+                                                <span class="icon-bar"></span>
+
+                                                <span class="icon-bar"></span>
+
+                                                <span class="icon-bar"></span>
+
+                                            </button>
+
+                                            <a class="navbar-brand" href=""><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/logo.png" alt=""/></a>
+
+                                        </div>
+
+
+
+                                        <!-- Collect the nav links, forms, and other content for toggling -->
+
+                                        <div class="collapse navbar-collapse no-padding" id="bs-example-navbar-collapse-1">
+
+                                            <ul class="nav navbar-nav">
+
+                                                <li class="active"><a href="#home">Home</a></li>
+
+                                                <li><a href="#ceo">CEO Message</a></li>
+
+												<li><a href="#work">Our Work</a></li>
+
+												<li><a href="#about">About Us</a></li>
+
+												<li><a href="#office">Our Offices</a></li>
+
+												<li><a href="#team">Our Team</a></li>
+
+												<li><a href="#contact">Contact</a></li>
+
+                                               
+
+                                            </ul>
+
+                                        </div><!-- /.navbar-collapse -->
+
+                                    </div><!-- /.container-fluid -->
+
+
+
+
+
+                                </nav>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </header>
+
+
+
+
+
+
+
+        <div class="main">
+
+
+
+            <section class="ceo-msg-sect" id="ceo">
+
+				<div class="container">
+
+					<h2>CEO'S Message</h2>
+
+					<h4>Take a look at all the work we have done</h4>
+
+					<div class="row">
+
+						<div class="col-lg-12 ceo-msg">
+
+							<div class="col-lg-5 col-md-5 col-sm-12 ceo-img pl pr">
+
+								<figure>
+
+									<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/ceo-img.jpg" alt="ceo-image" />
+
+								</figure>
+
+							</div>
+
+							<div class="col-lg-7 col-md-7 col-sm-12 pl pr ceo-text mCustomScrollbar">
+
+								<p>Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest property portal - came on board as an angel investor and took up the role of Chairman at Onlineproperty.com.In 2014, two of the most successful venture capital firms in the ASEAN region, Catcha Group and Frontier Digital Ventures, Onlineproperty.com. Riding that wave of success, we have rolled out the Urdu version of our website, launched our mobile website, and saddition to our proud tradition of excellence in service provision. Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest property portal - came on board as an angel investor and took up the role of Chairman at Onlineproperty.com.In 2014, two of the most successful venture capital firms in the ASEAN region, Catcha Group and Frontier Digital Ventures, Onlineproperty.com. Riding that wave of success, we have rolled out the Urdu version of our website, launched our mobile website, and saddition to our proud tradition of excellence in service provision.</p>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+            </section>
+
+
+
+
+
+            <section class="property-sect" id="work">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="work-portion text-center">
+
+							<h2>Our Work</h2>
+
+							<h4>Take a look at all the work we have done</h4>
+
+						</div>
+
+						<div class="col-md-12">
+
+							<div class="col-md-4">
+
+								<div class="work-section text-center">
+
+									<h3>Luxury Formhouses</h3>
+
+									<p><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/location.png" alt="" />DHA Phase 5 Lahore</p>
+
+									<h4>30,50,0000</h4>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>Single Family Residence</h6>
+
+											<ul>
+
+												<li>Bedrooms: 4</li>
+
+												<li>Bathrooms: 4</li>
+
+												<li>Area: 1200 SqrFt</li>
+
+											</ul>
+
+											<a href="">View</a>											
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="work-section text-center">
+
+									<h3>Luxury Formhouses</h3>
+
+									<p><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/location.png" alt="" />DHA Phase 5 Lahore</p>
+
+									<h4>30,50,0000</h4>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>Single Family Residence</h6>
+
+											<ul>
+
+												<li>Bedrooms: 4</li>
+
+												<li>Bathrooms: 4</li>
+
+												<li>Area: 1200 SqrFt</li>
+
+											</ul>
+
+											<a href="">View</a>											
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="work-section text-center">
+
+									<h3>Luxury Formhouses</h3>
+
+									<p><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/location.png" alt="" />DHA Phase 5 Lahore</p>
+
+									<h4>30,50,0000</h4>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>Single Family Residence</h6>
+
+											<ul>
+
+												<li>Bedrooms: 4</li>
+
+												<li>Bathrooms: 4</li>
+
+												<li>Area: 1200 SqrFt</li>
+
+											</ul>
+
+											<a href="">View</a>											
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="work-section text-center">
+
+									<h3>Luxury Formhouses</h3>
+
+									<p><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/location.png" alt="" />DHA Phase 5 Lahore</p>
+
+									<h4>30,50,0000</h4>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>Single Family Residence</h6>
+
+											<ul>
+
+												<li>Bedrooms: 4</li>
+
+												<li>Bathrooms: 4</li>
+
+												<li>Area: 1200 SqrFt</li>
+
+											</ul>
+
+											<a href="">View</a>											
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="work-section text-center">
+
+									<h3>Luxury Formhouses</h3>
+
+									<p><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/location.png" alt="" />DHA Phase 5 Lahore</p>
+
+									<h4>30,50,0000</h4>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>Single Family Residence</h6>
+
+											<ul>
+
+												<li>Bedrooms: 4</li>
+
+												<li>Bathrooms: 4</li>
+
+												<li>Area: 1200 SqrFt</li>
+
+											</ul>
+
+											<a href="">View</a>											
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="work-section text-center">
+
+									<h3>Luxury Formhouses</h3>
+
+									<p><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/location.png" alt="" />DHA Phase 5 Lahore</p>
+
+									<h4>30,50,0000</h4>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>Single Family Residence</h6>
+
+											<ul>
+
+												<li>Bedrooms: 4</li>
+
+												<li>Bathrooms: 4</li>
+
+												<li>Area: 1200 SqrFt</li>
+
+											</ul>
+
+											<a href="">View</a>											
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+            </section>
+
+
+
+			<div class="about-portion" id="about">
+
+				<div class="about-headings">
+
+					<div class="container">
+
+						<h2>About Us</h2>
+
+						<h4>Take a look at all the work we have done</h4>
+
+					</div>
+
+				</div>
+
+				<section class="about">
+
+					<div class="about-shade"></div>
+
+					<div class="container">
+
+						<div class="row">
+
+							<div class="col-lg-12 pr">
+
+								<div class="col-lg-4 col-md-4 pull-right pl">
+
+									<div class="about-section">
+
+										<h2>About</h2>
+
+										<div class="mCustomScrollbar">
+
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</br> 
+
+											Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</br> 
+
+											Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem.</p>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+			</div>
+
+			
+
+			
+
+			
+
+				<section class="office" id="office">
+
+					<div class="container">
+
+						<h2>Address</h2>
+
+						<h4>Take a look at all the work we have done</h4>
+
+						<div class="row">
+
+							<div class="col-lg-12">
+
+								
+
+								<div class="col-md-3">
+
+								</div>
+
+								<div class="col-md-6">
+
+									<div class="owl-carousel">
+
+										<div class="item">
+
+											<div class="address-office">
+
+												<h3>Lahore Office</h3>
+
+												<ul>
+
+													<li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+
+													<li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+
+													<li><i class="fa fa-map-marker"></i>G1, Center point, Cavlary Ground, Next to Ehsas Clinic Gulberg, Lahore</li> 
+
+												</ul>
+
+											</div>
+
+										</div>
+
+										<div class="item">
+
+											<div class="address-office">
+
+												<h3>Karachi Office</h3>
+
+												<ul>
+
+													<li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+
+													<li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+
+													<li><i class="fa fa-map-marker"></i>G1, Center point, Cavlary Ground, Next to Ehsas Clinic Gulberg, Lahore</li> 
+
+												</ul>
+
+											</div>
+
+										</div>
+
+										<div class="item">
+
+											<div class="address-office">
+
+												<h3>Islamabad Office</h3>
+
+												<ul>
+
+													<li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+
+													<li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+
+													<li><i class="fa fa-map-marker"></i>G1, Center point, Cavlary Ground, Next to Ehsas Clinic Gulberg, Lahore</li> 
+
+												</ul>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-3">
+
+								</div>
+
+								
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+			
+
+			
+
+
+
+
+
+
+
+            <section class="team-sect" id="team">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="team-portion text-center">
+
+							<h2>Our Team</h2>
+
+							<h4>Take a look at all the work we have done</h4>
+
+						</div>
+
+						<div class="col-md-12">
+
+							<div class="col-md-4">
+
+								<div class="team-section text-center">
+
+									<h3>Dennis Schwartz</h3>
+
+									<p>Managing Director</p>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>4 Years Experience</h6>
+
+											<ul>
+
+												<li>0300-1234567</li>
+
+												<li>dennis@property.c0m</li>
+
+												<li><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+											</ul>										
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="team-section text-center">
+
+									<h3>Dennis Schwartz</h3>
+
+									<p>Managing Director</p>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>4 Years Experience</h6>
+
+											<ul>
+
+												<li>0300-1234567</li>
+
+												<li>dennis@property.c0m</li>
+
+												<li><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+											</ul>										
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="team-section text-center">
+
+									<h3>Dennis Schwartz</h3>
+
+									<p>Managing Director</p>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>4 Years Experience</h6>
+
+											<ul>
+
+												<li>0300-1234567</li>
+
+												<li>dennis@property.c0m</li>
+
+												<li><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+											</ul>										
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="team-section text-center">
+
+									<h3>Dennis Schwartz</h3>
+
+									<p>Managing Director</p>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>4 Years Experience</h6>
+
+											<ul>
+
+												<li>0300-1234567</li>
+
+												<li>dennis@property.c0m</li>
+
+												<li><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+											</ul>										
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="team-section text-center">
+
+									<h3>Dennis Schwartz</h3>
+
+									<p>Managing Director</p>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>4 Years Experience</h6>
+
+											<ul>
+
+												<li>0300-1234567</li>
+
+												<li>dennis@property.c0m</li>
+
+												<li><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+											</ul>										
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="team-section text-center">
+
+									<h3>Dennis Schwartz</h3>
+
+									<p>Managing Director</p>
+
+									<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/line.jpg" alt="" />
+
+									<figure>
+
+										<a href="">
+
+											<div class="img-container">
+
+												<div class="img-block">
+
+													<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img1.jpg">
+
+												</div>
+
+											</div>
+
+										</a>
+
+										<figcaption class="hover-effect-text">
+
+											<h6>4 Years Experience</h6>
+
+											<ul>
+
+												<li>0300-1234567</li>
+
+												<li>dennis@property.c0m</li>
+
+												<li><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+											</ul>										
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+            </section>
+
+
+
+
+
+            <section class="contact" id="contact">
+
+				<div class="container">
+
+					<h2>Contact Us</h2>
+
+					<h4>Take a look at all the work we have done</h4>	
+
+					<div class="row">
+
+						<div class="col-lg-12">
+
+							<div class="col-lg-12 col-md-12">
+
+								<div class="contact-form">
+
+									<form role="form">
+
+										<div class="form-group">
+
+											<label>Name</label>
+
+											<input type="text" class="form-control" id="name" name="name" placeholder="" required>
+
+										</div>
+
+										<div class="form-group">
+
+											<label>Email Address</label>
+
+											<input type="text" class="form-control" id="email" name="email" placeholder="" required>
+
+										</div>
+
+										<div class="form-group">
+
+											<label>Phone Number</label>
+
+											<input type="text" class="form-control" id="phone" name="phone" placeholder="" required>
+
+										</div>
+
+										<div class="form-group">
+
+											<label>Message</label>
+
+											<textarea class="form-control textarea-height" type="textarea" id="message" placeholder="" rows="7"></textarea>
+
+										</div>
+
+										<button type="button" id="submit" name="submit" class="btn btn-primary btn-contact">Send</button>
+
+									</form>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+            </section>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <footer class="footer">
+
+            <div class="container-fluid footer-top">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+
+                            <div class="office-addresses">
+
+                                <h1>Follow Us</h1>
+
+                                <ul>
+
+                                    <li>(609) 349-6391  (609) 924-4291</li>
+
+                                    <li>nicole.muk@foxroach.com</li>
+
+                                    <li>Princeton Home Marketing Center</li>
+
+									<li><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a></li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container-fluid footer-btm">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                <p class="copyright">ALL REWARDS ARE CLEAR TECHNOLOGICALINC.</p>				
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 backtotop">
+
+                                <a href="javascript:" id="return-to-top" style=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Back to top</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+
+
+
+        <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery-3.2.1.min.js"></script>
+
+        <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/bootstrap.min.js"></script>
+
+        <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/owl.carousel.js"></script>
+
+		<script type="text/javascript" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script>
+
+            $(document).ready(function () {
+
+
+
+                $('.owl-carousel').owlCarousel({
+
+                    loop: true,
+
+                    dots: true,
+
+                    margin: 10,
+
+                    responsiveClass: true,
+
+                    responsive: {
+
+                        0: {
+
+                            items: 1,
+
+                            nav: false
+
+                        },
+
+                        600: {
+
+                            items: 1,
+
+                            nav: false
+
+                        },
+
+                        1000: {
+
+                            items: 1,
+
+                            dots: true,
+
+                            nav: false,
+
+                            loop: false
+
+                        }
+
+                    }
+
+                });
+
+
+
+
+
+                $('#return-to-top').click(function () {
+
+                    $('body,html').animate({
+
+                        scrollTop: 0
+
+                    }, 500);
+
+                });
+
+
+
+
+
+                $(function(){
+
+					createSticky($("#header"));
+
+				});
+
+				function createSticky(sticky) {
+
+					if (typeof sticky !== "undefined") {
+
+						var	pos = sticky.offset().top,
+
+								win = $(window);
+
+						win.on("scroll", function() {
+
+							win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+
+						});			
+
+					}
+
+				}
+
+            });
+
+        </script>
+
+		
+
+		
+
+		<script>
+
+		
+
+		$(document).ready(function(){
+
+			$(".navbar-nav li a").on('click', function(event) {
+
+				if (this.hash !== "") {
+
+				  event.preventDefault();
+
+				  var hash = this.hash;
+
+				  $('html, body').animate({
+
+					scrollTop: $(hash).offset().top
+
+				  }, 900, function(){
+
+				  });
+
+				} 
+
+			  });
+
+		  
+
+		    $(function(){
+
+				$('.navbar-nav li a').click(function(){
+
+					$('.navbar-nav').find('li.active').removeClass('active');
+
+					$(this).parent().addClass('active');
+
+					return false; //return false to aviod scroll top.
+
+				});
+
+			});
+
+		})
+
+		</script>
+
+		
+
+    </body>
+
+</html>

@@ -1,0 +1,5 @@
+[30-Jun-2022 10:49:21 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Http\FormRequest' not found in /home/rightdeed/public_html/app/Http/Requests/AddClientPostValidation.php on line 7
+[01-Jul-2022 08:35:50 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Http\FormRequest' not found in /home/rightdeed/public_html/app/Http/Requests/CreatePackageValidationForAdd.php on line 7
+[01-Jul-2022 13:46:46 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Http\FormRequest' not found in /home/rightdeed/public_html/app/Http/Requests/StorePrivacyPolicyPost.php on line 7
+[02-Jul-2022 11:15:14 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Http\FormRequest' not found in /home/rightdeed/public_html/app/Http/Requests/AddPropertyPostValidation.php on line 7
+[03-Jul-2022 09:16:30 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Http\FormRequest' not found in /home/rightdeed/public_html/app/Http/Requests/StoreTagPost.php on line 7

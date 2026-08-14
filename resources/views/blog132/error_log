@@ -1,0 +1,60 @@
+[10-Oct-2021 00:34:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function str_slug() in /home/rightdeed/public_html/resources/views/blog132/blog_listing.blade.php:79
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/blog_listing.blade.php on line 79
+[10-Oct-2021 21:14:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/rightdeed/public_html/resources/views/blog132/view.blade.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/view.blade.php on line 1
+[11-Oct-2021 21:37:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 195
+[11-Oct-2021 21:37:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 240
+[15-Nov-2021 22:45:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit.blade.php on line 48
+[15-Nov-2021 22:45:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit.blade.php on line 97
+[09-Dec-2021 14:53:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function str_slug() in /home/rightdeed/public_html/resources/views/blog132/blog_listing.blade.php:79
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/blog_listing.blade.php on line 79
+[14-Dec-2021 08:30:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 195
+[14-Dec-2021 08:30:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 240
+[09-Feb-2022 14:56:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/rightdeed/public_html/resources/views/blog132/view.blade.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/view.blade.php on line 1
+[01-Mar-2022 16:29:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/rightdeed/public_html/resources/views/blog132/view.blade.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/view.blade.php on line 1
+[02-Mar-2022 22:47:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit.blade.php on line 48
+[02-Mar-2022 22:47:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit.blade.php on line 97
+[02-Apr-2022 13:30:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/rightdeed/public_html/resources/views/blog132/view.blade.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/view.blade.php on line 1
+[16-Apr-2022 22:07:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/rightdeed/public_html/resources/views/blog132/view.blade.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/view.blade.php on line 1
+[23-Apr-2022 12:44:47 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/rightdeed/public_html/resources/views/blog132/view.blade.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/view.blade.php on line 1
+[05-May-2022 07:00:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/rightdeed/public_html/resources/views/blog132/view.blade.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/view.blade.php on line 1
+[16-Jun-2022 07:02:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function str_slug() in /home/rightdeed/public_html/resources/views/blog132/blog_listing.blade.php:79
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/blog_listing.blade.php on line 79
+[16-Jun-2022 14:08:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 195
+[16-Jun-2022 14:08:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 240
+[30-Jun-2022 01:07:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 195
+[30-Jun-2022 01:07:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 240
+[30-Jun-2022 01:32:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 195
+[30-Jun-2022 01:32:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit_blog.blade.php on line 240
+[10-Jul-2022 04:13:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/rightdeed/public_html/resources/views/blog132/view.blade.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/blog132/view.blade.php on line 1
+[22-Jul-2022 04:42:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit.blade.php on line 48
+[22-Jul-2022 04:42:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/rightdeed/public_html/resources/views/blog132/edit.blade.php on line 97

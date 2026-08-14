@@ -1,0 +1,4 @@
+[15-Dec-2021 18:25:56 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/rightdeed/public_html/resources/views/dashboard/editProfile.blade.php on line 318
+[15-Dec-2021 18:25:56 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/rightdeed/public_html/resources/views/dashboard/editProfile.blade.php on line 1012
+[06-Jun-2022 03:09:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/rightdeed/public_html/resources/views/dashboard/editProfile.blade.php on line 318
+[06-Jun-2022 03:09:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/rightdeed/public_html/resources/views/dashboard/editProfile.blade.php on line 1012

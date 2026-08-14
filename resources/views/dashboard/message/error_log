@@ -1,0 +1,4 @@
+[21-Jan-2022 00:54:07 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Property' not found in /home/rightdeed/public_html/resources/views/dashboard/message/message-list.blade.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/dashboard/message/message-list.blade.php on line 41

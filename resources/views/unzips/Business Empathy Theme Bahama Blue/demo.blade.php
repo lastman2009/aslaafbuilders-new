@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Red Theme</title>
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/nanoscroller.css">
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/theme.css" rel="stylesheet">
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/slick-theme.css">
+    <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/jquery.mCustomScrollbar.css">
+</head>
+<body>
+
+
+    <header class="header" id="home1">
+        <div class="container-fluid">
+            <div class="row ">
+            
+
+                <div class="mynav">
+                    <div class="container pr">
+                        <div class="col-lg-12 pr">
+                            <nav class="navbar navbar-default top-nav">
+
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>                        
+                                    </button>
+                                    <a class="navbar-brand" href="#"><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/logo_YourLogoHere.png"> </a>
+                                </div>
+                                <div class="collapse navbar-collapse pr" id="myNavbar">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="#home1">HOME</a></li>
+                                        <li><a href="#about">ABOUT US</a></li>
+                                        <li><a href="#work">OUR WORK</a></li>
+                                        <li><a href="#ceo">CEO MESSAGE</a></li>
+                                        <li><a href="#team">OUR TEAM</a></li>
+                                        <li><a href="#office">OUR OFFICES</a></li>  
+                                        <li><a href="#contact">CONTACT</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </nav>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="container pr">
+                    <div class="col-lg-12 pr">
+                        <div class="banner-text">
+                            <p>we have</p>
+                            <p>lot <span>of</span> themes</p>
+                            <p>for your property business</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </header>
+
+
+    <div class="main">
+        <section  class="aboutus-sect" id="about">
+
+            <div class="container-fluid text-center no-padding">
+
+
+                <div id="main-title" style="background-position: -3182px center;" class="text-center section-padding main-title">
+                    <h2>About Us</h2>
+                    <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/stick_03.jpg">
+
+                </div>
+
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                            <div  class="col-md-12 text-center about-us" >
+                                <div class="about-heading" >
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+                                </div>
+
+                                <div class="about-text">
+                                    <div class="mCustomScrollbar">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="property-sect" id="work">
+            <div class="container-fluid no-padding">
+
+                <div id="seconed-title" style="background-position: -3182px center;" class="text-center section-padding main-title">
+                    <h2>Our Work</h2>
+                    <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/stick_03.jpg">
+
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="team-heading col-md-12">
+                            <div class="property-heading text-center">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 properties">
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="img-container">
+                                    <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/property_03.jpg"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="property-text">
+                                    <p>03 Marla House For Rent.</p>
+                                    <p>DHA Phase 4, FF Block , Lahore.</p>
+                                    <p>R.S  96535</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="img-container">
+                                    <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/property_03.jpg"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="property-text">
+                                    <p>03 Marla House For Rent.</p>
+                                    <p>DHA Phase 4, FF Block , Lahore.</p>
+                                    <p>R.S  96535</p>
+                                </div>
+
+                            </div>
+                        </div> 
+                        <div class="col-md-12 hidden-sm hidden-xs">
+                            <div class="col-md-3 col-sm-6  pr">
+                                <div class="property-text">
+                                    <p>03 Marla House For Rent.</p>
+                                    <p>DHA Phase 4, FF Block , Lahore.</p>
+                                    <p>R.S  96535</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="img-container">
+                                    <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/property_03.jpg"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="property-text">
+                                    <p>03 Marla House For Rent.</p>
+                                    <p>DHA Phase 4, FF Block , Lahore.</p>
+                                    <p>R.S  96535</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="img-container">
+                                    <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/property_03.jpg"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12 properties hidden-md hidden-lg">
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="img-container">
+                                    <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/property_03.jpg"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="property-text">
+                                    <p>03 Marla House For Rent.</p>
+                                    <p>DHA Phase 4, FF Block , Lahore.</p>
+                                    <p>R.S  96535</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="img-container">
+                                    <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/property_03.jpg"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 pr">
+                                <div class="property-text">
+                                    <p>03 Marla House For Rent.</p>
+                                    <p>DHA Phase 4, FF Block , Lahore.</p>
+                                    <p>R.S  96535</p>
+                                </div>
+
+                            </div>
+                        </div> 
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="ceo-sect" id="ceo">
+            <div class="container-fluid no-padding">
+
+                <div id="third-title" style="background-position: -3182px center;" class="text-center section-padding main-title">
+                    <h2>Ceo Message</h2>
+                    <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/stick_03.jpg">
+
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                           
+
+                            <div class="col-md-12 ceo-heading text-center">
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="col-md-12">
+                            
+
+                            <div class="col-md-12 text-center ceo-text">
+                                <div class="mCustomScrollbar">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="team-sect" id="team">
+            <div class="container-fluid no-padding">
+
+                <div id="fourth-title" style="background-position: -3182px center;" class="text-center section-padding main-title">
+                    <h2>Our Great Team</h2>
+                    <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/stick_03.jpg">
+
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="col-md-1">
+
+                            </div>
+
+                            <div class="team-heading text-center">
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+                            </div>
+
+                            <div class="col-md-1">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12 teams">
+
+                            <div class="owl-carousel">
+                                <div class="item">
+
+                                    <div class="col-md-5 team-img">
+                                        <div class="img-container">
+                                            <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team_03.jpg"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-7 property-content no-padding">
+                                        <div class="slider-content team-content">
+                                            <p>Shehzad Hassan</p>
+                                            <p><span>ceo</span> </p>
+                                            <p>0300-1234567</p>
+                                            <p><span>5</span> year of services</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="item">
+
+                                    <div class="col-md-5 team-img">
+                                        <div class="img-container">
+                                            <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team_03.jpg"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-7 property-content no-padding">
+                                        <div class="slider-content team-content">
+                                            <p>Shehzad Hassan</p>
+                                            <p><span>ceo</span> </p>
+                                            <p>0300-1234567</p>
+                                            <p><span>5</span> year of services</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="item">
+
+                                    <div class="col-md-5 team-img">
+                                        <div class="img-container">
+                                            <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team_03.jpg"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-7 property-content no-padding">
+                                        <div class="slider-content team-content">
+                                            <p>Shehzad Hassan</p>
+                                            <p><span>ceo</span> </p>
+                                            <p>0300-1234567</p>
+                                            <p><span>5</span> year of services</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="item">
+
+                                    <div class="col-md-5 team-img">
+                                        <div class="img-container">
+                                            <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team_03.jpg"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-7 property-content no-padding">
+                                        <div class="slider-content team-content">
+                                            <p>Shehzad Hassan</p>
+                                            <p><span>ceo</span> </p>
+                                            <p>0300-1234567</p>
+                                            <p><span>5</span> year of services</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="item">
+
+                                    <div class="col-md-6 no-padding team-img">
+                                        <div class="img-container">
+                                            <div class="img-block"><img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team_03.jpg"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 property-content no-padding">
+                                        <div class="slider-content team-content">
+                                            <p>Shehzad Hassan</p>
+                                            <p><span>ceo</span> </p>
+                                            <p>0300-1234567</p>
+                                            <p><span>5</span> year of services</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="office-sect" id="office">
+            <div class="container-fluid no-padding">
+
+                <div id="fifth-title" style="background-position: -3182px center;" class="text-center section-padding main-title">
+                    <h2>Our Offices</h2>
+                    <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/stick_03.jpg">
+
+                </div>
+
+                <div class="container">
+                    <div class="row mr">
+                        <div class="col-md-12">
+                            
+
+                            <div class="col-md-12">
+                                <div class="office-heading text-center">
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut .</p>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+
+                        <div class="col-md-12 offices">
+
+                             
+                            <div class="your-class col-md-12">
+                                <div class="internal-sec">
+                                    <h2>office 01</h2> 
+                                    <p>1600 Amphitheatre Parkway  </p>
+                                    <p>Mountain View,</p>
+                                    <p>CA 94043 US</p>
+                                </div>
+
+                                <div class="internal-sec">
+                                    <h2>office 01</h2> 
+                                    <p>1600 Amphitheatre Parkway  </p>
+                                    <p>Mountain View,</p>
+                                    <p>CA 94043 US</p>
+                                </div>
+
+                                <div class="internal-sec">
+                                    <h2>office 01</h2> 
+                                    <p>1600 Amphitheatre Parkway  </p>
+                                    <p>Mountain View,</p>
+                                    <p>CA 94043 US</p>
+                                </div>
+
+                                <div class="internal-sec">
+                                    <h2>office 01</h2> 
+                                    <p>1600 Amphitheatre Parkway  </p>
+                                    <p>Mountain View,</p>
+                                    <p>CA 94043 US</p>
+                                </div>
+
+                                <div class="internal-sec">
+                                    <h2>office 01</h2> 
+                                    <p>1600 Amphitheatre Parkway  </p>
+                                    <p>Mountain View,</p>
+                                    <p>CA 94043 US</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-sect" id="contact">
+            <div class="container-fluid no-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="email" placeholder="Name" name="email">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail" name="email">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Phone" name="email">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-default">Send a message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="footer">
+
+            <div class="container-fluid footer-btm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 ftr-btm">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                                <p class="copyright">ALL REWARDS ARE CLEAR TECHNOLOGICALINC.</p>                
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 backtotop">
+                                <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Back to top</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery-3.2.1.min.js"></script>
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/owl.carousel.js"></script>
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+    $('#return-to-top').click(function () {      
+        $('body,html').animate({
+            scrollTop: 0                      
+        }, 500);
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            dots: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                600: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 1,
+                    dots: true,
+                    nav: false,
+                    loop: false
+                }
+            }
+        });
+
+
+// Add smooth scrolling to all links in navbar + footer link
+$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+// Make sure this.hash has a value before overriding default behavior
+if (this.hash !== "") {
+
+// Prevent default anchor click behavior
+event.preventDefault();
+
+// Store hash
+var hash = this.hash;
+
+// Using jQuery's animate() method to add smooth page scroll
+// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+$('html, body').animate({
+    scrollTop: $(hash).offset().top
+}, 900, function(){
+
+// Add hash (#) to URL when done scrolling (default click behavior)
+window.location.hash = hash;
+});
+} // End if
+});
+})
+</script>
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.flexslider.js"></script>
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+        $('.flexslider').flexslider({
+            animation: "slide",
+            animationLoop: false,
+            itemWidth: 210,
+            itemMargin: 5,
+            minItems: 2,
+            maxItems: 4,
+            start: function(slider){
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
+<script src="js/slick.js"></script>
+<script type="text/javascript">
+    $(document).on('ready', function() {
+        $(".your-class").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay:true,
+            autoplaySpeed:1000,
+            infinite:false,
+            speed:1000,
+            slide:'div',
+
+
+
+            responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+
+            ]
+
+
+        });
+
+    });
+</script>
+
+<script>
+    var i = null;
+    function ctmove() {
+        i--;
+        document.getElementById("main-title").style.backgroundPosition = i + "px";
+        document.getElementById("main-title2").style.backgroundPosition = i + "px";
+    }
+    window.setInterval(ctmove, 30);
+</script>
+
+<script>
+    var i = null;
+    function ctmove() {
+        i--;
+        document.getElementById("seconed-title").style.backgroundPosition = i + "px";
+        document.getElementById("seconed-title2").style.backgroundPosition = i + "px";
+    }
+    window.setInterval(ctmove, 30);
+</script>
+
+<script>
+    var i = null;
+    function ctmove() {
+        i--;
+        document.getElementById("third-title").style.backgroundPosition = i + "px";
+        document.getElementById("third-title2").style.backgroundPosition = i + "px";
+    }
+    window.setInterval(ctmove, 30);
+</script>
+
+<script>
+    var i = null;
+    function ctmove() {
+        i--;
+        document.getElementById("fourth-title").style.backgroundPosition = i + "px";
+        document.getElementById("fourth-title2").style.backgroundPosition = i + "px";
+    }
+    window.setInterval(ctmove, 30);
+</script>
+
+<script>
+    var i = null;
+    function ctmove() {
+        i--;
+        document.getElementById("fifth-title").style.backgroundPosition = i + "px";
+        document.getElementById("fifth-title2").style.backgroundPosition = i + "px";
+    }
+    window.setInterval(ctmove, 30);
+</script>
+
+

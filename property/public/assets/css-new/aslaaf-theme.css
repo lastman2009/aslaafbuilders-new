@@ -1,0 +1,279 @@
+/* ============================================================
+   Aslaaf Builders — Orange theme
+   Shared header/footer + homepage sections.
+   Every selector is prefixed with .ab- so it never collides
+   with the legacy bootstrap / style.css rules that inner
+   pages still rely on. Loaded AFTER style.css so the few
+   deliberate overrides below win the cascade.
+   ============================================================ */
+
+:root{
+  --ab-orange:#e8641c; --ab-orange-dark:#c24e12; --ab-orange-50:#fdefe6; --ab-orange-100:#fadfce;
+  --ab-gold:#e0a400; --ab-ink:#2a1c12; --ab-muted:#6b5d52; --ab-line:#ece3dc;
+  --ab-bg:#faf6f2; --ab-white:#fff; --ab-navy:#233042;
+}
+
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ab-ink);background:var(--ab-bg);line-height:1.55}
+
+/* Template font stack enforced on every new component — legacy sheets set
+   "Open Sans" / "Helvetica Neue" on body and elements and must not bleed in. */
+.ab-topbar,.ab-header,.ab-nav,.ab-btn,.ab-footer,.ab-home,
+.ab-home h1,.ab-home h2,.ab-home h3,.ab-footer h4,
+.ab-home input,.ab-home select,.ab-home button{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
+/* Template uses a global margin reset; scope it so legacy pages keep theirs.
+   (Section rules below override where the design needs spacing.) */
+.ab-home p,.ab-footer p{margin:0}
+.ab-home h1,.ab-home h2,.ab-home h3{margin:0}
+
+/* Inner pages offset their content for the old fixed header.
+   The new header is sticky (in normal flow), so remove it. */
+#main{margin-top:0;margin-bottom:0}
+
+/* Smooth in-page scrolling; anchored sections clear the sticky header. */
+html{scroll-behavior:smooth}
+#calculator,#filesRates,#areas{scroll-margin-top:95px}
+
+.ab-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.ab-topbar a,.ab-header a,.ab-footer a,.ab-home a{text-decoration:none;color:inherit}
+.ab-topbar a:hover,.ab-topbar a:focus{text-decoration:none}
+
+/* Remove the browser's default focus/tap outline on header links, nav
+   items, the logo and buttons — it was showing as a visible box on click. */
+.ab-header a,.ab-header button,.ab-topbar a,.ab-nav a,.ab-logo,.ab-btn,.ab-burger,.ab-user>a{outline:none}
+.ab-header a:focus,.ab-header button:focus,.ab-topbar a:focus,.ab-nav a:focus,.ab-logo:focus,.ab-btn:focus,.ab-burger:focus,.ab-user>a:focus{outline:none;box-shadow:none}
+/* Keep it back for real keyboard users tabbing through the nav. */
+.ab-header a:focus-visible,.ab-header button:focus-visible,.ab-nav a:focus-visible,.ab-btn:focus-visible,.ab-burger:focus-visible{outline:2px solid var(--ab-orange);outline-offset:2px}
+.ab-home img{display:block;max-width:100%}
+
+/* ---------- Logo ---------- */
+.ab-logo{display:flex;align-items:center;gap:11px}
+.ab-logo .ab-badge-mark{width:44px;height:44px;border-radius:50%;background:var(--ab-orange);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ab-logo .ab-badge-mark svg{width:26px;height:26px}
+.ab-logo .ab-logo-txt b{display:block;font-family:Georgia,'Times New Roman',serif;font-size:19px;font-weight:700;letter-spacing:3px;color:var(--ab-orange-dark);line-height:1}
+.ab-logo .ab-logo-txt small{display:block;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--ab-muted);margin-top:3px}
+
+/* ---------- Top bar ---------- */
+.ab-topbar{background:var(--ab-orange-dark);color:#fbe2d3;font-size:13px}
+.ab-topbar .ab-wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+.ab-topbar a{margin-left:18px;color:#fbe2d3}
+.ab-topbar a:hover{color:#fff}
+.ab-topbar .ab-top-left span{margin-right:18px}
+
+/* ---------- Header ---------- */
+/* legacy style.css sets header{position:fixed} — override deliberately */
+.ab-header{background:var(--ab-white);border-bottom:1px solid var(--ab-line);position:sticky;top:0;z-index:100;width:100%;display:block}
+.ab-header .ab-wrap{display:flex;align-items:center;min-height:76px;gap:30px}
+.ab-nav{display:flex;gap:19px;font-size:14.5px;font-weight:500;margin-left:6px;align-items:center}
+.ab-nav a{padding:6px 0;color:var(--ab-ink);white-space:nowrap}
+.ab-nav a:hover{color:var(--ab-orange)}
+.ab-head-actions{margin-left:auto;display:flex;align-items:center;gap:14px}
+.ab-btn{display:inline-block;border:none;cursor:pointer;font-size:14px;font-weight:600;border-radius:8px;padding:11px 20px;line-height:1.2;text-align:center;white-space:nowrap;flex-shrink:0}
+.ab-btn.ab-btn-post-mobile{display:none}
+.ab-btn:hover,.ab-btn:focus{text-decoration:none}
+/* .ab-btn-* pairs with .ab-btn on the same element (0,2,0) so it always
+   beats the broader ".ab-home a{color:inherit}" reset (0,1,1). */
+.ab-btn.ab-btn-ghost,.ab-btn-ghost{background:transparent;color:var(--ab-orange-dark);border:1px solid var(--ab-line)}
+.ab-btn.ab-btn-ghost:hover,.ab-btn-ghost:hover{border-color:var(--ab-orange);color:var(--ab-orange)}
+.ab-btn.ab-btn-primary,.ab-btn-primary{background:var(--ab-orange);color:#fff}
+.ab-btn.ab-btn-primary:hover,.ab-btn.ab-btn-primary:focus,.ab-btn-primary:hover,.ab-btn-primary:focus{background:var(--ab-orange-dark);color:#fff}
+.ab-btn.ab-btn-wa,.ab-btn-wa{background:#25d366;color:#fff}
+.ab-btn.ab-btn-wa:hover,.ab-btn.ab-btn-wa:focus,.ab-btn-wa:hover,.ab-btn-wa:focus{background:#1eb955;color:#fff}
+.ab-btn.ab-btn-white,.ab-btn-white{background:#fff;color:var(--ab-orange-dark)}
+.ab-btn.ab-btn-white:hover,.ab-btn-white:hover{background:var(--ab-orange-100);color:var(--ab-orange-dark)}
+.ab-btn-block{display:block;width:100%}
+
+/* user dropdown (logged in) */
+.ab-user{position:relative}
+.ab-user>a{display:inline-block;padding:11px 14px;border:1px solid var(--ab-line);border-radius:8px;font-size:14px;font-weight:600;color:var(--ab-orange-dark)}
+.ab-user-menu{display:none;position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--ab-line);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.12);min-width:170px;padding:8px 0;z-index:110}
+.ab-user:hover .ab-user-menu,.ab-user.open .ab-user-menu{display:block}
+.ab-user-menu a{display:block;padding:9px 16px;font-size:14px;color:var(--ab-ink)}
+.ab-user-menu a:hover{background:var(--ab-orange-50);color:var(--ab-orange-dark)}
+
+/* mobile burger */
+.ab-burger{display:none;margin-left:auto;background:transparent;border:1px solid var(--ab-line);border-radius:8px;padding:8px 11px;cursor:pointer;color:var(--ab-orange-dark);font-size:18px;line-height:1}
+
+/* ---------- Hero ---------- */
+.ab-hero{background:linear-gradient(rgba(40,20,8,.62),rgba(40,20,8,.66)) center/cover,var(--ab-navy);background-blend-mode:normal;color:#fff;padding:62px 0 92px;background-size:cover;background-position:center}
+.ab-hero .ab-tag{display:inline-block;background:rgba(224,164,0,.18);border:1px solid rgba(224,164,0,.5);color:#ffd873;font-size:13px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:16px}
+.ab-hero h1{font-size:41px;line-height:1.15;max-width:730px;font-weight:700;color:#fff;margin:0}
+.ab-hero .ab-hero-sub{font-size:18px;opacity:.93;margin-top:14px;max-width:600px}
+
+/* ---------- Search card ---------- */
+/* overflow must stay visible so the location-suggestions dropdown isn't clipped */
+.ab-search{background:var(--ab-white);border-radius:14px;margin-top:32px;box-shadow:0 18px 50px rgba(0,0,0,.24);overflow:visible;color:var(--ab-ink)}
+.ab-tabs{display:flex;border-bottom:1px solid var(--ab-line);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.ab-tab{padding:16px 30px;font-weight:600;font-size:15px;cursor:pointer;color:var(--ab-muted);border-bottom:3px solid transparent;background:transparent;border-top:none;border-left:none;border-right:none;white-space:nowrap;flex:0 0 auto}
+.ab-tab.active{color:var(--ab-orange-dark);border-bottom-color:var(--ab-orange)}
+.ab-search-body{padding:20px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr auto;gap:14px;align-items:end}
+.ab-field label{display:block;font-size:12px;font-weight:600;color:var(--ab-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.ab-field input,.ab-field select{width:100%;padding:12px 13px;border:1px solid var(--ab-line);border-radius:8px;font-size:15px;background:var(--ab-bg);color:var(--ab-ink);height:auto;box-shadow:none}
+.ab-search-btn{background:var(--ab-orange);color:#fff;border:none;border-radius:8px;padding:13px 26px;font-size:15px;font-weight:600;cursor:pointer;height:46px;white-space:nowrap}
+.ab-search-btn:hover{background:var(--ab-orange-dark)}
+
+/* Location autocomplete (results from /search_home) */
+.ab-field.ab-has-suggest{position:relative}
+.ab-suggest{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--ab-white);border:1px solid var(--ab-line);border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,.16);max-height:260px;overflow-y:auto;z-index:60;text-align:left}
+.ab-suggest.open{display:block}
+.ab-suggest-item{display:block;width:100%;padding:11px 14px;font-size:14px;color:var(--ab-ink);cursor:pointer;border:none;background:transparent;text-align:left;border-bottom:1px solid var(--ab-line)}
+.ab-suggest-item:last-child{border-bottom:none}
+.ab-suggest-item:hover,.ab-suggest-item.active{background:var(--ab-orange-50);color:var(--ab-orange-dark)}
+.ab-suggest-item .ab-suggest-pin{color:var(--ab-orange);margin-right:8px}
+.ab-suggest-empty{padding:11px 14px;font-size:13px;color:var(--ab-muted)}
+.ab-quick{display:flex;gap:10px;flex-wrap:wrap;padding:0 20px 20px;font-size:13px}
+.ab-quick span{align-self:center;color:var(--ab-muted)}
+.ab-quick a{background:var(--ab-orange-50);color:var(--ab-orange-dark);padding:6px 13px;border-radius:20px;font-weight:600}
+.ab-quick a:hover{background:var(--ab-orange-100)}
+
+/* ---------- Stats ---------- */
+.ab-stats{background:var(--ab-white);border-bottom:1px solid var(--ab-line)}
+.ab-stats .ab-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:30px 22px;text-align:center}
+.ab-stat b{display:block;font-size:29px;color:var(--ab-orange-dark);font-weight:700}
+.ab-stat span{font-size:14px;color:var(--ab-muted)}
+
+/* ---------- Sections ---------- */
+.ab-block{padding:56px 0}
+.ab-block.ab-tight{padding-top:0}
+.ab-sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px}
+.ab-sec-head h2{font-size:27px;font-weight:700;margin:0;color:var(--ab-ink)}
+.ab-sec-head p{color:var(--ab-muted);margin:5px 0 0}
+.ab-sec-head a{color:var(--ab-orange);font-weight:600;font-size:14px}
+
+/* ---------- Area / city cards ---------- */
+.ab-cities{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:18px}
+.ab-home a.ab-city{position:relative;height:170px;border-radius:12px;overflow:hidden;color:#fff;display:block;background:var(--ab-navy)}
+.ab-city img{height:100%;width:100%;object-fit:cover;transition:.3s}
+.ab-city:hover img{transform:scale(1.06)}
+.ab-city .ab-city-lbl{position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.68));display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.ab-city .ab-city-lbl b{font-size:18px}
+.ab-city .ab-city-lbl span{font-size:13px;opacity:.9}
+
+/* ---------- File price boxes ---------- */
+.ab-files{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ab-filebox{background:var(--ab-white);border:1px solid var(--ab-line);border-top:4px solid var(--ab-orange);border-radius:12px;padding:20px;transition:.2s}
+.ab-filebox:hover{box-shadow:0 12px 30px rgba(0,0,0,.09);transform:translateY(-3px)}
+.ab-filebox .ab-file-top{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.ab-filebox .ab-ficon{width:44px;height:44px;border-radius:10px;background:var(--ab-orange-50);color:var(--ab-orange);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.ab-filebox h3{font-size:16.5px;font-weight:700;margin:0;color:var(--ab-ink)}
+.ab-filebox .ab-file-sub{font-size:12px;color:var(--ab-muted)}
+.ab-filebox .ab-prow{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px dashed var(--ab-line)}
+.ab-filebox .ab-prow span:first-child{color:var(--ab-muted)}
+.ab-filebox .ab-prow b{color:var(--ab-orange-dark)}
+.ab-filebox .ab-file-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.ab-filebox .ab-trend{font-size:12px;font-weight:600;color:#1a7d4f}
+.ab-filebox .ab-more{font-size:13px;font-weight:600;color:var(--ab-orange)}
+.ab-indic{font-size:12px;color:var(--ab-muted);margin-top:10px;font-style:italic}
+
+/* ---------- Transfer calculator ---------- */
+.ab-calc-sec{background:var(--ab-orange-50)}
+.ab-calc{background:var(--ab-white);border:1px solid var(--ab-line);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 14px 40px rgba(0,0,0,.06)}
+.ab-calc-in{padding:30px}
+.ab-calc-in h3{font-size:18px;margin:0 0 4px;color:var(--ab-ink)}
+.ab-calc-in .ab-hint{font-size:13px;color:var(--ab-muted);margin-bottom:20px}
+.ab-cfield{margin-bottom:16px}
+.ab-cfield label{display:block;font-size:13px;font-weight:600;margin-bottom:7px;color:var(--ab-ink)}
+.ab-cfield input,.ab-cfield select{width:100%;padding:12px 13px;border:1px solid var(--ab-line);border-radius:8px;font-size:15px;background:var(--ab-bg);color:var(--ab-ink);height:auto;box-shadow:none}
+.ab-seg{display:flex;gap:8px}
+.ab-seg button{flex:1;padding:11px;border:1px solid var(--ab-line);background:var(--ab-bg);border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;color:var(--ab-muted)}
+.ab-seg button.on{background:var(--ab-orange);color:#fff;border-color:var(--ab-orange)}
+.ab-calc-out{background:#1c130c;color:#e7d8cc;padding:30px;display:flex;flex-direction:column}
+.ab-calc-out h3{color:#fff;font-size:16px;margin:0 0 16px}
+.ab-orow{display:flex;justify-content:space-between;font-size:14px;padding:11px 0;border-bottom:1px solid #3a2a1d}
+.ab-orow span:first-child{color:#c9b6a6}
+.ab-orow b{color:#fff;font-weight:600}
+.ab-total{margin-top:auto;padding-top:18px}
+.ab-total .ab-total-lbl{font-size:13px;color:#c9b6a6}
+.ab-total .ab-amt{font-size:32px;font-weight:700;color:#ffb37a}
+.ab-calc-out .ab-wa-btn{background:#25d366;color:#fff;border:none;border-radius:8px;padding:13px;font-size:14px;font-weight:600;cursor:pointer;margin-top:16px;width:100%}
+.ab-calc-note{font-size:12px;color:#9c8674;margin-top:12px;line-height:1.5}
+
+/* ---------- Listing / project cards ---------- */
+.ab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ab-grid.ab-grid-4{grid-template-columns:repeat(4,1fr)}
+.ab-card{background:var(--ab-white);border:1px solid var(--ab-line);border-radius:13px;overflow:hidden;transition:.25s}
+.ab-card:hover{box-shadow:0 14px 34px rgba(0,0,0,.10);transform:translateY(-3px)}
+.ab-card .ab-ph{position:relative;height:200px;display:block}
+.ab-card .ab-ph img{height:100%;width:100%;object-fit:cover}
+.ab-badge{position:absolute;top:13px;left:13px;background:var(--ab-orange);color:#fff;font-size:12px;font-weight:600;padding:5px 12px;border-radius:6px}
+.ab-badge.ab-rent{background:var(--ab-navy)}
+.ab-card .ab-card-body{padding:16px 17px}
+.ab-price{font-size:21px;font-weight:700;color:var(--ab-orange-dark)}
+.ab-price small{font-size:13px;color:var(--ab-muted);font-weight:500}
+.ab-card h3{font-size:16px;margin:6px 0 3px;font-weight:600}
+.ab-card h3 a{color:var(--ab-ink)}
+.ab-card h3 a:hover{color:var(--ab-orange)}
+.ab-loc{font-size:13px;color:var(--ab-muted)}
+.ab-specs{display:flex;gap:16px;margin-top:13px;padding-top:13px;border-top:1px solid var(--ab-line);font-size:13px;color:var(--ab-muted);flex-wrap:wrap}
+
+/* ---------- Why us ---------- */
+.ab-why{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;text-align:center}
+.ab-why .ab-ic{width:60px;height:60px;border-radius:14px;background:var(--ab-orange-50);color:var(--ab-orange);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 14px}
+.ab-why h3{font-size:18px;margin:0 0 7px;color:var(--ab-ink)}
+.ab-why p{color:var(--ab-muted);font-size:14px}
+
+/* ---------- CTA ---------- */
+.ab-cta{background:var(--ab-navy);color:#fff;text-align:center;padding:56px 22px;border-radius:16px}
+.ab-cta h2{font-size:28px;margin:0 0 10px;color:#fff}
+.ab-cta p{opacity:.9;margin-bottom:22px}
+.ab-cta .ab-btn{margin:0 6px 8px}
+
+/* ---------- Footer ---------- */
+.ab-footer{background:#1c130c;color:#c9b6a6;padding:52px 0 26px;font-size:14px;margin-top:56px;display:block;position:relative}
+.ab-fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px}
+.ab-fgrid>div{min-width:0}
+.ab-footer h4{color:#fff;font-size:15px;margin:0 0 14px;font-weight:700}
+.ab-footer ul{list-style:none;margin:0;padding:0}
+.ab-footer li{margin-bottom:9px}
+.ab-footer a:hover{color:#fff}
+.ab-footer .ab-logo .ab-logo-txt b{color:#fff}
+.ab-footer .ab-logo .ab-logo-txt small{color:#9c8674}
+.ab-footer .ab-logo{flex-wrap:wrap}
+.ab-footer .ab-logo-txt{min-width:0}
+.ab-footer .ab-logo-txt b,.ab-footer .ab-logo-txt small{white-space:normal;word-break:break-word}
+.ab-footer .ab-tagline{font-style:italic;color:var(--ab-gold);margin:14px 0 8px}
+.ab-socials{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.ab-socials a{width:38px;height:38px;border-radius:50%;background:#2a1c12;display:flex;align-items:center;justify-content:center;transition:.2s;margin:0}
+.ab-socials a:hover{background:var(--ab-orange)}
+.ab-socials svg{width:18px;height:18px;fill:#e7d8cc}
+.ab-socials a:hover svg{fill:#fff}
+.ab-fbottom{border-top:1px solid #3a2a1d;padding-top:20px;display:flex;justify-content:space-between;color:#9c8674;font-size:13px;flex-wrap:wrap;gap:8px}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .ab-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;gap:0;padding:10px 22px 16px;border-bottom:1px solid var(--ab-line);box-shadow:0 14px 30px rgba(0,0,0,.10);margin-left:0}
+  .ab-nav.open{display:flex}
+  .ab-nav a{padding:10px 0;width:100%;border-bottom:1px solid var(--ab-line)}
+  .ab-nav a:last-child{border-bottom:none}
+  .ab-burger{display:inline-block}
+  .ab-header .ab-wrap{gap:10px}
+  .ab-head-actions{margin-left:0;gap:8px}
+  .ab-head-actions .ab-btn-wa{display:none}
+  .ab-topbar .ab-top-right{display:none}
+  .ab-user>a{padding:0;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0}
+  .ab-user>a::before{content:"\1F464";font-size:16px}
+  .ab-user-menu{right:auto;left:50%;transform:translateX(-50%)}
+}
+@media(max-width:640px){
+  .ab-btn.ab-btn-post-full{display:none}
+  .ab-btn.ab-btn-post-mobile{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;font-size:26px;font-weight:600;line-height:44px;text-align:center;border-radius:50%;flex:0 0 auto}
+}
+@media(max-width:900px){
+  .ab-search-body{grid-template-columns:1fr 1fr}
+  .ab-search-btn{grid-column:1 / -1}
+  .ab-cities,.ab-grid,.ab-grid.ab-grid-4,.ab-why,.ab-fgrid{grid-template-columns:1fr 1fr}
+  .ab-files{grid-template-columns:1fr}
+  .ab-calc{grid-template-columns:1fr}
+  .ab-hero h1{font-size:31px}
+  .ab-stats .ab-wrap{grid-template-columns:1fr 1fr}
+  .ab-sec-head{flex-direction:column;align-items:flex-start;gap:6px}
+}
+@media(max-width:560px){
+  .ab-search-body{grid-template-columns:1fr}
+  .ab-cities,.ab-grid,.ab-grid.ab-grid-4,.ab-why,.ab-fgrid{grid-template-columns:1fr}
+  .ab-topbar .ab-top-left span{margin-right:10px;display:block}
+  .ab-topbar .ab-wrap{height:auto;padding-top:6px;padding-bottom:6px}
+  .ab-hero{padding:44px 0 64px}
+  .ab-tab{padding:14px 16px;font-size:14px}
+  .ab-hero h1{font-size:26px}
+  .ab-head-actions .ab-btn{padding:9px 13px;font-size:13px}
+}

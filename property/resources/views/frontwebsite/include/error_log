@@ -1,0 +1,8 @@
+[06-Jul-2022 23:05:37 UTC] PHP Fatal error:  Uncaught Error: Class 'DevDojo\Chatter\Helpers\ChatterHelper' not found in /home/rightdeed/public_html/resources/views/frontwebsite/include/searchproperty.blade.php:174
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/frontwebsite/include/searchproperty.blade.php on line 174
+[07-Jul-2022 00:16:19 UTC] PHP Fatal error:  Uncaught Error: Class 'DevDojo\Chatter\Helpers\ChatterHelper' not found in /home/rightdeed/public_html/resources/views/frontwebsite/include/searchproperty1.blade.php:187
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/frontwebsite/include/searchproperty1.blade.php on line 187

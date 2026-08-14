@@ -1,0 +1,13 @@
+[02-Jul-2022 00:47:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/rightdeed/public_html/resources/views/frontwebsite/property/detail-property.blade.php:123
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/frontwebsite/property/detail-property.blade.php on line 123
+[04-Jul-2022 17:14:33 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting end of file in /home/rightdeed/public_html/resources/views/frontwebsite/property/property_comparisan.blade.php on line 568
+[05-Jul-2022 07:10:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Session' not found in /home/rightdeed/public_html/resources/views/frontwebsite/property/internalSearch.blade1.php:177
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/frontwebsite/property/internalSearch.blade1.php on line 177
+[09-Jul-2022 04:39:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/rightdeed/public_html/resources/views/frontwebsite/property/property-detail-page-new.blade.php:377
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/frontwebsite/property/property-detail-page-new.blade.php on line 377

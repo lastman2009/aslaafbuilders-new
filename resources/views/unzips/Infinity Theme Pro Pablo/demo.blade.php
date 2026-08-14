@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+
+
+   <!--- basic page needs
+
+   ================================================== -->
+
+   <meta charset="utf-8">
+
+	<title>Infinity Theme</title>
+
+	<meta name="description" content="">  
+
+	<meta name="author" content="">
+
+
+
+   <!-- mobile specific metas
+
+   ================================================== -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+ 	<!-- CSS
+
+   ================================================== -->
+
+   <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/base.css">
+
+   <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/vendor.css">  
+
+   <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/main.css">  
+
+   <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/jquery.mCustomScrollbar.css" />
+
+   <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/slick.css"/>
+
+   <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/slick-theme.css"/>
+
+
+
+   <!-- script
+
+   ================================================== -->
+
+	<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/modernizr.js"></script>
+
+	<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/pace.min.js"></script>
+
+
+
+   <!-- favicons
+
+	================================================== -->
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+
+</head>
+
+
+
+<body id="top">
+
+
+
+	<!-- header 
+
+   ================================================== -->
+
+   <header> 
+
+
+
+   	<div class="header-logo">
+
+	      <a href="">LOGO</a>
+
+	   </div> 
+
+
+
+		<a id="header-menu-trigger" href="#0">
+
+		 	<span class="header-menu-text">Menu</span>
+
+		  	<span class="header-menu-icon"></span>
+
+		</a> 
+
+
+
+		<nav id="menu-nav-wrap">
+
+
+
+			<a href="#0" class="close-button" title="close"><span>Close</span></a>	
+
+
+
+	   	<h3>Infinity Theme</h3>  
+
+
+
+			<ul class="nav-list">
+
+				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
+
+				<li><a class="smoothscroll" href="#about" title="">About</a></li>
+
+				<li><a class="smoothscroll" href="#portfolio" title="">Works</a></li>
+
+				<li><a class="smoothscroll" href="#Services" title="">Team</a></li>
+
+				<li><a class="smoothscroll" href="#ceo-msg" title="">CEO Message</a></li>
+
+				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>						
+
+			</ul>	
+
+			<ul class="header-social-list">
+
+	         <li>
+
+	         	<a href="#"><i class="fa fa-facebook-square"></i></a>
+
+	         </li>
+
+	         <li>
+
+	         	<a href="#"><i class="fa fa-twitter"></i></a>
+
+	         </li>
+
+	         <li>
+
+	         	<a href="#"><i class="fa fa-envelope"></i></a>
+
+	         </li>	         
+
+	      </ul>		
+
+
+
+		</nav>  <!-- end #menu-nav-wrap -->
+
+
+
+	</header> <!-- end header -->  
+
+
+
+
+
+   <!-- home
+
+   ================================================== -->
+
+   <section id="home">
+
+
+
+   	<div class="overlay"></div>
+
+
+
+   	<div class="home-content-table">	
+
+		   <div class="home-content-tablecell">
+
+		   	<div class="row">
+
+		   		<div class="col-twelve">		   			
+
+			  		
+
+			  				<h3 class="animate-intro">We Are Family.</h3>
+
+				  			<h1 class="animate-intro">
+
+							Your House<br>
+
+							Your Paradise.
+
+				  			</h1>	
+
+
+
+				  			<div class="more animate-intro">
+
+				  				<a class="smoothscroll button stroke" href="#about">
+
+				  					Learn More
+
+				  				</a>
+
+				  			</div>							
+
+
+
+			  		</div> <!-- end col-twelve --> 
+
+		   	</div> <!-- end row --> 
+
+		   </div> <!-- end home-content-tablecell --> 		   
+
+		</div> <!-- end home-content-table -->
+
+
+
+		<ul class="home-social-list">
+
+	      <li>
+
+	         	<a href="#"><i class="fa fa-facebook-square"></i></a>
+
+	         </li>
+
+	         <li>
+
+	         	<a href="#"><i class="fa fa-twitter"></i></a>
+
+	         </li>
+
+	         <li>
+
+	         	<a href="#"><i class="fa fa-envelope"></i></a>
+
+	         </li>	 
+
+	   </ul> <!-- end home-social-list -->	
+
+
+
+		<div class="scrolldown">
+
+			<a href="#about" class="scroll-icon smoothscroll">		
+
+		   	Scroll Down		   	
+
+		   	<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+			</a>
+
+		</div>			
+
+   
+
+   </section> <!-- end home -->
+
+
+
+
+
+   <!-- about
+
+   ================================================== -->
+
+   <section id="about">
+
+
+
+   	<div class="row about-wrap">
+
+   		<div class="col-full">
+
+
+
+   			<div class="about-profile-bg"></div>
+
+
+
+				<div class="intro">
+
+					<h3 class="animate-this">About Us</h3>
+
+					<div class="mCustomScrollbar">
+
+			   			<p class="lead animate-this"><span>Infinity</span> is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. v is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers.</p>	
+
+					</div>  
+
+				</div>   
+
+
+
+   		</div> <!-- end col-full  -->
+
+   	</div> <!-- end about-wrap  -->
+
+
+
+   </section> <!-- end about -->
+
+
+
+
+
+   <!-- about
+
+   ================================================== -->
+
+   
+
+
+
+
+
+   <!-- portfolio
+
+   ================================================== -->
+
+   <section id="portfolio">
+
+   	
+
+   	<div class="intro-wrap">
+
+
+
+   		<div class="row narrow section-intro with-bottom-sep animate-this">
+
+	   		<div class="col-twelve">
+
+	   			<h3>Showcase</h3>
+
+		   		<h1>See Our Featured Work.</h1>  		
+
+			   		<p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>	   	
+
+	   		</div>   		
+
+	   	</div> <!-- end row section-intro -->   		
+
+
+
+   	</div> <!-- end intro-wrap -->   	
+
+
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<div id="folio-wrap" class="bricks-wrapper">					
+
+
+
+   				<div class="brick folio-item">
+
+	               <div class="item-wrap animate-this" data-src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-1.jpg" data-sub-html="#01" > 	
+
+	                  <a href="#" class="overlay">
+
+	                  	<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-1.jpg" alt="">	                     
+
+	                     <div class="item-text">
+
+	                     	<span class="folio-types">
+
+		     					      Property
+
+		     					   </span>
+
+		     					   <h3 class="folio-title">3 Marla House for sale DHA Lahore</h3>	     					   
+
+		     					   <h3 class="folio-title">R.s 54732</h3>	     					   
+
+		     					</div>                                        
+
+	                  </a>
+
+	                  <a href="" class='details-link' title="details">
+
+	                  	<i class="icon-link"></i>
+
+	                  </a>
+
+	               </div> <!-- end item-wrap -->
+
+						
+
+						<div id="01" class='hide'>
+
+							<h4>3 Marla House for sale DHA Lahore</h4>
+
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="">Details</a></p>
+
+						</div>
+
+	        		</div> <!-- end folio-item -->
+
+
+
+	        		<div class="brick folio-item">
+
+	               <div class="item-wrap animate-this" data-src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-2.jpg" data-sub-html="#02"> 	
+
+	                  <a href="#" class="overlay">
+
+	                  	<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-2.jpg" alt="">	                     
+
+	                      <div class="item-text">
+
+	                     	<span class="folio-types">
+
+		     					      Property
+
+		     					   </span>
+
+		     					   <h3 class="folio-title">3 Marla House for sale DHA Lahore</h3>	     					   
+
+		     					   <h3 class="folio-title">R.s 54732</h3>	     					   
+
+		     					</div>                                      
+
+	                  </a>
+
+	                  <a href="" class='details-link' title="details">
+
+	                  	<i class="icon-link"></i>
+
+	                  </a>
+
+	               </div> <!-- end item-wrap -->
+
+
+
+	               <div id="02" class='hide'>
+
+							<h4>3 Marla House for sale DHA Lahore</h4>
+
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="">Details</a></p>
+
+						</div>	               
+
+	        		</div> <!-- end folio-item -->
+
+
+
+	        		<div class="brick folio-item">
+
+	               <div class="item-wrap animate-this" data-src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-3.jpg" data-sub-html="#03" >   	
+
+	                  <a href="#" class="overlay">
+
+	                  	<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-3.jpg" alt="">	                     
+
+	                      <div class="item-text">
+
+	                     	<span class="folio-types">
+
+		     					      Property
+
+		     					   </span>
+
+		     					   <h3 class="folio-title">3 Marla House for sale DHA Lahore</h3>	     					   
+
+		     					   <h3 class="folio-title">R.s 54732</h3>	     					   
+
+		     					</div>                                
+
+	                  </a>
+
+	                  <a href="" class='details-link' title="details">
+
+	                  	<i class="icon-link"></i>
+
+	                  </a>
+
+	               </div> <!-- end item-wrap -->	
+
+
+
+	               <div id="03" class='hide'>
+
+							<h4>3 Marla House for sale DHA Lahore</h4>
+
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="">Details</a></p>
+
+						</div>               
+
+	        		</div> <!-- end folio-item -->
+
+
+
+					<div class="brick folio-item">
+
+	               <div class="item-wrap animate-this"  data-src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-4.jpg"  data-sub-html="#04" >
+
+	                  <a href="#" class="overlay">
+
+	                  	<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-4.jpg" alt="">	                     
+
+	                      <div class="item-text">
+
+	                     	<span class="folio-types">
+
+		     					      Property
+
+		     					   </span>
+
+		     					   <h3 class="folio-title">3 Marla House for sale DHA Lahore</h3>	     					   
+
+		     					   <h3 class="folio-title">R.s 54732</h3>	     					   
+
+		     					</div>                               
+
+	                  </a>
+
+	                  <a href="" class='details-link' title="details">
+
+	                  	<i class="icon-link"></i>
+
+	                  </a>
+
+	               </div> <!-- end item-wrap -->
+
+
+
+	               <div id="04" class='hide'>
+
+							<h4>3 Marla House for sale DHA Lahore</h4>
+
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="">Details</a></p>
+
+						</div>  	               
+
+	        		</div> <!-- end folio-item -->
+
+
+
+					<div class="brick folio-item">
+
+	               <div class="item-wrap animate-this"  data-src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-5.jpg"  data-sub-html="#05" >  	
+
+	                  <a href="#" class="overlay">
+
+	                  	<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-5.jpg" alt="">	                     
+
+	                      <div class="item-text">
+
+	                     	<span class="folio-types">
+
+		     					      Property
+
+		     					   </span>
+
+		     					   <h3 class="folio-title">3 Marla House for sale DHA Lahore</h3>	     					   
+
+		     					   <h3 class="folio-title">R.s 54732</h3>	     					   
+
+		     					</div>                                
+
+	                  </a>
+
+	                  <a href="" class='details-link' title="details">
+
+	                  	<i class="icon-link"></i>
+
+	                  </a>
+
+	               </div> <!-- end item-wrap -->
+
+
+
+	               <div id="05" class='hide'>
+
+							<h4>3 Marla House for sale DHA Lahore</h4>
+
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="">Details</a></p>
+
+						</div>	               
+
+	        		</div> <!-- end folio-item -->
+
+	           
+
+					<div class="brick folio-item">
+
+	               <div class="item-wrap animate-this"  data-src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-6.jpg"  data-sub-html="#06">     	
+
+	                  <a href="#" class="overlay">
+
+	                  	<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/work-6.jpg" alt="">	                     
+
+	                     <div class="item-text">
+
+	                     	<span class="folio-types">
+
+		     					      Property
+
+		     					   </span>
+
+		     					   <h3 class="folio-title">3 Marla House for sale DHA Lahore</h3>	     					   
+
+		     					   <h3 class="folio-title">R.s 54732</h3>	     					   
+
+		     					</div>                                       
+
+	                  </a>
+
+	                  <a href="" class='details-link' title="details">
+
+	                  	<i class="icon-link"></i>
+
+	                  </a>
+
+	               </div> <!-- end item-wrap -->
+
+
+
+	               <div id="06" class='hide'>
+
+							<h4>3 Marla House for sale DHA Lahore</h4>
+
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="">Details</a></p>
+
+						</div>	               
+
+	        		</div> <!-- end folio-item -->   				
+
+
+
+   			</div> <!-- end folio-wrap -->
+
+   		</div> <!-- end twelve -->
+
+   	</div> <!-- end portfolio-content -->   	
+
+
+
+   </section>  <!-- end portfolio -->
+
+
+
+
+
+
+
+<section class="team-sect" id="Services">
+
+
+
+   	<div class="overlay"></div>
+
+   	<div class="gradient-overlay"></div>
+
+   	
+
+   	<div class="row narrow section-intro with-bottom-sep animate-this">
+
+   		<div class="col-full">
+
+   			
+
+   				<h3>Talented</h3>
+
+   			   <h1>Our Best Team</h1>
+
+	   			   <p class="lead">Lorem ipsum Elit ut consequat veniam eu nulla nulla reprehenderit reprehenderit sit velit in cupidatat ex aliquip ut cupidatat Excepteur tempor id irure sed dolore sint sunt voluptate ullamco nulla qui Duis qui culpa voluptate enim ea aute qui veniam in irure et nisi nostrud deserunt est officia minim.</p>
+
+	   		
+
+   			
+
+   	   </div> 
+
+   	</div> 
+
+
+
+   	<div class="row services-content">
+
+
+
+   		<div class="services-list block-1-2 block-tab-full group">
+
+
+
+	      	  <div class="your-class">
+
+			    <div class="slick-item">
+
+			    	<figure>
+
+						<div class="abc">
+
+							<a href="#">
+
+								<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-1.jpg" alt="" />
+
+								<span class="facebook-icon"><i class="fa fa-chain"></i></span>
+
+								<div class="shades"></div>
+
+							</a>
+
+						</div>
+
+					</figure>
+
+					<div class="team-text">
+
+						<h2>Kiran Mukhtar.</h2>
+
+						<h3>CEO</h3>
+
+						<p>0311-4065583</p>
+
+						<p>5 Year Of Services</p>
+
+					</div>
+
+			    </div>
+
+			    <div class="slick-item">
+
+			    	<figure>
+
+						<div class="abc">
+
+							<a href="#">
+
+								<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-2.jpg" alt="" />
+
+								<span class="facebook-icon"><i class="fa fa-chain"></i></span>
+
+								<div class="shades"></div>
+
+							</a>
+
+						</div>
+
+					</figure>
+
+					<div class="team-text">
+
+						<h2>Kiran Mukhtar.</h2>
+
+						<h3>CEO</h3>
+
+						<p>0311-4065583</p>
+
+						<p>5 Year Of Services</p>
+
+					</div>
+
+			    </div>
+
+			    <div class="slick-item">
+
+			    	<figure>
+
+						<div class="abc">
+
+							<a href="#">
+
+								<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-1.jpg" alt="" />
+
+								<span class="facebook-icon"><i class="fa fa-chain"></i></span>
+
+								<div class="shades"></div>
+
+							</a>
+
+						</div>
+
+					</figure>
+
+					<div class="team-text">
+
+						<h2>Kiran Mukhtar.</h2>
+
+						<h3>CEO</h3>
+
+						<p>0311-4065583</p>
+
+						<p>5 Year Of Services</p>
+
+					</div>
+
+			    </div>
+
+			    <div class="slick-item">
+
+			    	<figure>
+
+						<div class="abc">
+
+							<a href="#">
+
+								<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-2.jpg" alt="" />
+
+								<span class="facebook-icon"><i class="fa fa-chain"></i></span>
+
+								<div class="shades"></div>
+
+							</a>
+
+						</div>
+
+					</figure>
+
+					<div class="team-text">
+
+						<h2>Kiran Mukhtar.</h2>
+
+						<h3>CEO</h3>
+
+						<p>0311-4065583</p>
+
+						<p>5 Year Of Services</p>
+
+					</div>
+
+			    </div>
+
+			    <div class="slick-item">
+
+			    	<figure>
+
+						<div class="abc">
+
+							<a href="#">
+
+								<img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-1.jpg" alt="" />
+
+								<span class="facebook-icon"><i class="fa fa-chain"></i></span>
+
+								<div class="shades"></div>
+
+							</a>
+
+						</div>
+
+					</figure>
+
+					<div class="team-text">
+
+						<h2>Kiran Mukhtar.</h2>
+
+						<h3>CEO</h3>
+
+						<p>0311-4065583</p>
+
+						<p>5 Year Of Services</p>
+
+					</div>
+
+			    </div>
+
+			  </div>  
+
+
+
+	      </div>
+
+   		
+
+   	</div> 
+
+
+
+   </section> 
+
+
+
+
+
+
+
+   <!-- CEO Message
+
+   ================================================== -->
+
+   <section id="ceo-msg">
+
+
+
+   	<div class="row ceo-msg-wrap">
+
+   		<div class="col-full">
+
+
+
+   			<div class="ceo-msg-profile-bg"></div>
+
+
+
+				<div class="intro">
+
+					<h3 class="animate-this">CEO Message</h3>
+
+					<div class="mCustomScrollbar">
+
+			   			<p class="lead animate-this"><span>We</span> are a creative digital agency based in Manila, Pakistan. We are composed of creative designers and experienced architacture. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. vis a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers. </p>	
+
+			   		</div>
+
+				</div>   
+
+
+
+   		</div> <!-- end col-full  -->
+
+   	</div> <!-- end ceo-msg-wrap  -->
+
+
+
+   </section> <!-- end CEO Message -->
+
+
+
+
+
+   <!-- CEO Message
+
+   ================================================== -->
+
+
+
+   <!-- Testimonials Section
+
+   ================================================== -->
+
+   <!-- <section id="testimonials">
+
+
+
+   	<div class="row">
+
+   		<div class="col-twelve">
+
+   			<h2 class="animate-this">What They Say About Us.</h2>
+
+   		</div>   		
+
+   	</div>   	
+
+
+
+      <div class="row flex-container">
+
+    
+
+         <div id="testimonial-slider" class="flex-slider animate-this">
+
+
+
+            <ul class="slides">
+
+
+
+               <li>
+
+                  <p>
+
+                  Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+
+                  to do what you believe is great work. And the only way to do great work is to love what you do.
+
+                  If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+
+                  </p> 
+
+
+
+                  <div class="testimonial-author">
+
+                    	<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/avatars/user-02.jpg" alt="Author image">
+
+                    	<div class="author-info">
+
+                    		Steve Jobs
+
+                    		<span class="position">CEO, Apple.</span>
+
+                    	</div>
+
+                  </div>                 
+
+             	</li> 
+
+               <li>
+
+                  <p>
+
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.    
+
+                  </p>
+
+
+
+               	<div class="testimonial-author">
+
+                    	<img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/avatars/user-03.jpg" alt="Author image">
+
+                    	<div class="author-info">
+
+                    		John Doe
+
+                    		<span>CEO, ABC Corp.</span>
+
+                    	</div>
+
+                  </div>                                         
+
+               </li> 
+
+
+
+            </ul> 
+
+
+
+         </div>         
+
+        
+
+      </div> 
+
+
+
+   </section>  -->
+
+
+
+
+
+	<!-- stats
+
+   ================================================== -->
+
+   <!-- <section id="clients">
+
+
+
+		<div class="row animate-this">
+
+			<div class="col-twelve">
+
+
+
+				<div class="client-lists owl-carousel">
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/mozilla.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/bower.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/codepen.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/envato.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/firefox.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/grunt.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/evernote.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/github.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/joomla.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/jQuery.png" alt=""></div>
+
+  					<div><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/clients/wordpress.png" alt=""></div>
+
+				</div>
+
+				
+
+			</div> 
+
+		</div> 
+
+
+
+   </section>  -->
+
+
+
+
+
+	<!-- contact
+
+   ================================================== -->
+
+   <section id="contact">
+
+
+
+      <div class="overlay"></div>
+
+
+
+		<div class="row narrow section-intro with-bottom-sep animate-this">
+
+   		<div class="col-twelve">
+
+   			<h3>Contact</h3>
+
+   			<h1>Get In Touch.</h1>
+
+
+
+   			<p class="lead">Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+   		</div> 
+
+   	</div> <!-- end section-intro -->
+
+
+
+   	<div class="row contact-content">
+
+
+
+   		<div class="col-seven tab-full animate-this">
+
+
+
+   			<h5>Send Us A Message</h5>
+
+
+
+            <!-- form -->
+
+            <form name="contactForm" id="contactForm" method="post">     			
+
+
+
+               <div class="form-field">
+
+ 					   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+
+               </div>
+
+
+
+               <div class="row">
+
+                 	<div class="col-six tab-full">
+
+                 		<div class="form-field">
+
+                 			<input name="contactEmail" type="email" id="contactEmail" placeholder="E-mail" value="" required="">
+
+                 		</div>		      			   
+
+		            </div>
+
+	            	<div class="col-six tab-full">	            
+
+	            		<div class="form-field">
+
+	            			<input name="contactPhone" type="text" id="contactPhone" placeholder="Phone" value="">
+
+	                  </div>		     				   
+
+		            </div>
+
+               </div>
+
+                                         
+
+               <div class="form-field">
+
+	              	<textarea name="contactMessage" id="contactMessage" placeholder="Message" rows="10" cols="50" required=""></textarea>
+
+	            </div> 
+
+
+
+               <div class="form-field">
+
+                  <button class="submitform">Send</button>
+
+               </div>
+
+
+
+      		</form> <!-- end form -->
+
+
+
+            <!-- contact-warning -->
+
+            <div id="message-warning"></div> 
+
+
+
+            <!-- contact-success -->
+
+      		<div id="message-success">
+
+               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+
+      		</div>
+
+
+
+         </div> <!-- end col-seven --> 
+
+
+
+         <div class="col-four tab-full contact-info end animate-this">
+
+
+
+         	<h5>Office Information</h5>
+
+
+
+         	<div class="cinfo">
+
+	   			<h6>Office 1</h6>
+
+	   			<p>
+
+	            	1600 Amphitheatre Parkway<br>
+
+	            	Mountain View, CA<br>
+
+	            	94043 US
+
+	            </p>
+
+	   		</div> <!-- end cinfo -->
+
+
+
+	   		<div class="cinfo">
+
+	   			<h6>Office 2</h6>
+
+	   			<p>
+
+	            	1600 Amphitheatre Parkway<br>
+
+	            	Mountain View, CA<br>
+
+	            	94043 US
+
+	            </p>
+
+	   		</div> <!-- end cinfo -->
+
+
+
+	   		<div class="cinfo">
+
+	   			<h6>Office 3</h6>
+
+	   			<p>
+
+	            	1600 Amphitheatre Parkway<br>
+
+	            	Mountain View, CA<br>
+
+	            	94043 US
+
+	            </p>
+
+	   		</div> <!-- end cinfo -->
+
+
+
+         </div> <!-- end cinfo --> 
+
+
+
+   	</div> <!-- end row contact-content -->
+
+		
+
+	</section> <!-- end contact -->
+
+
+
+
+
+	<!-- footer
+
+   ================================================== -->
+
+	<footer>
+
+     	
+
+	   	<div class="footer-btm">
+
+		    <div class="container">
+
+		        <div class="row">
+
+			        <div class="col-lg-12 main-ftr">
+
+			            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 main-ftr1">
+
+			            	<p class="copyright">Copyright Technological.inc 2017</p>
+
+			            </div>
+
+			            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 backtotop"> <a href="javascript:" id="return-to-top" style="">Back to top <i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a></div>
+
+		        	</div>
+
+		        </div>
+
+		    </div>
+
+		</div> <!-- end footer-bottom -->
+
+	
+
+   </footer>
+
+
+
+   <div id="preloader"> 
+
+    	<div id="loader"></div>
+
+   </div> 
+
+
+
+   <!-- Java Script
+
+   ================================================== --> 
+
+   <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery-3.2.1.min.js"></script>
+
+   <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/plugins.js"></script>
+
+   <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/main.js"></script>
+
+   <script>
+
+        $(document).ready(function () {
+
+
+
+            $('#return-to-top').click(function () {
+
+                $('body,html').animate({
+
+                    scrollTop: 0
+
+                }, 500);
+
+            });
+
+        });
+
+    </script>
+
+	<script type="text/javascript" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	  <script type="text/javascript" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/slick.js"></script>
+
+
+
+
+
+	  <script type="text/javascript">
+
+	    $(document).ready(function(){
+
+	      $('.your-class').slick({
+
+			  dots: true,
+
+			  arrows: false,
+
+			  infinite: false,
+
+			  speed: 300,
+
+			  slidesToShow: 2,
+
+			  slidesToScroll: 2,
+
+			  responsive: [
+
+			    {
+
+			      breakpoint: 1024,
+
+			      settings: {
+
+			        slidesToShow: 2,
+
+			        slidesToScroll: 2,
+
+			        infinite: true,
+
+			        dots: true
+
+			      }
+
+			    },
+
+			    {
+
+			      breakpoint: 600,
+
+			      settings: {
+
+			        slidesToShow: 1,
+
+			        slidesToScroll: 1
+
+			      }
+
+			    },
+
+			    {
+
+			      breakpoint: 480,
+
+			      settings: {
+
+			        slidesToShow: 1,
+
+			        slidesToScroll: 1
+
+			      }
+
+			    }
+
+			    // You can unslick at a given breakpoint now by adding:
+
+			    // settings: "unslick"
+
+			    // instead of a settings object
+
+			  ]
+
+			});
+
+	    });
+
+	  </script>
+
+       
+
+
+
+</body>
+
+
+
+</html>

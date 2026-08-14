@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple Royal Theme</title>
+        <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/jquery.mCustomScrollbar.css" />
+        <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/theme.css" rel="stylesheet">
+        <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/custom.css" rel="stylesheet">
+
+    </head>
+    <body>
+ 
+        <header class="header" id="home">
+            <div class="container-fluid menu-bar" id="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 pr">
+                            <div class="primary-menu">
+                                <nav class="navbar navbar-inverse mb">
+
+                                    <div class="container-fluid">
+                                        <!-- Brand and toggle get grouped for better mobile display -->
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                            <a class="navbar-brand" href=""><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/logo.png"></a>
+                                        </div>
+
+                                        <!-- Collect the nav links, forms, and other content for toggling -->
+                                        <div class="collapse navbar-collapse no-padding" id="bs-example-navbar-collapse-1">
+                                            <ul class="nav navbar-nav">
+                                                <li class="active"><a href="#home">Home</a></li>
+                                                <li><a href="#ceo">CEO Message</a></li>
+                                                <li><a href="#work">Our Work</a></li>
+                                                <li><a href="#team">Our Team</a></li>
+                                                <li><a href="#about">About Us</a></li>
+                                                <li><a href="#contact">Contact</a></li>
+                                                <li><a href="#office">Our Offices</a></li>
+                                            </ul>
+                                        </div><!-- /.navbar-collapse -->
+                                    </div><!-- /.container-fluid -->
+
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+         <section class="ceo-msg-sect" id="ceo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4 text-center">
+                                <div class="media-img"> 
+                                <a href="#"> <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/ceo-img.png" alt="" class="img-resposnive img-circle"> </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="col-md-12 content pl">
+                                    <div class="list-group"> 
+                                        <a class="list-group-item" href="#">
+                                            <h2 class="list-group-item-heading"> CEO's Message</h2>
+                                            <div class="list-group-item-text mCustomScrollbar">
+                                                <p>535 Mission St. Suite 700, San Francisco, CA 94105 </br >Trulia, founded in San Francisco, remains nestled in the heart of the city. Overlooking the massive Transbay Terminal project, Online Property get to enjoy a state-of-the-art office building with more than 80,000 square feet of space and nearly 80 meeting rooms, 535 Mission St. Suite 700, San Francisco, CA 94105 </br >Trulia, founded in San Francisco, remains nestled in the heart of the city. Overlooking the massive Transbay Terminal project, Online Property get to enjoy a state-of-the-art office building with more than 80,000 square feet of space and nearly 80 meeting rooms, 535 Mission St. Suite 700, San Francisco, CA 94105 </br >Trulia, founded in San Francisco, remains nestled in the heart of the city. Overlooking the massive Transbay Terminal project, Online Property get to enjoy a state-of-the-art office building with more than 80,000 square feet of space and nearly 80 meeting rooms, </p>
+                                            </div> 
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="property-sect" id="work">
+                <div class="container">
+                    <div class="row">
+                        <div class="property-portion text-center">
+                                <h2>Our Projects</h2>
+                            </div>
+                        <div class="col-lg-12">
+                            <div class="owl-carousel">
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/1-pic.jpg" alt="" />
+                                                
+                                                <div class="shades"> view </div>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/2-pic.jpg" alt="" />
+                                                
+                                                <div class="shades"> view </div>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                    
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/3-pic.jpg" alt="" />
+                                                
+                                            <div class="shades"> view </div>
+                                        </a>
+                                        </div>
+                                    </figure>
+                                    
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/1-pic.jpg" alt="" />
+                                                <div class="shades"> view </div>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                    
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/2-pic.jpg" alt="" />
+                                                <div class="shades"> view </div>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                    
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/3-pic.jpg" alt="" />
+                                                <div class="shades"> view </div>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                    
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/1-pic.jpg" alt="" />
+                                                <div class="shades"> view </div>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                    
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/2-pic.jpg" alt="" />
+                                                <div class="shades"> view </div>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                    
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <div class="abc">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/3-pic.jpg" alt="" />
+                                                <div class="shades"> view </div>
+                                            </a>
+                                        </div>
+                                    </figure>
+                                    <div class="owl-dots">
+                                        <div class="owl-dot active"><span></span></div>
+                                        <div class="owl-dot"><span></span></div>
+                                        <div class="owl-dot"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 pr">
+                                <div class="about-section">
+                                    <h2>About us</h2>
+                                    <div class="mCustomScrollbar">
+                                        <p>Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest property portal - came on board as an angel investor and took up the role of Chairman at Onlineproperty.com.
+
+In 2014, two of the most successful venture capital firms in the ASEAN region, Catcha Group and Frontier Digital Ventures, invested in a non-controlling interest in Onlineproperty.com.
+Riding that wave of success, we have rolled out the Urdu version of our website, launched our mobile website, and started publishing a dedicated monthly property magazine. The Zameen App, available for download on the App Store, is the latest addition to our proud tradition of excellence in service provision.
+Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest property portal - came on board as an angel investor and took up the role of Chairman at Onlineproperty.com.
+
+In 2014, two of the most successful venture capital firms in the ASEAN region, Catcha Group and Frontier Digital Ventures, invested in a non-controlling interest in Onlineproperty.com.
+Riding that wave of success, we have rolled out the Urdu version of our website, launched our mobile website, and started publishing a dedicated monthly property magazine. The Zameen App, available for download on the App Store, is the latest addition to our proud tradition of excellence in service provision.</p>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                            <div class="col-lg-12 pr team-section">
+                                <div class="team-img text-center">
+                                    <h2>Our Team</h2>
+                                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img.jpg">
+                                        <h3>Ceo</h3>
+                                        <p>Company Name</p>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img.jpg">
+                                        <h3>Ceo</h3>
+                                        <p>Company Name</p>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img.jpg">
+                                        <h3>Ceo</h3>
+                                        <p>Company Name</p>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team-img.jpg">
+                                        <h3>Ceo</h3>
+                                        <p>Company Name</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+             </section>
+            </div>
+
+        <footer class="footer">
+            <div class="container-fluid footer-top" id="office">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 office-addresses text-center">
+                                    <a href="#"><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/img1.png"></a>
+                                <p class="text-center"> (609) 349-6391  (609) 924-4291
+                                nicole.muk@foxroach.com
+                                 Princeton Home Marketing Center
+                                253 Nassau Street, Princeton, NJ 08540</p>
+                            </div>
+
+                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 office-addresses text-center">
+                                    <a href="#"><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/img1.png"></a>
+                                <p class="text-center"> (609) 349-6391  (609) 924-4291
+                                nicole.muk@foxroach.com
+                                 Princeton Home Marketing Center
+                                253 Nassau Street, Princeton, NJ 08540</p>
+                            </div>
+
+                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 office-addresses text-center">
+                                    <a href="#"><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/img1.png"></a>
+                                <p class="text-center"> (609) 349-6391  (609) 924-4291
+                                nicole.muk@foxroach.com
+                                 Princeton Home Marketing Center
+                                253 Nassau Street, Princeton, NJ 08540</p>
+                            </div>
+                            
+                            </div>
+                         <div class="col-md-12 f-logo text-center"><a href="#"><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/footer-logo.png"> </a> 
+                         
+                        </div>
+
+                         <div class="copt-right text-center">
+                            <p>©2015 An independently operated subsidiary of HomeServices of America, Inc., a Berkshire Hathaway affiliate, and a franchisee of BHH Affiliates, LLC.
+Berkshire Hathaway HomeServices and the Berkshire Hathaway HomeServices symbol are registered service marks of HomeServices of America, Inc.® Equal Housing Opportunity.</p> 
+                        </div>
+                        <div class="social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                            <p>powered by property online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </footer>
+
+
+        <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery-3.2.1.min.js"></script>
+        <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/bootstrap.min.js"></script>
+        <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/owl.carousel.js"></script>
+        <script type="text/javascript" src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    dots: true,
+                    nav: false,
+                    navText: [ '', '' ],
+                    margin: 10,
+                    responsiveClass: true,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: false
+                        },
+                        600: {
+                            items: 3,
+                            nav: false
+                        },
+                        1000: {
+                            items: 4,
+                            dots: true,
+                            nav: false,
+                            loop: false
+                        }
+                    }
+                });
+
+
+                $('#return-to-top').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                });
+
+
+                $(function(){
+                    createSticky($("#header"));
+                });
+                function createSticky(sticky) {
+                    if (typeof sticky !== "undefined") {
+                        var pos = sticky.offset().top,
+                                win = $(window);
+                        win.on("scroll", function() {
+                            win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+                        });         
+                    }
+                }
+            });
+        </script>
+        
+        
+        <script>
+        
+        $(document).ready(function(){
+            $(".navbar-nav li a").on('click', function(event) {
+                if (this.hash !== "") {
+                  event.preventDefault();
+                  var hash = this.hash;
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 900, function(){
+                  });
+                } 
+              });
+          
+            $(function(){
+                $('.navbar-nav li a').click(function(){
+                    $('.navbar-nav').find('li.active').removeClass('active');
+                    $(this).parent().addClass('active');
+                    return false; //return false to aviod scroll top.
+                });
+            });
+        })
+        </script>
+        
+    </body>
+</html>

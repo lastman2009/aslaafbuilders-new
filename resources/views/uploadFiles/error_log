@@ -1,0 +1,4 @@
+[09-Feb-2022 01:00:12 UTC] PHP Fatal error:  Cannot use "self" when no class scope is active in /home/rightdeed/public_html/resources/views/uploadFiles/uploadZipFileView.blade.php on line 46
+[30-Apr-2022 11:57:03 UTC] PHP Fatal error:  Cannot use "self" when no class scope is active in /home/rightdeed/public_html/resources/views/uploadFiles/uploadZipFileView.blade.php on line 46
+[29-Jun-2022 07:03:50 UTC] PHP Fatal error:  Cannot use "self" when no class scope is active in /home/rightdeed/public_html/resources/views/uploadFiles/uploadZipFileView.blade.php on line 46
+[06-Jul-2022 19:47:15 UTC] PHP Fatal error:  Cannot use "self" when no class scope is active in /home/rightdeed/public_html/resources/views/uploadFiles/uploadZipFileView.blade.php on line 46

@@ -1,0 +1,16 @@
+/vendor
+/node_modules
+/public/storage
+/public/hot
+/storage/*.key
+.env
+.env.backup
+.phpunit.result.cache
+.idea
+.vscode
+rightdeed_updated.zip
+wp-admin.zip
+
+property/public/unzips1/
+
+public/unzips1/

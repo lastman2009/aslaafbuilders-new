@@ -1,0 +1,4 @@
+@foreach($blocks as $block)
+	<option value="{{ $block->id }}">{{$block->name}}</option>
+@endforeach
+	

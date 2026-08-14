@@ -1,0 +1,8 @@
+[08-Feb-2022 10:24:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/rightdeed/public_html/resources/views/layouts/master.blade.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/layouts/master.blade.php on line 20
+[04-Apr-2022 06:20:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/rightdeed/public_html/resources/views/layouts/master.blade.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/rightdeed/public_html/resources/views/layouts/master.blade.php on line 20

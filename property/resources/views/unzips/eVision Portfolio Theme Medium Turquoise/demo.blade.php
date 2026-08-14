@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Golden Theme</title>
+
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/font-awesome.css" rel="stylesheet">
+
+
+
+
+
+    <link rel="stylesheet" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/nanoscroller.css">
+
+    
+
+
+
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/theme.css" rel="stylesheet">
+
+    <link href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/custom.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet"> 
+
+    <link rel="stylesheet" type="text/css" href="<?php public_path(); ?>/unzips/{{ $theme_name }}/css/flexslider.css">
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <header class="header" id="home1">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="container pr">
+
+                    <div class="col-lg-12 ">
+
+                        <nav class="navbar navbar-default top-nav">
+
+
+
+                            <div class="navbar-header">
+
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+                                    <span class="icon-bar"></span>
+
+                                    <span class="icon-bar"></span>
+
+                                    <span class="icon-bar"></span>                        
+
+                                </button>
+
+                                <a class="navbar-brand" href="#"><img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/logo_YourLogoHere.png"> </a>
+
+                            </div>
+
+                            <div class="collapse navbar-collapse pr" id="myNavbar">
+
+                                <ul class="nav navbar-nav">
+
+                                    <li><a href="#home1">HOME</a></li>
+
+                                    <li><a href="#about">ABOUT US</a></li>
+
+                                    <li><a href="#property">OUR WORK</a></li>                    
+
+                                    <li><a href="#team">OUR TEAM</a></li>
+
+                                   
+
+                                    
+
+                                </ul>
+
+
+
+                            </div>
+
+
+
+                        </nav>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+            
+
+    <div class="col-md-12 no-padding banner">
+
+        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/banner.jpeg">
+
+        <div class="modal-links">
+
+            <ul class="list-unstyled">
+
+                <li><a href="#" data-toggle="modal" data-target="#ceoMessage">CEO MESSAGE</a> </li>
+
+                <li><a data-toggle="modal" data-target=".bs-example-modal-lg">ADDERSS</a> </li>
+
+                <li><a href="#" data-toggle="modal" data-target="#contactUs">CONTACT US</a> </li>
+
+                
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+    <div class="main">
+
+
+
+        <section class="aboutus-sect" id="about">
+
+            <div class="container-fluid">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-12 aboutus">
+
+                            <div class="col-md-7">
+
+                                <div class="aboutus-content">
+
+                                    <h2>Some Words About Us</h2>
+
+                                    <p>Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest property portal - came on board as an angel investor Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest property portal - came on board as an angel investor </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="col-md-5 aboutus-img">
+
+                                <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/home-image_03.png">
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <section class="property-sect" id="property">
+
+            <div class="container-fluid">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+
+
+                            <div class="property-portion">
+
+                                <h2>Our Most Recent Work</h2>
+
+                                
+
+                            </div>
+
+                          
+
+                                <div class="col-md-4 project">
+
+
+
+                                    <figure class="figure">
+
+                                      <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/project.jpg" alt="Avatar" class="image" style="width:100%">
+
+                                      <figcaption class="figure-caption col-sm-12 col-xs-12">
+
+                                        <div class="col-md-7 col-sm-7 col-xs-7 name">
+
+                                           <p>Luxury Farmhouse</p>
+
+                                           
+
+                                        </div>
+
+
+
+                                       <div class="col-md-5 col-sm-5 col-xs-5 amount">
+
+                                           <p>30,50,00000</p>
+
+                                       </div>
+
+
+
+                                       <div class="col-md-12 col-sm-12 col-xs-12 adrs">
+
+                                           <p><span><i class="fa fa-map-marker loc-marker" aria-hidden="true"></i>Dha, Phase 5, Lahore</span></p> 
+
+                                       </div>
+
+                                      </figcaption>
+
+                                    </figure>
+
+  
+
+                                      <div class="middle">
+
+                                        <div class="text">
+
+                                            <a href="#">View</a>
+
+                                        </div>
+
+                                      </div>
+
+                                </div>
+
+
+
+                              <div class="col-md-4 project">
+
+
+
+                                    <figure class="figure">
+
+                                      <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/project.jpg" alt="Avatar" class="image" style="width:100%">
+
+                                      <figcaption class="figure-caption col-sm-12 col-xs-12">
+
+                                        <div class="col-md-7 col-sm-7 col-xs-7 name">
+
+                                           <p>Luxury Farmhouse</p>
+
+                                           
+
+                                        </div>
+
+
+
+                                       <div class="col-md-5 col-sm-5 col-xs-5 amount">
+
+                                           <p>30,50,00000</p>
+
+                                       </div>
+
+
+
+                                       <div class="col-md-12 col-sm-12 col-xs-12 adrs">
+
+                                           <p><span><i class="fa fa-map-marker loc-marker" aria-hidden="true"></i>Dha, Phase 5, Lahore</span></p> 
+
+                                       </div>
+
+                                      </figcaption>
+
+                                    </figure>
+
+  
+
+                                      <div class="middle">
+
+                                        <div class="text">
+
+                                            <a href="#">View</a>
+
+                                        </div>
+
+                                      </div>
+
+                                </div>
+
+
+
+                             <div class="col-md-4 project">
+
+
+
+                                    <figure class="figure">
+
+                                      <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/project.jpg" alt="Avatar" class="image" style="width:100%">
+
+                                      <figcaption class="figure-caption col-sm-12 col-xs-12">
+
+                                        <div class="col-md-7 col-sm-7 col-xs-7 name">
+
+                                           <p>Luxury Farmhouse</p>
+
+                                           
+
+                                        </div>
+
+
+
+                                       <div class="col-md-5 col-sm-5 col-xs-5 amount">
+
+                                           <p>30,50,00000</p>
+
+                                       </div>
+
+
+
+                                       <div class="col-md-12 col-sm-12 col-xs-12 adrs">
+
+                                           <p><span><i class="fa fa-map-marker loc-marker" aria-hidden="true"></i>Dha, Phase 5, Lahore</span></p> 
+
+                                       </div>
+
+                                      </figcaption>
+
+                                    </figure>
+
+  
+
+                                      <div class="middle">
+
+                                        <div class="text">
+
+                                            <a href="#">View</a>
+
+                                        </div>
+
+                                      </div>
+
+                                </div>
+
+
+
+                         <div class="col-md-4 project margin-top">
+
+
+
+                                    <figure class="figure">
+
+                                      <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/project.jpg" alt="Avatar" class="image" style="width:100%">
+
+                                      <figcaption class="figure-caption col-sm-12 col-xs-12">
+
+                                        <div class="col-md-7 col-sm-7 col-xs-7 name">
+
+                                           <p>Luxury Farmhouse</p>
+
+                                           
+
+                                        </div>
+
+
+
+                                       <div class="col-md-5 col-sm-5 col-xs-5 amount">
+
+                                           <p>30,50,00000</p>
+
+                                       </div>
+
+
+
+                                       <div class="col-md-12 col-sm-12 col-xs-12 adrs">
+
+                                           <p><span><i class="fa fa-map-marker loc-marker" aria-hidden="true"></i>Dha, Phase 5, Lahore</span></p> 
+
+                                       </div>
+
+                                      </figcaption>
+
+                                    </figure>
+
+  
+
+                                      <div class="middle">
+
+                                        <div class="text">
+
+                                            <a href="#">View</a>
+
+                                        </div>
+
+                                      </div>
+
+                                </div>
+
+                           <div class="col-md-4 project margin-top">
+
+
+
+                                    <figure class="figure">
+
+                                      <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/project.jpg" alt="Avatar" class="image" style="width:100%">
+
+                                      <figcaption class="figure-caption col-sm-12 col-xs-12">
+
+                                        <div class="col-md-7 col-sm-7 col-xs-7 name">
+
+                                           <p>Luxury Farmhouse</p>
+
+                                           
+
+                                        </div>
+
+
+
+                                       <div class="col-md-5 col-sm-5 col-xs-5 amount">
+
+                                           <p>30,50,00000</p>
+
+                                       </div>
+
+
+
+                                       <div class="col-md-12 col-sm-12 col-xs-12 adrs">
+
+                                           <p><span><i class="fa fa-map-marker loc-marker" aria-hidden="true"></i>Dha, Phase 5, Lahore</span></p> 
+
+                                       </div>
+
+                                      </figcaption>
+
+                                    </figure>
+
+  
+
+                                      <div class="middle">
+
+                                        <div class="text">
+
+                                            <a href="#">View</a>
+
+                                        </div>
+
+                                      </div>
+
+                                </div>
+
+
+
+                            <div class="col-md-4 project margin-top">
+
+
+
+                                    <figure class="figure">
+
+                                      <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/project.jpg" alt="Avatar" class="image" style="width:100%">
+
+                                      <figcaption class="figure-caption col-sm-12 col-xs-12">
+
+                                        <div class="col-md-7 col-sm-7 col-xs-7 name">
+
+                                           <p>Luxury Farmhouse</p>
+
+                                           
+
+                                        </div>
+
+
+
+                                       <div class="col-md-5 col-sm-5 col-xs-5 amount">
+
+                                           <p>30,50,00000</p>
+
+                                       </div>
+
+
+
+                                       <div class="col-md-12 col-sm-12 col-xs-12 adrs">
+
+                                           <p><span><i class="fa fa-map-marker loc-marker" aria-hidden="true"></i>Dha, Phase 5, Lahore</span></p> 
+
+                                       </div>
+
+                                      </figcaption>
+
+                                    </figure>
+
+  
+
+                                      <div class="middle">
+
+                                        <div class="text">
+
+                                            <a href="#">View</a>
+
+                                        </div>
+
+                                      </div>
+
+                                </div>
+
+
+
+                        </div>        
+
+                    </div>
+
+                </div>    
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <div class="team-heading">
+
+            <div class="container">
+
+                <h1>Meet Our Professional Team</h1>
+
+            </div>
+
+            
+
+            <section class="team-sect" id="team">
+
+            <div class="container-fluid">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-12 paddding">
+
+                            
+
+
+
+                                <div class="owl-carousel">
+
+
+
+                                    <div class="item staff">
+
+                                            <div class="slider-content">
+
+                                               
+
+                                                   <div class="col-lg-5 col-md-12">
+
+                                                       <figure class="figure">
+
+                                                            <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team.png" class="img-circle">
+
+
+
+                                                        </figure>
+
+                                                   </div>
+
+
+
+                                                   <div class="col-lg-7 col-md-12 team-content">
+
+                                                       <h2>M.F Hussain</h2>
+
+                                                       <h3>Marketing Designation</h3>
+
+                                                       <p>4 Years of Experience</p>
+
+                                                       <p class="email">info@gmail.com</p>
+
+                                                       <ul class="list-unstyled list-inline">
+
+                                                           <li>0300-1234567</li>
+
+                                                           <li><a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span> </a> </li>
+
+                                                           <li><a href="#"><span><i class="fa fa-google-plus" aria-hidden="true"></i></span> </a> </li>
+
+                                                       </ul>
+
+                                                   </div>
+
+
+
+                                                   
+
+                                            </div>
+
+
+
+                                    </div>
+
+
+
+
+
+                                    <div class="item">
+
+                                        <div class="slider-content">
+
+                                               
+
+                                               <div class="col-lg-5 col-md-12">
+
+                                                   <figure class="figure">
+
+                                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team.png" class="img-circle">
+
+
+
+                                                    </figure>
+
+                                               </div>
+
+
+
+                                               <div class="col-lg-7 col-md-12 team-content">
+
+                                                   <h2>M.F Hussain</h2>
+
+                                                   <h3>Marketing Designation</h3>
+
+                                                   <p>4 Years of Experience</p>
+
+                                                   <p class="email">info@gmail.com</p>
+
+                                                   <ul class="list-unstyled list-inline">
+
+                                                       <li>0300-1234567</li>
+
+                                                       <li><a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span> </a> </li>
+
+                                                       <li><a href="#"><span><i class="fa fa-google-plus" aria-hidden="true"></i></span> </a> </li>
+
+                                                   </ul>
+
+                                               </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                    <div class="item">
+
+                                            <div class="slider-content">
+
+                                               
+
+                                                   <div class="col-lg-5 col-md-12">
+
+                                                       <figure class="figure">
+
+                                                            <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team.png" class="img-circle">
+
+
+
+                                                        </figure>
+
+                                                   </div>
+
+
+
+                                                   <div class="col-lg-7 col-md-12 team-content">
+
+                                                       <h2>M.F Hussain</h2>
+
+                                                       <h3>Marketing Designation</h3>
+
+                                                       <p>4 Years of Experience</p>
+
+                                                       <p class="email">info@gmail.com</p>
+
+                                                       <ul class="list-unstyled list-inline">
+
+                                                           <li>0300-1234567</li>
+
+                                                           <li><a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span> </a> </li>
+
+                                                           <li><a href="#"><span><i class="fa fa-google-plus" aria-hidden="true"></i></span> </a> </li>
+
+                                                       </ul>
+
+                                                   </div>
+
+                                            </div>
+
+
+
+                                    </div>
+
+
+
+
+
+                                    <div class="item">
+
+                                        <div class="slider-content">
+
+                                           
+
+                                               <div class="col-lg-5 col-md-12">
+
+                                                   <figure class="figure">
+
+                                                        <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team.png" class="img-circle">
+
+
+
+                                                    </figure>
+
+                                               </div>
+
+
+
+                                               <div class="col-lg-7 col-md-12 team-content">
+
+                                                   <h2>M.F Hussain</h2>
+
+                                                   <h3>Marketing Designation</h3>
+
+                                                   <p>4 Years of Experience</p>
+
+                                                   <p class="email">info@gmail.com</p>
+
+                                                   <ul class="list-unstyled list-inline">
+
+                                                       <li>0300-1234567</li>
+
+                                                       <li><a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span> </a> </li>
+
+                                                       <li><a href="#"><span><i class="fa fa-google-plus" aria-hidden="true"></i></span> </a> </li>
+
+                                                   </ul>
+
+                                               </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+
+
+                
+
+
+
+
+
+                <footer>
+
+                    <div class="footer">
+
+                        <div class="container-fluid footer-top">
+
+                            <div class="container">
+
+                                <div class="row">
+
+                                    <div class="col-md-12 col-sm-12 followon col-xs-12 text-center ">
+
+                                            <h2><span>FOLLOW ON</span> </h2>
+
+                                            <ul class="no-padding">
+
+                                                <li>(609) 349-6391  (609) 924-4291</li>
+
+                                                <li>nicole.muk@foxroach.com</li>
+
+                                                <li>Princeton Home Marketing Center</li>
+
+                                            </ul>
+
+                                            <ul class="list-inline follow-social">
+
+                                                <li><a href="#"><span><i class="fa fa-facebook" aria-hidden="true"></i></span></a></li>
+
+                                                <li><a href="#"><span><i class="fa fa-envelope" aria-hidden="true"></i></span></a>  </li>
+
+                                            </ul>
+
+                                     </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="container-fluid footer-btm">
+
+                            <div class="container">
+
+                                <div class="row">
+
+                                    <div class="col-lg-12">
+
+
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                            <p class="copyright">ALL REWARDS ARE CLEAR TECHNOLOGICALINC.</p>				
+
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 backtotop">
+
+                                            <a href="javascript:" id="return-to-top" style=""><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Back to top</a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </footer>
+
+
+
+            </body>
+
+            </html>
+
+
+
+            <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery-3.2.1.min.js"></script>
+
+            <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/bootstrap.min.js"></script>
+
+            
+
+
+
+            <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/owl.carousel.js"></script>
+
+            <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/owl.carousel.min.js"></script>
+
+            <script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.nanoscroller.js"></script>
+
+            <script type="text/javascript">
+
+                $('#return-to-top').click(function () {      
+
+                    $('body,html').animate({
+
+                        scrollTop: 0                      
+
+                    }, 500);
+
+                });
+
+            </script>
+
+
+
+            <script>
+
+                $(document).ready(function(){
+
+
+
+
+
+                    $('.owl-carousel').owlCarousel({
+
+                        loop: true,
+
+                        dots: true,
+
+                        nav: false,
+
+                        
+
+                        margin: 15,
+
+                        responsiveClass: true,
+
+                        responsive: {
+
+                            0: {
+
+                                items: 1,
+
+                                nav: false
+
+                            },
+
+                            580: {
+
+                                items: 1,
+
+                                nav: false
+
+                            },
+
+                            600: {
+
+                                items: 3,
+
+                                nav: false
+
+                            },
+
+                            1024: {
+
+                                items: 3,
+
+                                dots: true,
+
+                                nav: false
+
+                            }
+
+                        }
+
+                    });
+
+
+
+                    // $('.owl-carousel-address').owlCarousel({
+
+                    //     loop: true,
+
+                    //     dots: true,
+
+                    //     nav: false,
+
+                        
+
+                    //     margin: 15,
+
+                    //     responsiveClass: true,
+
+                    //     responsive: {
+
+                    //         0: {
+
+                    //             items: 3,
+
+                    //             nav: true
+
+                    //         },
+
+                    //         580: {
+
+                    //             items: 3,
+
+                    //             nav: false
+
+                    //         },
+
+                    //         600: {
+
+                    //             items: 3,
+
+                    //             nav: false
+
+                    //         },
+
+                    //         1024: {
+
+                    //             items: 3,
+
+                    //             dots: true,
+
+                    //             nav: false
+
+                    //         }
+
+                    //     }
+
+                    // });
+
+
+
+// Add smooth scrolling to all links in navbar + footer link
+
+$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+
+
+// Make sure this.hash has a value before overriding default behavior
+
+if (this.hash !== "") {
+
+
+
+// Prevent default anchor click behavior
+
+event.preventDefault();
+
+
+
+// Store hash
+
+var hash = this.hash;
+
+
+
+// Using jQuery's animate() method to add smooth page scroll
+
+// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+
+$('html, body').animate({
+
+    scrollTop: $(hash).offset().top
+
+}, 900, function(){
+
+
+
+// Add hash (#) to URL when done scrolling (default click behavior)
+
+window.location.hash = hash;
+
+});
+
+} // End if
+
+});
+
+})
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+    $(document).ready( function() {
+
+
+
+        $(".nano").nanoScroller();    
+
+
+
+    });
+
+
+
+
+
+</script>
+
+
+
+
+
+<div class="modal fade ceo-msg" id="ceoMessage" role="dialog">
+
+    <div class="modal-dialog modal-lg">
+
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+         
+
+          <div class="col-md-12">
+
+              <div class="col-sm-5">
+
+                  <img src="<?php public_path(); ?>/unzips/{{ $theme_name }}/images/team.png" class="img-circle ceo-img">   
+
+              </div>
+
+
+
+              <div class="col-md-7 ceo-msg">
+
+                  <p>Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest property portal - came on board as an angel investor Onlinproperty.com was founded in 2006 by two Pakistani entrepreneur brothers, Zeeshan Ali Khan and Imran Ali Khan. In 2012, Gilles Blanchard, co-founder of SeLoger.com - France's largest property portal - came on board as an angel investor </p>
+
+              </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+
+           <div class="flexslider">
+
+                  <ul class="slides">
+
+                    <li>
+
+                        <div class="address-office">
+
+                            <h3>Lahore Office</h3>
+
+                            <ul>
+
+                                <li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+
+                                <li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+
+                                <li><i class="fa fa-map-marker"></i>G1, Center point, Cavlary Ground, Next to Ehsas Clinic Gulberg, Lahore</li> 
+
+                            </ul>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <div class="address-office">
+
+                            <h3>Karachi Office</h3>
+
+                            <ul>
+
+                                <li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+
+                                <li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+
+                                <li><i class="fa fa-map-marker"></i>G1, Center point, Cavlary Ground, Next to Ehsas Clinic Gulberg, Lahore</li> 
+
+                            </ul>
+
+                        </div>
+
+                    </li>
+
+
+
+                    <li>
+
+                        <div class="address-office">
+
+                            <h3>Islamabad Office</h3>
+
+                            <ul>
+
+                                <li><i class="fa fa-phone"></i> (609) 349-6391  (609) 924-4291</li>
+
+                                <li><i class="fa fa-envelope"></i> info@propertyonline.com</li>
+
+                                <li><i class="fa fa-map-marker"></i>G1, Center point, Cavlary Ground, Next to Ehsas Clinic Gulberg, Lahore</li> 
+
+                            </ul>
+
+                        </div>
+
+                    </li>
+
+                    
+
+                  </ul>
+
+            </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<div class="modal fade" id="contactUs" role="dialog">
+
+    <div class="modal-dialog modal-lg">
+
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+            <form>
+
+                <div class="col-md-6">
+
+                     <input class="form-control" type="text" id="fname" name="firstname" placeholder="Name">     
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Email Address">
+
+                </div>
+
+                      
+
+                <div class="col-md-12">
+
+                    <textarea class="msg form-control" id="comment" name="comment" placeholder="Message"></textarea>
+
+                    <input type="submit" value="Submit" class="form-submit">
+
+                </div>
+
+            </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</div>
+
+<script src="<?php public_path(); ?>/unzips/{{ $theme_name }}/js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready( function() {
+
+
+
+         $('.flexslider').flexslider();
+
+
+
+    });
+
+
+
+
+
+</script>

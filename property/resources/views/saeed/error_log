@@ -1,0 +1,18 @@
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(./header.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 1
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(./header.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 1
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(): Failed opening './header.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/rightdeed/public_html/resources/views/saeed/index.php on line 1
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(./aside.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 2
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(./aside.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 2
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(): Failed opening './aside.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/rightdeed/public_html/resources/views/saeed/index.php on line 2
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(./footer.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 415
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(./footer.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 415
+[12-Feb-2022 11:47:55 UTC] PHP Warning:  include(): Failed opening './footer.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/rightdeed/public_html/resources/views/saeed/index.php on line 415
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(./header.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 1
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(./header.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 1
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(): Failed opening './header.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/rightdeed/public_html/resources/views/saeed/index.php on line 1
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(./aside.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 2
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(./aside.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 2
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(): Failed opening './aside.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/rightdeed/public_html/resources/views/saeed/index.php on line 2
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(./footer.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 415
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(./footer.php): failed to open stream: No such file or directory in /home/rightdeed/public_html/resources/views/saeed/index.php on line 415
+[23-Jun-2022 20:01:52 UTC] PHP Warning:  include(): Failed opening './footer.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/rightdeed/public_html/resources/views/saeed/index.php on line 415

@@ -1,0 +1,592 @@
+
+@media (max-width:1200px) {
+.companies img {
+	width: 100%
+}
+.companies .social-icons {
+	width: 133px;
+}
+.social-icons li i {
+	font-size: 16px;
+}
+.companies .social-icons li {
+	padding: 3px 15px 0
+}
+.navbar-nav li a {
+	font-size: 14px;
+}
+.navbar-brand {
+	width: 200px
+}
+.navbar-brand img {
+	width: 100%
+}
+.nav-pills > li > a {
+	font-size: 14px;
+}
+.btn-default.search {
+	padding-bottom: 3px;
+}
+.locations img, .quick-access-wraper img {
+	width: 100%
+}
+}
+
+@media (max-width:1199px) {
+.signup {
+	padding: 1px 8px;
+	margin-top: 7px;
+}
+.social-icons {
+	left: 35px;
+}
+.family-house figure {
+	width: 100%;
+}
+.properties .social-icons li {
+	line-height: 40px;
+}
+.signup a {
+	font-size: 12px;
+}
+.prices-wraper {
+	width: 100%
+}
+.banner-inner-contents {
+	padding-bottom: 20px;
+}
+.family-house p a {
+	margin: 5px 23px;
+}
+.projects .carousel-control.left, .projects .carousel-control.right {
+	top: 170px;
+}
+
+.properties .social-icons {
+	left: 40px;
+}
+.latest-properties .social-icons {
+	height: 135px;
+	left: 5px;
+	margin-bottom: 0;
+	padding: 0;
+	top: 5px;
+	width: 25px;
+}
+.latest-properties .social-icons li{ line-height:45px; padding:0}
+
+.latest-properties .btn-style.details.no-bg:hover {
+	border-color: #fa6919;
+}
+.latest-properties .for-sale {
+	width: 72px;
+	top: 10px;
+	padding: 5px 0
+}
+.latest-properties a:focus, .latest-properties a:hover {
+	color: #fa6919
+}
+.projects .features {
+	margin-bottom: 30px;
+}
+.projects {
+	padding: 60px 0
+}
+.projects .for-sale{ padding:10px 0;}
+.projects .area{ width:114px; top:155px; padding:4px 0; font-size:13px; height:27px;}
+.view-more:hover {
+	color: #fa6919
+}
+.q-acces{ margin-top:8px;}
+#input-with-keypress-0{ width:56px;}
+}
+
+@media (max-width:1024px) {
+.top-bar .social-media{ margin-left:5px;}
+.navbar{ height:auto; margin-top:26px;}	
+.banner-inner-contents-left h4 {
+	min-height: 364px;
+}
+.projects .carousel-control.right {
+	right: -15px;
+	width: 20px;
+}
+.signup {
+	margin-left: 10px;
+}
+.rang-slider {
+	width: 80%
+}
+.range-inputs {
+	margin-top: 0
+}
+.features figure {
+	padding-top: 0
+}
+.prices-details .details {
+	float: right;
+	margin: -3px 12px;
+	text-align: center;
+	width: 80px;
+}
+.banner-inner-contents {
+	min-height: 336px;
+}
+.family-house p {
+	margin-left: 10px;
+	font-size: 12px;
+}
+.prices-details .details {
+	font-size: 12px;
+	margin: 0 5px;
+	width: 74px;
+}
+.projects .prices-details .details {
+	float: none;
+}
+.view-more {
+	border: 1px solid #818181;
+	color: #818181;
+	display: inline-block;
+	font-size: 15px;
+	height: 36px;
+	line-height: 24px;
+	padding: 5px 15px;
+	text-align: left;
+	width: 177px;
+}
+.view-more i {
+	border-bottom: 35px solid #fa6919;
+	font-size: 28px;
+	line-height: 38px;
+	margin-top: -5px;
+	width: 78px;
+}
+.projects .viewMore {
+	line-height: 32px;
+	width: 150px;
+}
+.blogs .family-house figure img {
+	border: none
+}
+.blogs .for-sale {
+	right: 16px;
+	top: 18px;
+	width: 77px;
+	font-size: 11px;
+	padding: 3px 0;
+}
+.blogs .family-house p {
+	font-size: 12px;
+	padding-top: 5px;
+}
+.blogs .family-house {
+	min-height: 220px;
+}
+.properties .for-sale {
+	font-size: 10px;
+	padding: 4px 0;
+	right: 13px;
+	top: -8px;
+	width: 75px;
+}
+.properties .family-house p a {
+	margin: 5px 14px;
+}
+.properties .prices-details p {
+	font-size: 12px;
+}
+.locations h3 {
+	font-size: 18px;
+}
+.properties .family-house {
+	position: relative;
+	z-index: 15;
+}
+.projects .for-sale {
+	font-size: 12px;
+	padding: 8px 0;
+	width: 134px;
+}
+.projects .family-house {
+}
+.agencies .view-more i {
+	font-size: 20px;
+}
+
+.panel-heading {
+	padding: 12px 15px;
+}
+.page-footer h2 {
+	font-size: 25px
+}
+.footer-logo {
+	margin-bottom: 20px;
+	width: 158px;
+}
+.page-footer p {
+	font-size: 12px;
+}
+.page-footer ul li a {
+	font-size: 14px;
+}
+.page-footer ul li {
+	line-height: 24px;
+}
+.page-footer ul.address li i {
+	font-size: 16px;
+	margin-right: 0
+}
+.page-footer ul.address li a {
+	font-size: 11px;
+}
+.page-footer ul.address li p {
+	line-height: 18px;
+}
+.page-footer {
+	height: 320px;
+	padding: 25px 0;
+}
+.projects .prices-details {
+	display: block;
+	float: none;
+	text-align: center;
+	width: auto;
+}
+.latest-properties .social-icons li {
+	line-height: 40px;
+}
+}
+
+@media (max-width:990px) {
+.navbar-form .form-control {
+	margin: 0 0 0 5px;
+}
+.form-select {
+	width: 180px;
+	margin: 0 0 0 5px
+}
+.range-wraper {
+	float: left;
+	margin-top: 1px;
+	width: 100%;
+}
+.form-select select {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+}
+.form-select {
+	height: 30px;
+	margin-bottom: 15px;
+}
+.navbar-form .form-control {
+	height: 30px;
+	margin-bottom: 15px;
+}
+.banner-inner-contents .btn-style {
+	width: 120px;
+	padding: 2px 0
+}
+.banner-inner-contents-left h4 {
+	min-height: 336px;
+}
+.main-section {
+	margin-top: 140px;
+}
+.features h2 {
+	font-size: 25px;
+}
+.features p {
+	font-size: 14px;
+}
+.family-house h4 {
+	font-size: 14px;
+}
+.family-house p {
+	font-size: 12px;
+}
+.navbar-default .navbar-nav > li > a {
+	font-size: 13px;
+}
+.properties .social-icons {
+	width: 168px;
+	left: 22px;
+	height: 30px;
+}
+.properties .social-icons li {
+	line-height: 30px;
+	width: auto;
+	padding: 0 20px;
+}
+.latest-properties .social-icons li {
+	line-height: 30px;
+	width: auto;
+	padding: 12px 10px;
+}
+.latest-properties .social-icons {
+	height: 158px;
+	left: 5px;
+	margin-bottom: 0;
+	padding: 0;
+	top: 5px;
+	width: 30px;
+}
+.latest-properties .col-md-12.text-center.margin-top, .agencies .col-md-12.text-center.margin-top {
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.projects .carousel-control.right {
+	right: -56px;
+}
+.companies .social-icons {
+	width: 158px;
+}
+.companies .social-icons li {
+	padding: 3px 19px 0;
+}
+.blogs .family-house h4 {
+	font-size: 14px;
+	margin: 4px 0
+}
+.page-footer {
+	height: 340px;
+}
+.companies img {
+	width: auto;
+}
+}
+
+@media (max-width:768px) {
+.header {
+	height: 100px
+}
+.navbar-nav li:hover::after, .navbar-nav li.active::after {
+	display: none
+}
+.navbar-nav li:hover::before, .navbar-nav li.active::before {
+	display: none
+}
+#bs-example-navbar-collapse-1 {
+	border: 0 none;
+	float: right;
+	margin-right: -13px;
+	margin-top: -25px;
+}
+.nav > li > a:hover, .nav > li .active > a {
+	background: #fc6335 !important;
+	color: #fff !important;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+	background: #fc6335 !important;
+	color: #fff !important;
+}
+.no-padding-left, .no-padding-right {
+	padding: 0 15px;
+	width: 100%;
+	margin: 0
+}
+.banner-inner-contents .navbar-form {
+	float: left;
+	margin: 0
+}
+.btn-default.search {
+	margin-top: 9px;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+.nav-pills > li > a {
+	padding: 4px 15px;
+}
+.nav-pills > li {
+	border: none
+}
+.nav-pills::before {
+	bottom: 1px
+}
+.nav-pills > li {
+	margin-top: 1px;
+}
+.banner-inner-contents-left h4 {
+	min-height: 98px;
+	padding-top: 33px;
+}
+.navbar {
+	height: 72px;
+}
+.main-section {
+	margin-top: 20px;
+}
+.nav-pills {
+	padding: 8px 0;
+	position: relative;
+}
+.btn-default.search {
+	line-height: 28px;
+}
+.nav-pills::before {
+	bottom: 7px;
+}
+.vc_container {
+	background-position: 33px top;
+	background-size: 100%
+}
+.header {
+	height: auto;
+}
+.banner-contents {
+	margin: 110px auto 0;
+}
+.projects {
+	background-size: 265%
+}
+}
+
+@media (min-width:320px) and (max-width:767px) {
+#bs-example-navbar-collapse-1 {
+	border: 0 none;
+	float: right;
+	margin-right: 12px;
+	margin-top: -25px;
+	width: 150px;
+}
+.nav.navbar-nav.navbar-right {
+	border: 1px solid #ccc;
+}
+.nav.navbar-nav.navbar-right li {
+	border-bottom: 1px solid #ccc;
+}
+.btn-default.search {
+	margin-top: 8px;
+}
+.properties .for-sale {
+	padding: 8px 15px;
+	right: 20px;
+	top: -15px;
+	font-size: 14px;
+	width: 100px;
+}
+.properties .social-icons {
+	display: block;
+	float: none;
+	height: 40px;
+	text-align: center;
+	width: 94%;
+}
+.properties .social-icons li {
+	display: inline-block;
+	float: none;
+	line-height: 40px;
+}
+.family-house {
+	border: 1px solid #dfdfdf;
+	float: left;
+	min-height: 300px;
+	padding: 0;
+	width: 100%;
+}
+.latest-properties .social-icons {
+	height: 97%
+}
+.latest-properties .social-icons li {
+	padding: 67px 10px;
+}
+.projects {
+	background: rgba(0, 0, 0, 0) url("../images/bg-slide.jpg") no-repeat scroll 0 0 / 100% 244%;
+	color: #fff;
+	height: 760px;
+}
+.companies img {
+	width: 100%
+}
+.companies .social-icons {
+	height: 50px;
+	width: 100%;
+}
+.social-icons li i {
+	font-size: 33px;
+}
+.companies .social-icons li {
+	padding: 0px 14% 0;
+	line-height: 36px;
+}
+.companies .social-icons li i {
+	line-height: 48px;
+}
+.page-footer {
+	height: 100%;
+}
+.page-footer ul.address li p {
+	width: auto
+}
+.page-footer ul.address li i {
+	margin-top: 0
+}
+.page-footer ul.address li a {
+	float: left;
+	font-size: 11px;
+	margin-top: -3px;
+}
+.page-footer ul.address li {
+	float: left;
+	margin-right: 20px;
+}
+#bs-example-navbar-collapse-1 {
+	border: 0 none;
+	float: right;
+	margin-right: -5px;
+	margin-top: -54px;
+	width: 150px;
+}
+}
+
+@media (max-width:767px) {
+.latest-properties .social-icons {
+	width: 45px;
+}
+.latest-properties .social-icons li {
+	padding: 55px 15px;
+}
+.latest-properties .social-icons li i {
+	font-size: 20px;
+}
+.projects .carousel-control.right {
+	right: 15px;
+}
+.properties .for-sale {
+	width: 104px;
+}
+.properties .social-icons {
+	width: 90%
+}
+.latest-properties .social-icons li {
+	padding: 27px 15px;
+}
+.projects .viewMore {
+	margin-top: -82px;
+}
+.projects {
+	height: 554px;
+}
+.companies .social-icons li {
+	padding: 0 13% 0
+}
+.blogs .carousel-control.left, .blogs .carousel-control.right {
+	top: -110px
+}
+}
+
+/*
+
+
+@media (max-width:580px){ body{ background:green}}
+
+@media (max-width:480px){}
+
+@media (max-width:360px){}
+
+@media (max-width:320px){ body{ background:yellow}}
+
+*/

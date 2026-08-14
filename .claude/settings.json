@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tasklist //FI \"IMAGENAME eq php.exe\")",
+      "Bash(netstat -ano)",
+      "PowerShell(Get-Process php -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force -Confirm:$false)",
+      "PowerShell(\"killed\")",
+      "PowerShell(Set-Location \"c:\\\\xampp\\\\htdocs\\\\rightdeed11\"; Start-Process -FilePath \"php\" -ArgumentList \"artisan\",\"serve\",\"--port=8099\" -WindowStyle Hidden; Start-Sleep -Seconds 3; try { \\(Invoke-WebRequest -Uri \"http://127.0.0.1:8099/\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { $_.Exception.Message })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:8099/\" -UseBasicParsing -TimeoutSec 10; $r.StatusCode; \\($r.Content -match 'images\\\\.unsplash\\\\.com/photo-1560448204'\\) } catch { $_.Exception.Message })",
+      "Bash(grep -n \"^b,strong\\\\|^strong,b\\\\|b{color\\\\|^b{\" \"c:/xampp/htdocs/rightdeed11/public/assets/css-new/all-in-one.css\" \"c:/xampp/htdocs/rightdeed11/public/assets/css-new/style.css\")",
+      "Bash(grep -no \"\\\\.feature-prop-heading[^{]*{[^}]*}\\\\|h3{[^}]*color[^}]*}\\\\|^h1,h2,h3[^{]*{[^}]*}\" \"c:/xampp/htdocs/rightdeed11/public/assets/css-new/style.css\")",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:8099/assets/css-new/aslaaf-theme.css\" -UseBasicParsing -TimeoutSec 10; \\($r.Content -match '\\\\.ab-city\\\\{position:relative;height:170px;border-radius:12px;overflow:hidden;color:#fff;display:block;background:var\\\\\\(--ab-navy\\\\\\)\\\\}'\\) } catch { $_.Exception.Message })",
+      "Bash(grep -o \"a:focus{[^}]*}\\\\|a:active,a:hover{[^}]*}\" \"c:/xampp/htdocs/rightdeed11/public/assets/css-new/all-in-one.css\")"
+    ]
+  }
+}
