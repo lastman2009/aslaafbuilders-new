@@ -20,15 +20,44 @@ class FileUploadController extends Controller
       
         return view('uploadFiles.uploadFileView');
     }
-    public function blogImageGallery(){
-       
-        $images =  DB::table('image_uploads')->orderBy('id', 'desc')->get();
-            // dd($images[0]->image);
-        // $ImageUpload = $ImageUpload[0]->image;
-        // $images = explode(';', $ImageUpload );
-     // dd($images);
-        return view('uploadFiles.blogImageGallery',compact('images'));
+    public function blogImageGallery(Request $request){
 
+        $perPage = (int) $request->input('per_page', 20);
+        $perPage = in_array($perPage, [12, 24, 48, 96], true) ? $perPage : 24;
+
+        $search = trim((string) $request->input('q', ''));
+
+        // The `image` column holds a ';'-joined list, so one row can expand to
+        // several images. Rows are paginated (not individual images) because the
+        // column is read this way everywhere else in the app.
+        $rows = ImageUpload::query()
+            ->when($search !== '', function ($query) use ($search) {
+                $query->where(function ($q) use ($search) {
+                    $q->where('title', 'like', '%' . $search . '%')
+                      ->orWhere('description', 'like', '%' . $search . '%')
+                      ->orWhere('image', 'like', '%' . $search . '%');
+                });
+            })
+            ->orderByDesc('id')
+            ->paginate($perPage)
+            ->withQueryString();
+
+        // Flatten each row's ';'-joined filenames into one image per card.
+        $images = [];
+        foreach ($rows as $row) {
+            foreach (array_filter(array_map('trim', explode(';', (string) $row->image))) as $file) {
+                $images[] = [
+                    'id'          => $row->id,
+                    'file'        => $file,
+                    'title'       => $row->title,
+                    'description' => $row->description,
+                    'created_at'  => $row->created_at,
+                    'url'         => asset('/images/uploaded_images/' . $file),
+                ];
+            }
+        }
+
+        return view('uploadFiles.blogImageGallery', compact('rows', 'images', 'perPage', 'search'));
     }
 
     public function uploaded_images_save(Request $request)

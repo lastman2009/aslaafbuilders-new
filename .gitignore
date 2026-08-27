@@ -14,3 +14,7 @@ wp-admin.zip
 property/public/unzips1/
 
 public/unzips1/
+
+# Blog gallery uploads land here at runtime (see FileUploadController).
+# Files already committed before this rule stay tracked.
+/public/images/uploaded_images/
