@@ -11,9 +11,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>%TITLE%</title>
 
-    <meta property="og:title" content="Right Deed" />
+    <meta property="og:title" content="Aslaaf Builders" />
     <meta property="og:type" content="Pakistan Real Estate" />
-    <meta property="og:url" content="https://www.rightdeed.com/" />
+    <meta property="og:url" content="https://aslaafbuilders.com/" />
     <meta property="og:description" content="%DESCRIPTION%" />
  
     <meta property="og:image" content="https://www.rightdeed.com/home_images/logos/logo.png" />
