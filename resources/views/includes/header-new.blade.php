@@ -18,7 +18,11 @@
  
     <meta property="og:image" content="https://www.rightdeed.com/home_images/logos/logo.png" />
    
-    <link href="/image/fav.jpg" rel="icon" type="image/x-icon" />
+    <!-- Favicon — the Aslaaf Builders badge from the header logo -->
+    <link rel="icon" href="/image/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/image/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/image/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/image/apple-touch-icon.png">
     <!--<link type="text/css" rel="stylesheet" href="{{asset('/assets/css-new/bootstrap.min.css')}}" >-->
     <!--<link type="text/css" rel="stylesheet" href="{{asset('/assets/css-new/font-awesome.css')}}">-->
     <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">-->

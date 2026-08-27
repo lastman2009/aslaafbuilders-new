@@ -7,17 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <!--   <title>Admin Dashboard</title> -->
        <title>%TITLE%</title>
-       	<link href="/image/fav.jpg" rel="icon" type="image/x-icon" />
-
-       <link href="/image/fav.jpg" rel="icon" type="image/x-icon" />
-
         <meta name="description" content="Online Property Portal User Dashboard" />
         <meta name="keywords" content="" keyword="%META%"/>
         <meta name="author" content=""/>
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="../favicon.ico">
-        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+        <!-- Favicon — the Aslaaf Builders badge from the header logo -->
+        <link rel="icon" href="/image/favicon.ico" sizes="32x32">
+        <link rel="icon" href="/image/favicon-32x32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="/image/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/image/apple-touch-icon.png">
       
         <!-- Morris Charts CSS -->
         <link href="{{asset('assets_admin/vendors/bower_components/morris.js/morris.css')}}" rel="stylesheet" type="text/css"/>

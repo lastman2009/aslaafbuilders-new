@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title }} - {{Config::get("name.name.app") }}</title>
-    	<link href="/image/fav.jpg" rel="icon" type="image/x-icon" />
+    <!-- Favicon — the Aslaaf Builders badge from the header logo -->
+    <link rel="icon" href="/image/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/image/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/image/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/image/apple-touch-icon.png">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fontawsome -->
