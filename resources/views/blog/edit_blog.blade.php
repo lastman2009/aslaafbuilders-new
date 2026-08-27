@@ -67,7 +67,7 @@ $title = "Blog Edit";
                                     <div class="col-lg-12 col-sm-12 text-center profile_image blog-img-section">
                                        <div class="blog-img-uploaded">
                                           <figure class="edit-profile-image img-blogs">
-                                             <img id="myImg1" class="blog_img_upload" src="../../assets_admin/dist/img/selcetimg.jpg" alt="Profile Image">
+                                             <img id="myImg1" class="blog_img_upload" src="{{ asset('assets_admin/dist/img/selcetimg.jpg') }}" alt="Profile Image">
                                           </figure>
                                           <div class="text-center">
                                              <input type="file" name="photo" id="file-1" class="inputfile inputfile-1" />
@@ -117,7 +117,7 @@ $title = "Blog Edit";
                                           </figure>
                                           @else
                                           <figure class="edit-profile-image img-blogs">
-                                             <img class="blog_img_upload img-responsive img-height" src="../../assets_admin/dist/img/selcetimg.jpg" alt="">
+                                             <img class="blog_img_upload img-responsive img-height" src="{{ asset('assets_admin/dist/img/selcetimg.jpg') }}" alt="">
                                           </figure>
                                           @endif
                                        </div>
@@ -134,7 +134,7 @@ $title = "Blog Edit";
                                     <div class="col-lg-12 col-sm-12 text-center profile_image blog-img-section padding-left padding-right">
                                        <div class="blog-img-uploaded mynewpadding">
                                           <figure class="edit-profile-image img-blogs">
-                                             <img id="myImg2" class="blog_img_upload" src="../../assets_admin/dist/img/selcetimg.jpg" alt="Profile Image">
+                                             <img id="myImg2" class="blog_img_upload" src="{{ asset('assets_admin/dist/img/selcetimg.jpg') }}" alt="Profile Image">
                                           </figure>
                                           <div class="text-center">
                                              <input type="file" name="info_graphic" id="file-2" class="inputfile inputfile-1"/>

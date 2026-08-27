@@ -18,3 +18,9 @@ public/unzips1/
 # Blog gallery uploads land here at runtime (see FileUploadController).
 # Files already committed before this rule stay tracked.
 /public/images/uploaded_images/
+
+# Blog featured/infographic images land here at runtime (BlogController).
+/public/images/blogs_images/
+
+# Guard: uploads must never land outside public/ again (see getPublicPath()).
+/images/

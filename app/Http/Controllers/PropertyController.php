@@ -3827,7 +3827,10 @@ public function upload_multiple_image($images_array,$folderName)
     // }
 
       public function getPublicPath(){
-        return $this->isLive()? "" : "/public";
+        // Uploads must always land inside the web root. This used to key off
+        // isLive(), which was true for any host other than 127.0.0.1, so both
+        // "localhost" and production wrote outside public/ and 404ed.
+        return "/public";
       }
       public function isLive(){
         return $_SERVER['SERVER_NAME'] == "127.0.0.1" ? false : true;

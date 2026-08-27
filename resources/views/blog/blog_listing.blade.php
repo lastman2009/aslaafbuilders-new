@@ -58,13 +58,13 @@ $title = "Blog Listing";
                                         @foreach($blogs as $blog)
                                                    <tr>
                                                 <td>{{$blog->id}}</td>
-					                        	<td><a href="blogView/{{$blog->id}}">{{$blog->title}}</a></td>
+					                        	<td><a href="/blogView/{{$blog->id}}">{{$blog->title}}</a></td>
 					                        	<td>
                                          	<?php echo substr(strip_tags($blog->contant),0,40).'...';?>
 					                        		
 					                        	</td>
 					                        	<td>{{$blog->created_at}}</td>
-					                        	<td class="blog-img"><img src="../../images/blogs_images/{{$blog->gallery}}" height="60" width="60"></td>
+					                        	<td class="blog-img"><img src="{{ asset('images/blogs_images/'.$blog->gallery) }}" height="60" width="60" alt="{{ $blog->title }}" loading="lazy"></td>
 
 			                    				@if($blog->status == 2)
 					                        	<td><a href="javascipt:void(0);" class="blogstatus" data-url="blogStatusChange/{{$blog->id}}/{{$blog->status}}" data-id="{{$blog->id}}">
@@ -83,7 +83,7 @@ $title = "Blog Listing";
                                                         <i class="fa fa-trash-o text-inverse m-r-10"></i> 
                                                     </a>
 												
-													<a href="/blog/{{$blog->id}}/{{$title}}" class="mr-5" data-toggle="tooltip" data-original-title="View"> 
+													<a href="/blog/{{$blog->id}}/{{$title}}" class="mr-5" target="_blank" rel="noopener" data-toggle="tooltip" data-original-title="View"> 
                                                         <i class="fa fa-eye text-inverse m-r-10"></i> 
                                                     </a>
 												

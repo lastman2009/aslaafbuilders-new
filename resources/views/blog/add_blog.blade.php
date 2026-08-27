@@ -69,7 +69,7 @@ $title = "Add Blog";
                                     <div class="col-lg-12 col-sm-12 text-center profile_image blog-img-section">
                                        <div class="blog-img-uploaded">
                                           <figure class="edit-profile-image img-blogs">
-                                             <img id="myImg1" class="blog_img_upload blog-images" src="../assets_admin/dist/img/selcetimg.jpg" alt="Profile Image">
+                                             <img id="myImg1" class="blog_img_upload blog-images" src="{{ asset('assets_admin/dist/img/selcetimg.jpg') }}" alt="Profile Image">
                                           </figure>
                                           <div class="text-center">
                                              <input type="file" name="photo" id="file-1" class="inputfile inputfile-1" required="required" />
@@ -115,7 +115,7 @@ $title = "Add Blog";
                               <div class="col-lg-12 col-sm-12 text-center profile_image blog-img-section">
                                  <div class="blog-img-uploaded">
                                     <figure class="edit-profile-image img-blogs">
-                                       <img id="myImg2" class="blog_img_upload blog-images" src="../assets_admin/dist/img/selcetimg.jpg" alt="Profile Image">
+                                       <img id="myImg2" class="blog_img_upload blog-images" src="{{ asset('assets_admin/dist/img/selcetimg.jpg') }}" alt="Profile Image">
                                     </figure>
                                     <div class="text-center">
                                        <input type="file" name="info_graphic" id="file-2" class="inputfile inputfile-1"/>
