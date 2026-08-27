@@ -1975,6 +1975,23 @@ optgroup {
     clear: both;
 }
 
+/* The listing renders .bloglists cards as floated .col-md-6 pairs, but the
+   cards are not equal height — a title that wraps to three lines makes one
+   card ~8px taller than its neighbour. A float only drops as far as the
+   tallest preceding float allows, so the next card cannot reach the left
+   column and wedges into the right one instead, leaving a visible hole in
+   the left column and pushing the grid ragged. Clearing every odd card
+   forces each pair to start a genuine new row whatever the heights are. */
+@media (min-width: 992px) {
+    .bloglists {
+        min-height: 470px;
+    }
+
+    .bloglists:nth-of-type(odd) {
+        clear: both;
+    }
+}
+
 .blogs .family-house figure img {
     padding: 5px;
     float: left

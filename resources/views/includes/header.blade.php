@@ -11,7 +11,11 @@
 	<meta  name="description" content="%DESCRIPTION%">
 	<meta  name="keywords" content="%KEYWORD%">
 	<title>%TITLE%</title>
-	<link href="/image/fav.jpg" rel="icon" type="image/x-icon" />
+	<!-- Favicon — the Aslaaf Builders badge from the header logo -->
+	<link rel="icon" href="/image/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/image/favicon-32x32.png" type="image/png" sizes="32x32">
+	<link rel="icon" href="/image/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/image/apple-touch-icon.png">
     
 	<!-- Fontawsome -->
 	<!-- <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.css"> -->
