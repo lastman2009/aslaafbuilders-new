@@ -323,7 +323,7 @@ $areaStockPhotos = [
                 @php $blogUrl = '/blog/' . $blog->id . '/' . str_slug($blog->title); @endphp
                 <div class="ab-card">
                     <a class="ab-ph" href="{{ $blogUrl }}">
-                        <img src="{{ ab_image('images/blogs_images/original_' . $blog->gallery, 'home_images/placeholders/area-' . (($i % 5) + 1) . '.svg') }}" alt="{{ str_limit(strip_tags($blog->title), 60) }}">
+.                        <img src="{{ ab_image('images/blogs_images/' . $blog->gallery, 'home_images/placeholders/area-' . (($i % 5) + 1) . '.svg') }}" alt="{{ str_limit(strip_tags($blog->title), 60) }}">
                     </a>
                     <div class="ab-card-body">
                         <h3><a href="{{ $blogUrl }}">{{ str_limit(strip_tags($blog->title), 65) }}</a></h3>
