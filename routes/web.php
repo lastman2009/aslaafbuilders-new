@@ -892,6 +892,23 @@ Route::post('/assignMaptoPhase','MapController@assignMaptoPhase');
 });
 // Route::delete('/{id}','UserController@destroy');
 ///////property page send message ..../////
+/////Blog module (rewritten posting screen) — writes to the same `blogs` table
+/////the legacy BlogController uses, so existing front-end pages are unaffected.
+Route::prefix('admin/posts')->name('admin.posts.')->group(function () {
+    Route::get('/', '\App\Http\Controllers\Admin\PostController@index')->name('index');
+    Route::get('/create', '\App\Http\Controllers\Admin\PostController@create')->name('create');
+    Route::post('/', '\App\Http\Controllers\Admin\PostController@store')->name('store');
+    Route::post('/check-slug', '\App\Http\Controllers\Admin\PostController@checkSlug')->name('check-slug');
+    Route::post('/upload-content-image', '\App\Http\Controllers\Admin\PostController@uploadContentImage')->name('upload-content-image');
+    Route::get('/{id}/edit', '\App\Http\Controllers\Admin\PostController@edit')->name('edit');
+    Route::put('/{id}', '\App\Http\Controllers\Admin\PostController@update')->name('update');
+    Route::post('/{id}/trash', '\App\Http\Controllers\Admin\PostController@trash')->name('trash');
+    Route::post('/{id}/restore', '\App\Http\Controllers\Admin\PostController@restore')->name('restore');
+});
+
+/////XML sitemap for search engines/////
+Route::get('/sitemap.xml', '\App\Http\Controllers\SitemapController@index')->name('sitemap');
+
 Route::get('/{url}','AgencyWebsiteController@websiteUrl');
 
 
@@ -905,4 +922,3 @@ Route::post('/dashboard/meta/store','MetaController@store');
 
 });   
 //Dashboard Controller
-

@@ -276,7 +276,7 @@
                             </ul>
                         </li> -->
                         <li class="dropdown auth-drp">
-                         @if(Auth::user()->image != "")
+                         @if(!empty(Auth::user()->image))
                              @foreach(json_decode(Auth::user()->image) as $images)
                             <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="/image/profile/{{$images}}" alt="user_auth" class="user-auth-img img-circle"/>
                                 <div class="pull-right"><i class="zmdi zmdi-caret-down arrow-style"></i></div>

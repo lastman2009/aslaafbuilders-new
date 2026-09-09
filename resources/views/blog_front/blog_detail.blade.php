@@ -7,12 +7,59 @@
 // $title =$blog->title;
 // }  
 $base="https://www.rightdeed.com/";
-$title = (!empty($blog->meta_title) ? $blog->meta_title : $blog->title);
+$title = $blog->seo_title;
 $keyword =$blog->meta_keyword;
-$description =$blog->meta_description;
+// Falls back to a body excerpt so no post ships without a description.
+$description = $blog->seo_description;
 
+$canonicalUrl = !empty($blog->canonical_url) ? $blog->canonical_url : url($blog->url);
+$socialImage  = $blog->social_image;
+$publishedIso = optional($blog->published_at ?: $blog->created_at)->toAtomString();
+$modifiedIso  = optional($blog->updated_at)->toAtomString();
 @endphp
 @include("includes.title")
+
+{{-- SEO / social tags. The shared header only emits title, description and
+     keywords, so canonical and the Open Graph + Twitter cards live here. --}}
+<link rel="canonical" href="{{ $canonicalUrl }}">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ Config::get('name.name.app') }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ $canonicalUrl }}">
+@if($socialImage)
+<meta property="og:image" content="{{ $socialImage }}">
+<meta property="og:image:alt" content="{{ strip_tags($blog->title) }}">
+@endif
+@if($publishedIso)
+<meta property="article:published_time" content="{{ $publishedIso }}">
+@endif
+@if($modifiedIso)
+<meta property="article:modified_time" content="{{ $modifiedIso }}">
+@endif
+
+<meta name="twitter:card" content="{{ $socialImage ? 'summary_large_image' : 'summary' }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+@if($socialImage)
+<meta name="twitter:image" content="{{ $socialImage }}">
+@endif
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context'      => 'https://schema.org',
+    '@type'         => 'BlogPosting',
+    'headline'      => strip_tags($blog->title),
+    'description'   => $description,
+    'url'           => $canonicalUrl,
+    'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => $canonicalUrl],
+    'datePublished' => $publishedIso,
+    'dateModified'  => $modifiedIso ?: $publishedIso,
+    'author'        => ['@type' => 'Person', 'name' => $blog->author_name ?: Config::get('name.name.app')],
+    'publisher'     => ['@type' => 'Organization', 'name' => Config::get('name.name.app')],
+] + ($socialImage ? ['image' => $socialImage] : []), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <style>
@@ -44,7 +91,10 @@ $description =$blog->meta_description;
                             <div class="blog-description col-md-12">
                                 <?= $blog->contant; ?>
                                 @if(!empty($blog->info_graphic) && file_exists(public_path('images/blogs_images/' . $blog->info_graphic)))
-                                <div class="blog-header col-md-12"><a
+                                {{-- Infographics are tall/text-dense and must not be cropped like the
+                                     hero photo above, so this block deliberately skips .blog-header and
+                                     stays plain (see .blog-header-infographic in style.css). --}}
+                                <div class="blog-header-infographic col-md-12"><a
                                             href="/images/blogs_images/{{$blog->info_graphic}}"
                                             data-lightbox="roadtrip"> <img class="img-responsive"
                                                                            src="/images/blogs_images/{{$blog->info_graphic}}" alt="{{ $blog->title }} infographic"></a>

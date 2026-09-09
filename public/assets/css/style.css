@@ -2044,17 +2044,50 @@ optgroup {
     height: 200px;
 }
 
+/* Featured images vary in shape depending on what was uploaded (see the
+   .bloglists rule near line 6069 for the listing-page version of this same
+   fix). A fixed-ratio frame with object-fit keeps the detail-page hero
+   banner a consistent size across every article instead of the box growing
+   or shrinking with each photo's native aspect ratio. */
 .blog-details .blog-header {
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    background: #000;
+    width: 100%;
+    height: 0;
+    padding-top: 66.6667%; /* 3:2, same frame as .bloglists .blog-header so
+                              listing and detail pages show the same size */
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-details .blog-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+/* Infographic block: same border/spacing as .blog-header for visual
+   consistency, but deliberately no fixed ratio or object-fit -- infographics
+   are tall and text-dense, so cropping them would cut off real content. */
+.blog-details .blog-header-infographic {
     border: 1px solid #ccc;
     margin-bottom: 15px;
     background: transparent;
     width: 100%;
-    height: auto;
 }
 
-.blog-details .blog-header img {
+.blog-details .blog-header-infographic img {
     margin: 0 auto;
     height: auto;
+    width: 100%;
+    display: block;
 }
 
 .blog-details .blog-section {
@@ -6066,9 +6099,32 @@ table.prop-detail-table td strong {
     width: auto;
 }
 
-.bloglists .blog-header,
+/* Uploaded photos vary in shape (landscape banners, square crops, etc.) and
+   thumbnails preserve their native aspect ratio rather than being distorted
+   or center-cropped at generation time (see PostController::storeFeatured).
+   Without a fixed frame here, that makes listing cards ragged in height --
+   this constrains only the *display box* on the listing grid to a uniform
+   3:2 frame and lets object-fit crop the overflow, so every card lines up
+   the same regardless of what shape the source photo was. The single-post
+   detail page (.blog-details .blog-header, ~line 2047) is intentionally
+   left at height:auto so the full featured image still shows there. */
+.bloglists .blog-header {
+    height: 0;
+    padding-top: 66.6667%; /* 3:2 box, matches the legacy 300x171 thumb ratio */
+    position: relative;
+    overflow: hidden;
+}
+
 .bloglists .blog-header img {
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
 }
 
 div.counts {

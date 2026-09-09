@@ -26,7 +26,7 @@ $title = "Blog Listing";
 
 
 
-							<h2><a class="add-blog" href="/blogs/create">Add New Blog</a></h2>
+							<h2><a class="add-blog" href="{{ route('admin.posts.create') }}">Add New Blog</a></h2>
 
 
 

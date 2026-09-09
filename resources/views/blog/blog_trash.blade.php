@@ -14,7 +14,7 @@ $title = "Blog Trash";
 				<div class="panel panel-default card-view add-new-blog">
 					<div class="panel-wrapper collapse in">
 						<div class="panel-body">
-							<h2><a class="add-blog" href="/blogs/create">Add New Blog</a></h2>
+							<h2><a class="add-blog" href="{{ route('admin.posts.create') }}">Add New Blog</a></h2>
 							<div class="table-wrap loadyou">
 								<div class="table-responsive">
 									<table id="blog-listing" class="table mb-0 table-class">

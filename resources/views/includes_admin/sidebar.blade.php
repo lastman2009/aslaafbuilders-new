@@ -494,10 +494,10 @@
 			</a>
 			<ul id="blog" class="collapse collapse-level-1 two-col-list">
 				<li>
-					<a href="/blogs/create">Add Blogs</a>
+					<a href="{{ route('admin.posts.create') }}">Add Blog</a>
 				</li>
 				<li>
-					<a href="/blogs">Blog List</a>
+					<a href="{{ route('admin.posts.index') }}">All Blogs</a>
 				</li>
 				
 				<li>

@@ -499,10 +499,24 @@ class BlogController extends Controller
         $blog = Blog::find($id);
         if($blog != null)
         {
-            //$title = basename($request->fullUrl());
-            $title_new = str_slug($blog->title);
-            $title = str_slug(urldecode($title));
-            if($title == $title_new)
+            // Only published posts are publicly viewable; a scheduled post
+            // stays hidden until its published_at passes.
+            if ((int) $blog->status !== Blog::STATUS_PUBLISHED
+                || ($blog->published_at && $blog->published_at->isFuture())) {
+                return abort(404);
+            }
+
+            // The id resolves the post; the slug segment is cosmetic. When it
+            // does not match (a retitled post, or an older indexed URL), issue
+            // a 301 to the canonical URL instead of the previous hard 404 --
+            // that 404 silently dropped rankings every time a title changed.
+            $requestedSlug = str_slug(urldecode($title));
+            $canonicalSlug = $blog->effective_slug;
+
+            if ($requestedSlug !== $canonicalSlug) {
+                return redirect($blog->url, 301);
+            }
+
             {
                 $comments = BlogComment::where('blog_id', $id)->where('status', 1)->get();
                 $parentComments = BlogComment::where('blog_id', $id)->where('status', 1)->get();
@@ -528,7 +542,6 @@ class BlogController extends Controller
 
                 return view('blog_front.blog_detail', compact('blog', 'comments', 'parentComments', 'most_view_blogs', 'categories', 'blogsArchives', 'years'));
             }
-             return abort('404');
         }
         return abort('404');
     }
