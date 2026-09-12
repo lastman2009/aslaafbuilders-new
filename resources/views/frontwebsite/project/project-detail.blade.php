@@ -1229,7 +1229,7 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
 @endsection
 @section('script')
 <script type="text/javascript" src="{{asset('assets/js-new/lightslider.js')}}"></script>
-<script  defer src="https://maps.googleapis.com/maps/api/js?key={{Config::get("name.google.googleMap")}}&callback=initMap&libraries=places" type="text/javascript"></script>
+@include('frontwebsite.property.partials.property-map')
 <!-- Google Map Script -->
 <script type="text/javascript">   
    var modal = document.getElementById("myModal");
@@ -1268,27 +1268,7 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
          var latitude = parseFloat("{{$property->latitude}}");
          var lngitude = parseFloat("{{$property->longitude}}");
       
-      function initialize() {
-      var pyrmont = {lat:latitude, lng:lngitude};
-          var mapOptions = {
-              center: pyrmont ,
-              zoom: 15
-          };
-          
-          
-          var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-          
-          var marker = new google.maps.Marker({
-           position: pyrmont,
-      map: map,
-      title: 'Hello World!'
-             });
-      }
-      
-      $(document).ready(function() {
-           initialize();
-          $('#show-map').on('click', initialize)
-      });
+      // The map is drawn by the property-map partial included above.
       
       function mapHandling(evt, sectionName) {
           var i, tabcontent, tablinks;
@@ -1304,26 +1284,9 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
           evt.currentTarget.className += " active";
       }
       
-         function callback(results, status) {
-             var count;
-          var type1= 
-          console.log(results[0]);
-         
-         
-         }
-      
-         function createMarker(place) {
-         var placeLoc = place.geometry.location;
-         var marker = new google.maps.Marker({
-             map: map,
-             position: place.geometry.location
-         });
-         
-         google.maps.event.addListener(marker, 'click', function() {
-             infowindow.setContent(place.name);
-             infowindow.open(map, this);
-         });
-         } 
+         // Google Places helpers (callback/createMarker) were removed with the
+         // Google Maps embed. Neither was ever called, and callback() carried
+         // a syntax error ("var type1=" with no value) that would have thrown.
 </script>
 @endsection
 @section('detial-page-footer')

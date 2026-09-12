@@ -342,7 +342,7 @@ $title = "Frequent Property Add";
 		$( ".file" ).fileinput( {
 
 uploadUrl: '#', // you must set a valid URL here else you will get an error
-allowedFileExtensions: [ 'jpg', 'png', 'gif' ],
+allowedFileExtensions: [ 'jpg', 'jpeg', 'png', 'gif', 'webp' ],
 overwriteInitial: true,
 maxFileSize: 1024,
 maxFilesNum: 1,
@@ -531,92 +531,7 @@ $( '#phase' ).change( function () {
 <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyDGliLFvAQbzQtcte_CQVjhHa6vQ3ifZjk&sensor=false&libraries=places"></script> -->
 <!-- <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFTfCu2rXDn78zX7Tc2IEpBuxBYr__WVA&v=3.exp&callback=initMap" type="text/javascript"></script>
 	<script src="/assets_admin/dist/js/locationPicker.js"></script> -->
-	<script src="https://maps.google.com/maps/api/js?key=AIzaSyDFTfCu2rXDn78zX7Tc2IEpBuxBYr__WVA&v=3.exp&sensor=false&libraries=places"></script>
-<script src="/assets_admin/dist/js/locationPicker.js"></script>
-
-<script>
-	var inital_lat = "31.554397"; /*lahore pakistan*/
-	var inital_lng = "74.356078";
-	$( '#locationpicker' ).locationpicker( {
-
-		location: {
-			latitude: inital_lat,
-			longitude: inital_lng
-		},
-		radius: 25,
-		inputBinding: {
-			latitudeInput: $( "#latitude" ),
-			longitudeInput: $( "#longitude" ),
-			locationNameInput: $( '#address5' )
-		},
-		enableAutocomplete: true,
-		oninitialized: function ( component ) {
-			var addressComponents = $( component ).locationpicker( 'map' ).location.addressComponents;
-			// updateControls( addressComponents );
-			var vallat = $( '#latitude' ).val();
-			var vallng = $( '#longitude' ).val();
-
-			$( '#latitude' ).attr( 'value', vallat );
-			$( '#longitude' ).attr( 'value', vallng );
-		}
-	} );
-	/* address field for map */
-	/* loading location picker  */
-	$( "#city" ).change( function ( e ) {
-
-		var geocoder = new google.maps.Geocoder();
-		geocoder.geocode({ 'address': $('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-			if ( status == google.maps.GeocoderStatus.OK ) {
-				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$("#address5").val($('#city option:selected').text().trim()+', Pakistan');
-			} else {
-				alert( "Something got wrong " + status );
-			}
-		});
-	});
-	$( "#town" ).change( function ( e ) {
-		var geocoder = new google.maps.Geocoder();
-		geocoder.geocode({ 'address': $('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-			if ( status == google.maps.GeocoderStatus.OK ) {
-				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$("#address5").val($('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', Pakistan');
-			} else {
-				alert( "Something got wrong " + status );
-			}
-		});
-	});
-	$( "#phase" ).change( function ( e ) {
-		var geocoder = new google.maps.Geocoder();
-		geocoder.geocode({ 'address': $('#phase option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-			if ( status == google.maps.GeocoderStatus.OK ) {
-				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$("#address5").val($('#phase option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', Pakistan');
-			} else {
-				alert( "Something got wrong " + status );
-			}
-		});
-	});
-	$( "#block" ).change( function ( e ) {
-		var geocoder = new google.maps.Geocoder();
-		geocoder.geocode({ 'address': $('#block option:selected').text().trim()+', '+$('#phase option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-			if ( status == google.maps.GeocoderStatus.OK ) {
-				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$("#address5").val($('#block option:selected').text().trim()+', '+$('#phase option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', Pakistan');
-			} else {
-				alert( "Something got wrong " + status );
-			}
-		});
-	});
-	
-</script>
+@include('dashboard.property.partials.map-locationpicker')
 <script>
 
 	function convertNumberToWords(amount) {

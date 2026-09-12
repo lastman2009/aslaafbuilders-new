@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-    <meta name="google-site-verification" content="JgeA_wkUnETUFTNjhTg3ttly5YbcmzP2tSo8S3Y5ebA" />
+    <meta name="google-site-verification" content="_5MDurhqgxX4NOZlAEPE2hyNoH3cafXZLNXonzQoHRs" />
     <meta  name="description" content="%DESCRIPTION%">
 	<meta  name="keywords" content="%KEYWORD%">
     <meta name="csrf-token" content="{{ csrf_token() }}">

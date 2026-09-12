@@ -18,7 +18,9 @@ use Config;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    protected $allowed_image_extensions = ["png", "jpg", "jpeg"];
+    // Kept in step with the file pickers in the property forms, which offer
+    // GIF too. ImageHelper::load() already handles all four types.
+    protected $allowed_image_extensions = ["png", "jpg", "jpeg", "gif", "webp"];
     protected $allowed_document_extensions = ["docx", "pdf", "docs"];
 
     public function isLive(){
@@ -157,8 +159,26 @@ class Controller extends BaseController
         foreach ($images_array as $img) {
           # code...
 
-          $pic_name = $img->getClientOriginalName();
-          $new_name = time() . '.' .$pic_name;
+          // time() is identical for every file uploaded within the same second,
+          // so a batch sharing an original filename used to overwrite itself.
+          // Original names also carry spaces, parentheses and non-ASCII text,
+          // which break the plain <img src> the listings render.
+          $extension = strtolower($img->getClientOriginalExtension());
+          // Every image here is re-encoded as JPEG by ImageHelper::saveImage(),
+          // which always runs with its default $image_type. Naming a WebP
+          // upload .webp would leave a file holding JPEG bytes, which some
+          // browsers and the watermark step then read wrongly.
+          if ($extension === 'webp') {
+              $extension = 'jpg';
+          }
+          $basename  = pathinfo($img->getClientOriginalName(), PATHINFO_FILENAME);
+          $slug      = preg_replace('/[^A-Za-z0-9]+/', '-', $basename);
+          $slug      = trim($slug, '-');
+          if ($slug === '') {
+              $slug = 'image';
+          }
+          $slug = substr($slug, 0, 60);
+          $new_name = time() . '-' . uniqid() . '-' . $slug . '.' . $extension;
 
           $img->move(base_path() .  $this->getPublicPath().'/images/property/user_property/', 'original_'.$new_name);
 
@@ -166,7 +186,13 @@ class Controller extends BaseController
           $path = $new_name;
           $path = 'original_'.$new_name;
           
-          $img_helper->load($targetPath. $path);
+          // A file that cannot be decoded (corrupt, or an animated WebP) would
+          // otherwise reach resize() as null and fatal, leaving the moved file
+          // orphaned on disk.
+          if ($img_helper->load($targetPath . $path) === false) {
+              @unlink($targetPath . $path);
+              return false;
+          }
           $img_helper->resize(1024,768);
           $img_helper->saveImage($targetPath.'original_'.$new_name);
 

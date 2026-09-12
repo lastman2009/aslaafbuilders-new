@@ -145,8 +145,7 @@ $title = "Property Add";
 															</div>
 															{{-- <button ></button> --}}
 															<div class="row">
-																<div class="col-md-6"><a href="javascript:void(0)" class="btn" style="width:100%;background-color: #f0b708;color: white;" id="image-info"  >Add Image</a></div>
-																<div class="col-md-6"><a href="javascript:void(0)" class="btn" style="width:100%;background-color: #f0b708;display: none;color: white;" id="extraFeature"  >Extra Features</a></div>
+																
 
 															</div>
 															
@@ -463,7 +462,9 @@ $title = "Property Add";
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 property-section extra-feature-tab" style="display: none;">
+		
+@include('dashboard.property.partials.extra-features-style')
+		<div class="col-lg-12 col-md-12 col-sm-12 property-section extra-feature-tab">
 			<div class="panel panel-default card-view">
 				<div class="panel-wrapper collapse in">
 					<div class="panel-body">
@@ -1048,13 +1049,19 @@ $title = "Property Add";
 </div>
 
 	<div class="row">
-		<div class="col-lg-12 padding-right theme-heading image-info-tab" style="display: none">
+		<div class="col-lg-12 padding-right theme-heading image-info-tab">
 			<div class="col-lg-12 col-md-12 col-sm-12 padding-left property-sectione add-property-img-uploader">
 				<div class="form-actions edit-form-submit">
 					<div class="panel panel-default card-view portfolio-img-tab profile-Image-tab multi-files-uploader">
 						<div class="panel-wrapper collapse in">
 							<div class="panel-body portfolio-role profile-role">
 								<div class="form-group">
+									<label class="control-label mb-10">Property Images</label>
+									<p style="color:#9a9a9a;font-size:12px;margin-bottom:10px;">
+										Select up to 12 photos (JPG, PNG, GIF or WebP, max 6&nbsp;MB each).
+										Hold Ctrl to pick several at once - they are uploaded together with
+										the property, and the first one becomes the listing thumbnail.
+									</p>
 									<input id="file-1" type="file" style="z-index: 0;" name="images[]" multiple class="file" data-overwrite-initial="false" data-min-file-count="0">
 								</div>
 							</div>
@@ -1123,30 +1130,15 @@ $title = "Property Add";
 //     });
 // 	}
 	$(function() {
-	$('.property_type_extra_feature').change(function(){
-	// $('.extra-feature-tab').show();
-	$('#image-info').show();
-	$('#extraFeature').show();
-	// blink();
+	// Extra Features and Images are always visible now, so nothing has to be
+	// revealed when the property type changes.
 	});
-	});
-	$('#image-info').click(function() {
-       $('.image-info-tab').toggle('slow');
-       // $('#target2').hide();
-   });
-	$('#extraFeature').click(function() {
-       $('.extra-feature-tab').toggle('slow');
-       // $('#target2').hide();
-   });
 
 	$(document).ready(function(){
 
 
 
 
-		$('#extraFeature').click(function(){
-			$('.extra-feature-tab').show();
-		});
 		$( '#property_type' ).change( function () {
 		property_type = $( '#property_type option:selected' ).attr('class');
 		// alert(property_type);
@@ -1191,11 +1183,13 @@ $title = "Property Add";
 	$( ".file" ).fileinput( {
 
 uploadUrl: '#', // you must set a valid URL here else you will get an error
-allowedFileExtensions: [ 'jpg', 'png', 'gif' ],
-overwriteInitial: true,
-maxFileSize: 1700,
-maxFilesNum: 1,
-maxFileCount: 11,
+allowedFileExtensions: [ 'jpg', 'jpeg', 'png', 'gif', 'webp' ],
+overwriteInitial: false,
+// Kept in step with PropertyController::MAX_IMAGE_UPLOAD_BYTES (6MB) and
+// MAX_IMAGE_UPLOAD_COUNT (12). php.ini post_max_size must exceed the
+// combined batch or PHP discards the whole POST, losing every field.
+maxFileSize: 6144,
+maxFileCount: 12,
 showRemove: false,
 showUpload: false,
 showUploadedThumbs: false,
@@ -1238,9 +1232,10 @@ slugCallback: function ( filename ) {
 </script>
 <script type="text/javascript">
 	$( document ).ready( function () {
-		$( '#file-1' ).click( function () {
-			$( '.multi-files-uploader .fileinput-remove' ).trigger( 'click' );
-		} );
+		// A click handler used to fire .fileinput-remove here, which cleared the
+		// whole selection every time the picker was opened - so a second batch
+		// of images could never be added. Clearing on form reset is handled
+		// separately, further down.
 
 ///////Function to ristrict max lenght of price input field///////
 $("#mytext").attr('maxlength', '9');
@@ -1394,154 +1389,7 @@ $( '#phase' ).change( function () {
 
 });
 </script>
-<!--  <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGliLFvAQbzQtcte_CQVjhHa6vQ3ifZjk&callback=initMap">
-</script> -->
-<!--////// NAQASH API ////-->
-<script src="https://maps.google.com/maps/api/js?key={{Config::get("name.google.googleMap")}}&v=3.exp&sensor=false&libraries=places"></script>
-
-<script src="/assets_admin/dist/js/locationPicker.js"></script>
- <script>
-// 	var inital_lat = "31.554397"; /*lahore pakistan*/
-// 	var inital_lng = "74.356078";
-// 	$( '#locationpicker' ).locationpicker( {
-
-// 		location: {
-// 			latitude: inital_lat,
-// 			longitude: inital_lng
-// 		},
-// 		radius: 25,
-// 		inputBinding: {
-// 			latitudeInput: $( "#latitude" ),
-// 			longitudeInput: $( "#longitude" ),
-// 			locationNameInput: $( '#address5' )
-// 		},
-// 		enableAutocomplete: true,
-// 		oninitialized: function ( component ) {
-// 			var addressComponents = $( component ).locationpicker( 'map' ).location.addressComponents;
-// 			// updateControls( addressComponents );
-// 			var vallat = $( '#latitude' ).val();
-// 			var vallng = $( '#longitude' ).val();
-
-// 			$( '#latitude' ).attr( 'value', vallat );
-// 			$( '#longitude' ).attr( 'value', vallng );
-// 		}
-// 	} );
-// 	/* address field for map */
-// 	/* loading location picker  */
-// 	$( "#city" ).change( function ( e ) {
-
-// 		var geocoder = new google.maps.Geocoder();
-// 		geocoder.geocode({ 'address': $('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-// 			if ( status == google.maps.GeocoderStatus.OK ) {
-// 				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-// 				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-// 				$("#address5").val($('#city option:selected').text().trim()+', Pakistan');
-// 			} else {
-// 				alert( "Something got wrong " + status );
-// 			}
-// 		});
-// 	});
-// 	$( "#town" ).change( function ( e ) {
-// 		var geocoder = new google.maps.Geocoder();
-// 		geocoder.geocode({ 'address': $('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-// 			if ( status == google.maps.GeocoderStatus.OK ) {
-// 				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-// 				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-// 				$("#address5").val($('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', Pakistan');
-// 			} else {
-// 				alert( "Something got wrong " + status );
-// 			}
-// 		});
-// 	});
-	
-// </script>
-
-<script>
-	var inital_lat = "31.554397"; /*lahore pakistan*/
-	var inital_lng = "74.356078";
-	$( '#locationpicker' ).locationpicker( {
-
-		location: {
-			latitude: inital_lat,
-			longitude: inital_lng
-		},
-		radius: 25,
-		inputBinding: {
-			latitudeInput: $( "#latitude" ),
-			longitudeInput: $( "#longitude" ),
-			locationNameInput: $( '#address5' )
-		},
-		enableAutocomplete: true,
-		oninitialized: function ( component ) {
-			var addressComponents = $( component ).locationpicker( 'map' ).location.addressComponents;
-			// updateControls( addressComponents );
-			var vallat = $( '#latitude' ).val();
-			var vallng = $( '#longitude' ).val();
-
-			$( '#latitude' ).attr( 'value', vallat );
-			$( '#longitude' ).attr( 'value', vallng );
-		}
-	} );
-	/* address field for map */
-	/* loading location picker  */
-	$( "#city" ).change( function ( e ) {
-
-		var geocoder = new google.maps.Geocoder();
-		geocoder.geocode({ 'address': $('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-			if ( status == google.maps.GeocoderStatus.OK ) {
-				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$("#address5").val($('#city option:selected').text().trim()+', Pakistan');
-			} else {
-				alert( "Something got wrong " + status );
-			}
-		});
-	});
-	$( "#town" ).change( function ( e ) {
-		var geocoder = new google.maps.Geocoder();
-		geocoder.geocode({ 'address': $('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-			if ( status == google.maps.GeocoderStatus.OK ) {
-				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$("#address5").val($('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', Pakistan');
-			} else {
-				alert( "Something got wrong " + status );
-			}
-		});
-	});
-	$( "#phase" ).change( function ( e ) {
-		var geocoder = new google.maps.Geocoder();
-		geocoder.geocode({ 'address': $('#phase option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-			if ( status == google.maps.GeocoderStatus.OK ) {
-				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$("#address5").val($('#phase option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', Pakistan');
-			} else {
-				alert( "Something got wrong " + status );
-			}
-		});
-	});
-	$( "#block" ).change( function ( e ) {
-		var geocoder = new google.maps.Geocoder();
-		geocoder.geocode({ 'address': $('#block option:selected').text().trim()+', '+$('#phase option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', pk'},function ( results, status ) {
-
-			if ( status == google.maps.GeocoderStatus.OK ) {
-				$( "#latitude" ).val( results[ 0 ].geometry.location.lat() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$( "#longitude" ).val( results[ 0 ].geometry.location.lng() ).removeAttr( "disabled" ).trigger( 'focus' );
-				$("#address5").val($('#block option:selected').text().trim()+', '+$('#phase option:selected').text().trim()+', '+$('#town option:selected').text().trim()+', '+$('#city option:selected').text().trim()+', Pakistan');
-			} else {
-				alert( "Something got wrong " + status );
-			}
-		});
-	});
-	
-</script>
+@include('dashboard.property.partials.map-locationpicker')
 // <script>
 // 	$(document).ready(function() {
 // 		$("input[type=number]").stepper();

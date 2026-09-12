@@ -1,2 +1,10 @@
 User-agent: *
 Disallow:
+
+# Keep private and non-content areas out of the index.
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /register
+Disallow: /password/
+
+Sitemap: https://aslaafbuilders.com/sitemap.xml

@@ -24,4 +24,12 @@ return [
         'googleplus' => 'https://plus.google.com/116587637553760893275',
         'instagram' => 'https://www.instagram.com/right.deed/',
     ],
+
+    /*
+    | Google services. The maps key is read from GOOGLE_MAPS_API_KEY in .env so
+    | the key is not hardcoded in views.
+    */
+    'google' => [
+        'googleMap' => env('GOOGLE_MAPS_API_KEY'),
+    ],
 ];

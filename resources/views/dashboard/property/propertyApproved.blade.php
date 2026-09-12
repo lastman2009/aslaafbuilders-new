@@ -92,6 +92,13 @@ $title = "Properties Approved List For Admin";
                                                     </a>
                                                     @endif   
                                                    
+                                                
+                                                    {{-- Opens the public listing page in a new tab. --}}
+                                                    <a href="{{ $property->url }}/{{ $property->id }}" target="_blank" rel="noopener"
+                                                       data-toggle="tooltip"
+                                                       data-original-title="{{ $property->status == 1 ? 'View on Website' : 'View on Website (not published yet)' }}">
+                                                        <i class="fa fa-external-link {{ $property->status == 1 ? 'text-inverse' : 'blocked-text' }}"></i>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         @endforeach                                            

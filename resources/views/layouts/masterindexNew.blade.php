@@ -12,20 +12,30 @@
     // session/CSRF cookie Laravel queues on Response::send() for any
     // first-time visit to a page using this layout.
     ob_start();
-    // $buffer=str_replace("%TITLE%",$title.' - '.Config::get("name.name.app"),$buffer);
-    if(isset($title))
-    {      
-    $buffer=str_replace("%TITLE%", $title ,$buffer);
-    }
-    
-    //$buffer=str_replace("%TITLE%",$title ,$buffer);  
-    if(isset($description))
-    {      
-    $buffer=str_replace("%DESCRIPTION%", $description ,$buffer);
-    }
-     if(isset($keyword))
-    { 
-    $buffer=str_replace("%KEYWORD%", $keyword ,$buffer);
+    // Every placeholder is always replaced. Pages that do not set a value
+    // get the site default - leaving a token unreplaced used to ship the
+    // literal "%DESCRIPTION%" to search engines.
+    $seo_defaults = [
+        '%TITLE%'       => 'Aslaaf Builders',
+        '%DESCRIPTION%' => 'Aslaaf Builders - buy, sell and rent property across Pakistan.',
+        '%KEYWORD%'     => 'property, real estate, Pakistan, Aslaaf Builders',
+        '%CANONICAL%'   => url()->current(),
+        '%OGIMAGE%'     => url('/image/favicon-32x32.png'),
+    ];
+    $seo_values = [
+        '%TITLE%'       => isset($title)       ? $title       : null,
+        '%DESCRIPTION%' => isset($description) ? $description : null,
+        '%KEYWORD%'     => isset($keyword)     ? $keyword     : null,
+        '%CANONICAL%'   => isset($canonical)   ? $canonical   : null,
+        '%OGIMAGE%'     => isset($og_image)    ? $og_image    : null,
+    ];
+    foreach ($seo_defaults as $token => $default) {
+        $value = $seo_values[$token];
+        if ($value === null || trim((string) $value) === '') {
+            $value = $default;
+        }
+        // These land inside HTML attributes, so quotes must be escaped.
+        $buffer = str_replace($token, e($value), $buffer);
     }
 
     echo $buffer;

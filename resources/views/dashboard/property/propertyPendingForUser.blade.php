@@ -72,7 +72,7 @@ $title = "Properties Pending List ";
                                                 <td>No Image</td>
                                                 @endif
                                                 <td class="status-user-{{$property->id}} blocked-text">Pending</td>
-                                                <td> <a href="{{$property->url}}/{{$property->id}}" class="toggle-icon mr-5 " data-toggle="tooltip" data-original-title="View"> 
+                                                <td> <a href="{{$property->url}}/{{$property->id}}" target="_blank" rel="noopener" class="toggle-icon mr-5 " data-toggle="tooltip" data-original-title="View"> 
                                                         <i class="fa fa-eye text-inverse m-r-10"></i> 
                                                     </a></td>
                                             </tr>

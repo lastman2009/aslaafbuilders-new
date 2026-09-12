@@ -80,6 +80,11 @@ $title = "Properties Trash List For Admin";
                                                                     <i class="fa fa-unlock text-inverse m-r-10"></i> 
                                                                 </a> 
 
+                                                                {{-- Opens the public listing page in a new tab. --}}
+                                                                <a href="{{ $property->url }}/{{ $property->id }}" target="_blank" rel="noopener"
+                                                                   data-toggle="tooltip" data-original-title="View on Website (trashed)">
+                                                                    <i class="fa fa-external-link blocked-text"></i>
+                                                                </a>
 
                                                             </td>
                                                         </tr>

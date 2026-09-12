@@ -24,3 +24,7 @@ public/unzips1/
 
 # Guard: uploads must never land outside public/ again (see getPublicPath()).
 /images/
+
+# Property photo uploads land here at runtime (PropertyController).
+# Files already committed before this rule stay tracked.
+/public/images/property/

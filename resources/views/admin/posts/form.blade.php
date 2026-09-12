@@ -13,41 +13,52 @@ $publishedAt = old('published_at', $post->published_at ? $post->published_at->fo
 <link rel="stylesheet" href="{{ asset('assets_admin/vendors/bower_components/summernote/dist/summernote.css') }}">
 
 <style type="text/css">
-    .pe-layout { display:grid; grid-template-columns: minmax(0,1fr) 320px; gap:20px; align-items:start; }
-    @media (max-width: 1100px) { .pe-layout { grid-template-columns: minmax(0,1fr); } }
-    .pe-box { background:#1f1f1f; border:1px solid #333; border-radius:6px; margin-bottom:18px; }
-    .pe-box > h3 { margin:0; padding:11px 14px; font-size:13px; font-weight:700; text-transform:uppercase;
-                   letter-spacing:.04em; color:#ddd; border-bottom:1px solid #333; }
-    .pe-box > .pe-body { padding:14px; }
-    .pe-field { margin-bottom:14px; }
+    .pe-page { padding:24px 26px 60px; }
+    .pe-page-title { margin:0 0 22px; }
+    .pe-layout { display:grid; grid-template-columns: minmax(0,1fr) 340px; gap:26px; align-items:start; }
+    @media (max-width: 1100px) { .pe-layout { grid-template-columns: minmax(0,1fr); } .pe-page { padding:18px 14px 40px; } }
+    .pe-box {
+        background:#242424;
+        border:1px solid #3a3a3a;
+        border-radius:8px;
+        margin-bottom:22px;
+        box-shadow:0 1px 3px rgba(0,0,0,.4);
+    }
+    .pe-box > h3 { margin:0; padding:14px 20px; font-size:13px; font-weight:700; text-transform:uppercase;
+                   letter-spacing:.04em; color:#ddd; border-bottom:1px solid #3a3a3a; }
+    .pe-box > .pe-body { padding:22px 20px; }
+    .pe-field { margin-bottom:20px; }
+    .pe-field-inline select { max-width:220px; }
     .pe-field:last-child { margin-bottom:0; }
-    .pe-field label { display:block; font-size:12px; font-weight:600; color:#c9c9c9; margin-bottom:5px; }
-    .pe-field .help { font-size:11px; color:#8c8c8c; margin-top:4px; display:block; }
-    .pe-title-input { font-size:20px !important; height:auto !important; padding:10px 12px !important; font-weight:600; }
-    .pe-url { display:flex; align-items:center; gap:6px; flex-wrap:wrap; font-size:12px; }
+    .pe-field label { display:block; font-size:12px; font-weight:600; color:#c9c9c9; margin-bottom:7px; }
+    .pe-field .help { font-size:11px; color:#8c8c8c; margin-top:6px; display:block; }
+    .pe-title-input { font-size:20px !important; height:auto !important; padding:12px 14px !important; font-weight:600; }
+    .pe-url { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:12px; }
     .pe-url .pe-url-prefix { color:#8c8c8c; white-space:nowrap; }
     .pe-url input { flex:1; min-width:160px; }
-    .pe-slug-msg { font-size:11px; margin-top:5px; min-height:15px; }
+    .pe-slug-msg { font-size:11px; margin-top:7px; min-height:15px; }
     .pe-slug-msg.ok { color:#5cb85c; }
     .pe-slug-msg.bad { color:#d9534f; }
-    .pe-checklist { max-height:190px; overflow-y:auto; border:1px solid #3a3a3a; border-radius:4px; padding:9px; background:#191919; }
-    .pe-checklist label { display:block; font-weight:400; font-size:13px; color:#ddd; margin:0 0 6px; cursor:pointer; }
-    .pe-checklist input { margin-right:7px; }
+    .pe-checklist { max-height:190px; overflow-y:auto; border:1px solid #3a3a3a; border-radius:5px; padding:12px; background:#1c1c1c; }
+    .pe-checklist label { display:block; font-weight:400; font-size:13px; color:#ddd; margin:0 0 8px; cursor:pointer; }
+    .pe-checklist input { margin-right:8px; }
     .pe-counter { font-size:11px; color:#8c8c8c; float:right; font-weight:400; }
     .pe-counter.over { color:#d9534f; font-weight:700; }
-    .pe-preview { background:#fff; border-radius:4px; padding:12px 14px; }
-    .pe-preview .g-title { color:#1a0dab; font-size:17px; line-height:1.3; margin-bottom:2px; }
+    .pe-preview { background:#fff; border-radius:5px; padding:14px 16px; }
+    .pe-preview .g-title { color:#1a0dab; font-size:17px; line-height:1.3; margin-bottom:3px; }
     .pe-preview .g-url { color:#006621; font-size:12px; word-break:break-all; }
-    .pe-preview .g-desc { color:#545454; font-size:12.5px; line-height:1.45; margin-top:3px; }
-    .pe-img-preview { width:100%; max-height:170px; object-fit:contain; background:#111; border-radius:4px;
-                      display:block; margin-bottom:8px; }
-    .pe-actions { display:flex; gap:8px; flex-wrap:wrap; }
-    .pe-errors { margin-bottom:16px; }
-    .pe-sticky-save { position:sticky; top:10px; z-index:5; }
+    .pe-preview .g-desc { color:#545454; font-size:12.5px; line-height:1.45; margin-top:4px; }
+    .pe-img-preview { width:100%; max-height:170px; object-fit:contain; background:#111; border-radius:5px;
+                      display:block; margin-bottom:10px; }
+    .pe-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+    .pe-errors { margin-bottom:20px; }
+    .pe-sticky-save { position:sticky; top:16px; z-index:5; }
 </style>
 
 <div class="page-wrapper">
-    <div class="container-fluid">
+    <div class="container-fluid pe-page">
+
+        <h2 class="pe-page-title">{{ $title }}</h2>
 
         @if($errors->any())
             <div class="alert alert-danger pe-errors">
@@ -73,6 +84,15 @@ $publishedAt = old('published_at', $post->published_at ? $post->published_at->fo
                                        class="form-control pe-title-input"
                                        value="{{ $val('title', $post->title) }}"
                                        placeholder="Add title">
+                            </div>
+
+                            <div class="pe-field pe-field-inline">
+                                <label for="pe-identifier">Section</label>
+                                <select id="pe-identifier" name="identifier" class="form-control">
+                                    <option value="{{ \App\Blog::TYPE_BLOG }}" @selected((int) $val('identifier', $post->identifier) === \App\Blog::TYPE_BLOG)>Blog</option>
+                                    <option value="{{ \App\Blog::TYPE_NEWS }}" @selected((int) $val('identifier', $post->identifier) === \App\Blog::TYPE_NEWS)>News</option>
+                                </select>
+                                <span class="help">Chooses which listing the post shows in.</span>
                             </div>
 
                             <div class="pe-field">
@@ -183,15 +203,6 @@ $publishedAt = old('published_at', $post->published_at ? $post->published_at->fo
                                 <input type="datetime-local" id="pe-published-at" name="published_at"
                                        class="form-control" value="{{ $publishedAt }}">
                                 <span class="help">Set a future date and time to schedule the post.</span>
-                            </div>
-
-                            <div class="pe-field">
-                                <label for="pe-identifier">Section</label>
-                                <select id="pe-identifier" name="identifier" class="form-control">
-                                    <option value="{{ \App\Blog::TYPE_BLOG }}" @selected((int) $val('identifier', $post->identifier) === \App\Blog::TYPE_BLOG)>Blog</option>
-                                    <option value="{{ \App\Blog::TYPE_NEWS }}" @selected((int) $val('identifier', $post->identifier) === \App\Blog::TYPE_NEWS)>News</option>
-                                </select>
-                                <span class="help">Chooses which listing the post shows in.</span>
                             </div>
 
                             <div class="pe-field">

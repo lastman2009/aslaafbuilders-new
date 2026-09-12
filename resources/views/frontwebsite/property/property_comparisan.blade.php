@@ -253,7 +253,9 @@ $title = "Property Comparison";
                                         <div class="img-block"><img class="img-responsive" src="/images/property/user_property/original_<?=$images[0] ?>"></div>
 
                                     @else
-                                     <div class="img-block"><img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center={{$firstproperty->latitude}},{{$firstproperty->longitude}}&markers=color:orange%7Clabel:R%7C{{$firstproperty->latitude}},{{$firstproperty->longitude}}&zoom=12&size=512x384&sensor=true&key=AIzaSyBq8gdCcmzERDnikFG5ZXPT2cl_HBIXEWY"></div>
+                                     {{-- Static Google map image removed: it used a dead API key and rendered
+     as a broken image. The interactive Leaflet map above shows the same
+     location. --}}
                                      @endif
                                 @endif
                                 </div>
@@ -543,7 +545,9 @@ $title = "Property Comparison";
                                     
                                     <div class="img-block"><img class="img-responsive" src="/images/property/user_property/original_<?=$images[0] ?>"></div>
                                     @else
-                                     <div class="img-block"><img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center={{$secondproperty->latitude}},{{$secondproperty->longitude}}&markers=color:orange%7Clabel:R%7C{{$secondproperty->latitude}},{{$secondproperty->longitude}}&zoom=12&size=512x384&sensor=true&key=AIzaSyBq8gdCcmzERDnikFG5ZXPT2cl_HBIXEWY"></div>
+                                     {{-- Static Google map image removed: it used a dead API key and rendered
+     as a broken image. The interactive Leaflet map above shows the same
+     location. --}}
                                      @endif
                                 @endif
                                 </div>
@@ -828,7 +832,7 @@ $title = "Property Comparison";
 <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGliLFvAQbzQtcte_CQVjhHa6vQ3ifZjk&callback=initMap">
     </script> -->
-    <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFTfCu2rXDn78zX7Tc2IEpBuxBYr__WVA&v=3.exp&callback=initMap" type="text/javascript"></script>
+@include('frontwebsite.property.partials.compare-maps')
 <script type="text/javascript">
 	$('#saveProperty').click(function(){
 		id =$(this).attr('data-id');
@@ -903,43 +907,7 @@ $title = "Property Comparison";
 
 
 <script type="text/javascript">
-	var marker;
-	var marker2;
-
-	function initMap() {
-	  var map = new google.maps.Map(document.getElementById('map1'), {
-	    zoom: 17,
-	    center: {lat: {{$firstproperty->latitude}}, lng: {{$firstproperty->longitude}}}
-	  });
-	  var map2 = new google.maps.Map(document.getElementById('map2'), {
-	    zoom: 17,
-	    center: {lat: {{$secondproperty->latitude}}, lng: {{$secondproperty->longitude}}}
-	  });
-	  marker = new google.maps.Marker({
-	    map: map,
-	    draggable: true,
-	    animation: google.maps.Animation.DROP,
-	    position: {lat: {{$firstproperty->latitude}}, lng: {{$firstproperty->longitude}}}
-	  });
-	  marker.addListener('click', toggleBounce);
-	  marker2 = new google.maps.Marker({
-	    map: map2,
-	    draggable: true,
-	    animation: google.maps.Animation.DROP,
-	    position: {lat: {{$secondproperty->latitude}}, lng: {{$secondproperty->longitude}}}
-	  });
-	  marker2.addListener('click', toggleBounce);
-	}
-
-	function toggleBounce() {
-	  if (marker.getAnimation() !== null || marker2.getAnimation() !== null) {
-	    marker.setAnimation(null);
-	    marker2.setAnimation(null);
-	  } else {
-	    marker.setAnimation(google.maps.Animation.BOUNCE);
-	    marker2.setAnimation(google.maps.Animation.BOUNCE);
-	  }
-	}
+	// The maps are drawn by the compare-maps partial included above.
 </script>
 
 <script type="text/javascript">

@@ -483,7 +483,7 @@ $modifiedIso  = optional($blog->updated_at)->toAtomString();
                             </ul>
                         </div>
                       
-                        <div class="recent-blogs text-center"><a href="https://www.rightdeed.com/signup"> <img src="/assets/images/sidebar_ad_1.jpg"></a></div>
+                        {{-- <div class="recent-blogs text-center"><a href="https://www.rightdeed.com/signup"> <img src="/assets/images/sidebar_ad_1.jpg"></a></div> --}}
                          {{-- <div class="recent-blogs text-center"><img src="../../assets/images/img2.jpg"></div>
                         --}}
                     </div>

@@ -271,4 +271,81 @@ class Property extends Model
     {
         return $this->hasMany(PaymentPlan::class);
     }
+
+    /*
+    |---------------------------------------------------------------------
+    | SEO
+    |---------------------------------------------------------------------
+    | Every value is generated from the property's own data, so listings
+    | need no hand-written meta tags. Nothing here can return an empty
+    | string, because a blank meta tag is worse than a generated one.
+    */
+
+    /** Location as "Town, City", skipping parts that are missing. */
+    public function seoLocation()
+    {
+        $parts = [];
+        if (!empty($this->town) && !empty($this->town->name)) {
+            $parts[] = $this->town->name;
+        }
+        if (!empty($this->city) && !empty($this->city->name)) {
+            $parts[] = $this->city->name;
+        }
+        return implode(', ', $parts);
+    }
+
+    public function seoTitle()
+    {
+        $bits = array_filter([
+            $this->title,
+            'for ' . self::getPurpose($this->purpose),
+            $this->seoLocation(),
+        ]);
+        return trim(implode(' ', $bits)) ?: 'Property';
+    }
+
+    public function seoDescription()
+    {
+        // The stored description is user-entered HTML, so flatten it before
+        // it goes anywhere near a meta tag.
+        $text = trim(preg_replace('/\s+/', ' ', strip_tags((string) $this->description)));
+        if ($text === '') {
+            $location = $this->seoLocation();
+            $text = trim($this->title . ' available for ' . self::getPurpose($this->purpose)
+                . ($location !== '' ? ' in ' . $location : '')) . '.';
+        }
+        // 155 characters is roughly what a search result shows.
+        if (mb_strlen($text) > 155) {
+            $text = mb_substr($text, 0, 152) . '...';
+        }
+        return $text;
+    }
+
+    public function seoKeywords()
+    {
+        $words = array_filter([
+            $this->title,
+            'property for ' . self::getPurpose($this->purpose),
+            !empty($this->town) ? $this->town->name : null,
+            !empty($this->city) ? $this->city->name : null,
+            'real estate Pakistan',
+        ]);
+        return implode(', ', $words);
+    }
+
+    /** Absolute URL of the first gallery image, for og:image. */
+    public function seoImage()
+    {
+        $images = array_filter(explode(';', (string) $this->gallery));
+        if (empty($images)) {
+            return null;
+        }
+        return url('/images/property/user_property/original_' . reset($images));
+    }
+
+    /** Absolute canonical URL for this property. */
+    public function seoCanonical()
+    {
+        return url($this->url . '/' . $this->id);
+    }
 }

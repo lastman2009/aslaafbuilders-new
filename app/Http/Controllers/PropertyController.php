@@ -56,6 +56,31 @@ use App\AgencyWebsite;
 class PropertyController extends Controller
 {
   
+  /*
+   | Per-image upload ceiling.
+   |
+   | Images are resized to 1024x768 server-side after upload, so a large
+   | source file costs nothing once stored - the only real constraint is
+   | that the whole POST must fit inside php.ini's post_max_size, with room
+   | to spare for the ~96 other form fields.
+   |
+   | The old ceiling was 1.7MB, which rejected almost every photo taken on a
+   | phone and sent the user back to an empty form.
+   */
+  const MAX_IMAGE_UPLOAD_BYTES = 6291456; // 6 MB per image
+  const MAX_IMAGE_UPLOAD_COUNT = 12;      // 12 photos per submit
+
+  /*
+   | 12 * 6MB = 72MB, so php.ini needs roughly:
+   |     post_max_size       = 96M
+   |     upload_max_filesize = 8M
+   |     max_file_uploads    = 20
+   | If post_max_size is smaller than a submitted batch, PHP discards the
+   | entire POST: $_POST and $_FILES arrive empty and the user loses every
+   | field with a misleading "empty data" message. Keep php.ini in step with
+   | these constants.
+   */
+
   const ACTIVE = 1;
   const PENDING = 0;
   const INACTIVE = 2;
@@ -484,8 +509,8 @@ if(count($images) == 1){
 }
 $portfolio->gallery = $images;
 $portfolio->update();
-File::delete("images/property/user_property/original_" . $img_name);
-File::delete("images/property/user_property/thumb_" . $img_name);
+File::delete(public_path("images/property/user_property/original_" . $img_name));
+File::delete(public_path("images/property/user_property/thumb_" . $img_name));
 return Response::json(['success' => 'removed']);
 }
 
@@ -497,9 +522,9 @@ return Response::json(['success' => 'removed']);
         {
           foreach ($request->images as $image) 
           {
-              if(filesize($image) > 1700000)
+              if($image->getSize() > self::MAX_IMAGE_UPLOAD_BYTES)
               { 
-                  return redirect('dashboard/property/add')->with('message', 'image file size is not acceptable');
+                  return redirect('dashboard/property/add')->with('message', 'Image "' . $image->getClientOriginalName() . '" is ' . round($image->getSize() / 1048576, 1) . 'MB. Each image must be under ' . (self::MAX_IMAGE_UPLOAD_BYTES / 1048576) . 'MB.');
               }  
           }  
         }
@@ -691,9 +716,9 @@ public function addpropertyForHouse(Request $request)
     {
       foreach ($request->images as $image) 
       {
-        if(filesize($image) > 1700000)
+        if($image->getSize() > self::MAX_IMAGE_UPLOAD_BYTES)
         { 
-          return redirect('dashboard/property/add')->with('message', 'image file size is not acceptable');
+          return redirect('dashboard/property/add')->with('message', 'Image "' . $image->getClientOriginalName() . '" is ' . round($image->getSize() / 1048576, 1) . 'MB. Each image must be under ' . (self::MAX_IMAGE_UPLOAD_BYTES / 1048576) . 'MB.');
         }  
       }  
     }
@@ -838,7 +863,7 @@ return redirect('dashboard/property/add')->with('message', 'Due to Large Image Y
     //       {
     //         foreach ($request->images as $image) 
     //         {
-    //             if(filesize($image) > 1700000)
+    //             if($image->getSize() > self::MAX_IMAGE_UPLOAD_BYTES)
     //             { 
     //                 return redirect('dashboard/project/add')->with('message', 'image file size is not acceptable');
     //             }  
@@ -1395,9 +1420,9 @@ public function updateIndex($property, $model, $town_id = null){
       {
         foreach ($request->images as $image) 
         {
-          if(filesize($image) > 1700000)
+          if($image->getSize() > self::MAX_IMAGE_UPLOAD_BYTES)
           { 
-            return back()->with('message', 'image file size is not acceptable');
+            return back()->with('message', 'Image "' . $image->getClientOriginalName() . '" is ' . round($image->getSize() / 1048576, 1) . 'MB. Each image must be under ' . (self::MAX_IMAGE_UPLOAD_BYTES / 1048576) . 'MB.');
           }  
         }         
       }
@@ -1474,6 +1499,12 @@ public function updateIndex($property, $model, $town_id = null){
     if(!empty($request->images)){
       $array = $request->images;
       $images = $this->upload_multiple_image_and_resize_save_in_folder_property($array, 'user_property');
+      // The helper returns false when a file is not an allowed image type.
+      // Without this guard implode() receives false and fatals on PHP 8.
+      if(!$images)
+      {
+        return back()->with('error', 'Sorry, only JPG, JPEG, PNG & GIF files are allowed.');
+      }
       $img_string = implode(';', $images);
       if(!empty($property->gallery))
       {
@@ -3294,9 +3325,9 @@ public function addFrequentProperty(Request $request)
         {
           foreach ($request->images as $image) 
           {
-              if(filesize($image) > 1700000)
+              if($image->getSize() > self::MAX_IMAGE_UPLOAD_BYTES)
               { 
-                  return redirect('dashboard/quick/add/Property')->with('message', 'image file size is not acceptable');
+                  return redirect('dashboard/quick/add/Property')->with('message', 'Image "' . $image->getClientOriginalName() . '" is ' . round($image->getSize() / 1048576, 1) . 'MB. Each image must be under ' . (self::MAX_IMAGE_UPLOAD_BYTES / 1048576) . 'MB.');
               }  
           }  
         }
@@ -3386,7 +3417,11 @@ public function quickEditProperty($id)
  {
   $user_client =Client::where('id',$property->client_id)->where('user_id',$property->user_id)->first();
 }
-    //  $user=Auth::user();
+// The assignment here was commented out while 'user' stayed in compact(),
+// which is a fatal error on PHP 8 rather than a silently skipped variable.
+// The view is for an existing property, so it needs that property's owner
+// (matching editproperty/editpropertydetails), not the logged-in user.
+$user = User::find($property->user_id);
 return view('dashboard.property.quickEditPropertyPage',compact('property','propertyTypes','data','cities','towns','blocks','phases','clients' ,'user_client','user'));
 }
 public function EditFrequentProperty(Request $request ,$id)
@@ -3395,9 +3430,9 @@ public function EditFrequentProperty(Request $request ,$id)
  {
   foreach ($request->images as $image) 
   {
-    if(filesize($image) > 1700000)
+    if($image->getSize() > self::MAX_IMAGE_UPLOAD_BYTES)
     { 
-      return back()->with('message', 'image file size is not acceptable');
+      return back()->with('message', 'Image "' . $image->getClientOriginalName() . '" is ' . round($image->getSize() / 1048576, 1) . 'MB. Each image must be under ' . (self::MAX_IMAGE_UPLOAD_BYTES / 1048576) . 'MB.');
     }  
   }         
 }
@@ -3429,6 +3464,12 @@ if(!empty($request->images))
 {
   $array = $request->images;
   $images = $this->upload_multiple_image_and_resize_save_in_folder_property($array, 'user_property');
+  // The helper returns false when a file is not an allowed image type.
+  // Without this guard implode() receives false and fatals on PHP 8.
+  if(!$images)
+  {
+    return back()->with('error', 'Sorry, only JPG, JPEG, PNG & GIF files are allowed.');
+  }
   $img_string = implode(';', $images);
   if(!empty($property->gallery))
   {
@@ -4179,8 +4220,8 @@ public function ApiDeletePropertyImage(Request $request){
       }
       $property->gallery = $images;
       $property->update();
-      File::delete("images/property/user_property/original_" . $request->img_name);
-      File::delete("images/property/user_property/thumb_" . $request->img_name);
+      File::delete(public_path("images/property/user_property/original_" . $request->img_name));
+      File::delete(public_path("images/property/user_property/thumb_" . $request->img_name));
       return Response::json('Removed');                
     }
     return Response::json('Removed from list!');
@@ -4307,6 +4348,8 @@ public function images_resize()
 
 
 }
-ini_set('upload_max_filesize', '512M');
-ini_set('post_max_size', '512M');
+// NOTE: upload_max_filesize and post_max_size are PHP_INI_PERDIR settings.
+// Two ini_set() calls used to sit here, outside the class, and never had any
+// effect. Raise these in php.ini (or .htaccess) if larger uploads are needed;
+// see PropertyController::MAX_IMAGE_UPLOAD_BYTES, which must stay within them.
 ini_set('max_execution_time', '720');

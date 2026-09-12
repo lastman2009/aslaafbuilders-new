@@ -82,7 +82,7 @@ $title = "Properties Pending List For Admin";
                                                         <i class="fa fa-lock text-inverse m-r-10"></i> 
                                                     </a>
                                                     @endif
-                                                      <a href="{{$property->url}}/{{$property->id}}" class="mr-5 " data-toggle="tooltip" data-original-title="Preview"> 
+                                                      <a href="{{$property->url}}/{{$property->id}}" target="_blank" rel="noopener" class="mr-5 " data-toggle="tooltip" data-original-title="Preview"> 
                                                         <i class="fa fa-eye text-inverse m-r-10"></i> 
                                                     </a>
                                                 </td>

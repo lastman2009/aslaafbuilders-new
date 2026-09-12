@@ -4,18 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="_5MDurhqgxX4NOZlAEPE2hyNoH3cafXZLNXonzQoHRs" />
     <meta  name="description" content="%DESCRIPTION%">
 	<meta  name="keywords" content="%KEYWORD% ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>%TITLE%</title>
 
-    <meta property="og:title" content="Aslaaf Builders" />
-    <meta property="og:type" content="Pakistan Real Estate" />
-    <meta property="og:url" content="https://aslaafbuilders.com/" />
+    <link rel="canonical" href="%CANONICAL%" />
+
+    <meta property="og:title" content="%TITLE%" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aslaaf Builders" />
+    <meta property="og:url" content="%CANONICAL%" />
     <meta property="og:description" content="%DESCRIPTION%" />
- 
-    <meta property="og:image" content="https://www.rightdeed.com/home_images/logos/logo.png" />
+    <meta property="og:image" content="%OGIMAGE%" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%TITLE%" />
+    <meta name="twitter:description" content="%DESCRIPTION%" />
+    <meta name="twitter:image" content="%OGIMAGE%" />
    
     <!-- Favicon — the Aslaaf Builders badge from the header logo -->
     <link rel="icon" href="/image/favicon.ico" sizes="32x32">

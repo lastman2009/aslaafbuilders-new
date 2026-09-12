@@ -103,6 +103,14 @@ $title = "All Properties List";
                                                                     <i class="fa fa-pencil-square-o text-inverse "></i> 
                                                                 </a>
 
+                                                                {{-- Opens the public listing page in a new tab. Unpublished
+                                                                     properties are still reachable by direct link, so the
+                                                                     tooltip says so rather than hiding the action. --}}
+                                                                <a href="{{ $property->url }}/{{ $property->id }}" target="_blank" rel="noopener"
+                                                                   class="  " data-toggle="tooltip"
+                                                                   data-original-title="{{ $property->status == 1 ? 'View on Website' : 'View on Website (not published yet)' }}">
+                                                                    <i class="fa fa-external-link {{ $property->status == 1 ? 'text-inverse' : 'blocked-text' }}"></i>
+                                                                </a>
 
                                                             </td>
                                                         </tr>
