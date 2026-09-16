@@ -118,7 +118,7 @@ $title = "Property Add";
 							<div class="col-md-6 padding-left">
 								<div class="form-group">
 									<label class="control-label mb-10" for="email_de">all inclusive price (PKR):</label>
-									<input type="text" id="mytext" name="price" onkeypress='return validateQty(event);' class="tooltip-color" min="1" max="9" onkeyup="word.innerHTML=convertNumberToWords(this.value)" data-toggle="tooltip" data-placement="top"  placeholder="" required/>
+									<input type="text" id="mytext" name="price" onkeypress='return validateQty(event);' class="tooltip-color" min="1" max="9" onkeyup="word.innerHTML=convertNumberToWords(this.value)" data-toggle="tooltip" data-placement="top"  placeholder="" inputmode="numeric" pattern="[0-9]*" autocomplete="off" required/>
 								</div>
 								@if ($errors->has('price'))
 							    <div class="error" style="color: red">{{ $errors->first('price') }}</div>
@@ -1238,7 +1238,9 @@ slugCallback: function ( filename ) {
 		// separately, further down.
 
 ///////Function to ristrict max lenght of price input field///////
-$("#mytext").attr('maxlength', '9');
+// 9 digits capped the price below 1 billion, which is short for PKR
+// property prices. The column is a varchar(255), so 12 digits is safe.
+$("#mytext").attr('maxlength', '12');
 } );
 </script>
 <script type="text/javascript">
@@ -1390,6 +1392,7 @@ $( '#phase' ).change( function () {
 });
 </script>
 @include('dashboard.property.partials.map-locationpicker')
+@include('dashboard.property.partials.numeric-input-guard')
 // <script>
 // 	$(document).ready(function() {
 // 		$("input[type=number]").stepper();

@@ -678,7 +678,7 @@ $Backups =['UPS' ,'Generator','Solar'];
 								<div class="col-md-6 padding-left">
 									<div class="form-group">
 										<label class="control-label mb-10" for="email_de">all inclusive price (PKR):</label>
-										<input type="text" id="mytext" name="price" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="tooltip-color" value="{{$property->price}}" min="1" max="9" onkeyup="word.innerHTML=convertNumberToWords(this.value)" data-toggle="tooltip" data-placement="top"  placeholder="" required/>
+										<input type="text" id="mytext" name="price" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="tooltip-color" value="{{$property->price}}" min="1" max="9" onkeyup="word.innerHTML=convertNumberToWords(this.value)" data-toggle="tooltip" data-placement="top"  placeholder="" inputmode="numeric" pattern="[0-9]*" autocomplete="off" required/>
 									</div>
 <!-- <input type="text" name="number" placeholder="Number OR Amount" onkeyup="word.innerHTML=convertNumberToWords(this.value)" /> -->
 <div id="word" style="position: absolute;
@@ -1317,7 +1317,9 @@ $('#youtube').remove();
 });
 
 ///////Function to ristrict max lenght of price input field///////
-$("#mytext").attr('maxlength', '9');    
+// 9 digits capped the price below 1 billion, which is short for PKR
+// property prices. The column is a varchar(255), so 12 digits is safe.
+$("#mytext").attr('maxlength', '12');    
 
 
 
@@ -1329,6 +1331,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGliLFvAQbzQtcte_CQVjhHa6
 </script> -->
 <!-- <script src="https://maps.google.com/maps/api/js?key=AIzaSyDGliLFvAQbzQtcte_CQVjhHa6vQ3ifZjk&sensor=false&libraries=places"></script> -->
 @include('dashboard.property.partials.map-locationpicker')
+@include('dashboard.property.partials.numeric-input-guard')
 <script>
 $(document).ready(function() {
 $("input[type=number]").stepper();

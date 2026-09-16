@@ -1186,6 +1186,13 @@ public function updateIndex($property, $model, $town_id = null){
   $area_type = $property->area_type;
   $per_sq_ft_price = $this->getPerSquareFeetPrice($price, $area, $area_type);
 
+  // Without a usable per-square-foot price there is nothing to average into
+  // the index. Carrying on would feed null into the arithmetic below and
+  // corrupt the stored averages, so skip this property instead.
+  if ($per_sq_ft_price === null || !is_numeric($per_sq_ft_price) || $per_sq_ft_price <= 0) {
+    return;
+  }
+
   if(empty($town_id)){
     $current = $model::where("city_id" , $city_id)->where("day", date("d", strtotime($property->created_at)))->where("month", date("m", strtotime($property->created_at)))->where("year", date("Y", strtotime($property->created_at)))->first();
   }else{
@@ -1210,7 +1217,9 @@ public function updateIndex($property, $model, $town_id = null){
     }else{
       $previous_day_avg_price = $previous_day->avg_price_ftsq;
       $new_index = ($new_avg / $previous_day_avg_price) * 100;
-      $avg_price_difference = (($new_index - $previous_day->index)/$previous_day->index) * 100;
+      // A previous index of 0 (or null) would be a division by zero.
+            $avg_price_difference = empty($previous_day->index) ? 0
+              : (($new_index - $previous_day->index) / $previous_day->index) * 100;
     }
     $current->avg_price_ftsq = $new_avg;
     $current->index = $new_index;
@@ -1238,7 +1247,9 @@ public function updateIndex($property, $model, $town_id = null){
           }else{
             $previous_day_avg_price = $previous_day->avg_price_ftsq;
             $new_index = ($per_sq_ft_price / $previous_day_avg_price) * 100;
-            $avg_price_difference = (($new_index - $previous_day->index)/$previous_day->index) * 100;
+            // A previous index of 0 (or null) would be a division by zero.
+            $avg_price_difference = empty($previous_day->index) ? 0
+              : (($new_index - $previous_day->index) / $previous_day->index) * 100;
           }
           $new_entery->index = $new_index;
           $new_entery->avg_price_difference = $avg_price_difference;
@@ -1274,7 +1285,9 @@ public function updateIndex($property, $model, $town_id = null){
             $previous_day_avg_price = $previous_day->avg_price_ftsq;
             // dd(($current->avg_price_ftsq / $previous_day_avg_price) * 100);
             $new_index = ($current->avg_price_ftsq / $previous_day_avg_price) * 100;
-            $avg_price_difference = (($new_index - $previous_day->index)/$previous_day->index) * 100;
+            // A previous index of 0 (or null) would be a division by zero.
+            $avg_price_difference = empty($previous_day->index) ? 0
+              : (($new_index - $previous_day->index) / $previous_day->index) * 100;
           // dd($avg_price_difference);
 
             $current->index = $new_index;
@@ -1304,6 +1317,19 @@ public function updateIndex($property, $model, $town_id = null){
         $this->updateIndex($property, PlotCityTownIndex::class, $property->town_id);
       } 
       public function getPerSquareFeetPrice($price, $area, $area_type){
+        // Price and area arrive straight from the form and may be blank, or
+        // carry thousands separators / words ("1,235", "1235 lack"). On PHP 8
+        // those throw "A non-numeric value encountered" or a TypeError rather
+        // than quietly coercing, so normalise first and bail out when either
+        // value is unusable. area_type is also nullable, and an unknown type
+        // falls through the switch and returns null.
+        $price = is_numeric($price) ? (float) $price : (float) preg_replace('/[^0-9.]/', '', (string) $price);
+        $area  = is_numeric($area)  ? (float) $area  : (float) preg_replace('/[^0-9.]/', '', (string) $area);
+
+        if ($price <= 0 || $area <= 0) {
+            return null;
+        }
+
         switch ($area_type) {
           case 'Marla':
           return $price/$this->marlaToSqfeet($area);

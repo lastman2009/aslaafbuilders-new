@@ -675,7 +675,9 @@ $('#youtube').remove();
 });
 
 ///////Function to ristrict max lenght of price input field///////
-$("#mytext").attr('maxlength', '9');    
+// 9 digits capped the price below 1 billion, which is short for PKR
+// property prices. The column is a varchar(255), so 12 digits is safe.
+$("#mytext").attr('maxlength', '12');    
 
 
 
