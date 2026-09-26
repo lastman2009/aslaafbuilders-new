@@ -529,9 +529,13 @@ return Response::json(['success' => 'removed']);
           }  
         }
         $title = $this->removeProceedingHash($request->title);
-        $ignorelist =['_token','user_id','files','approved_by_id','address','video','images','clientdata','youtube_link','electricity_backup', 'flooring'];
+        $ignorelist =['_token','user_id','files','approved_by_id','address','video','images','clientdata','youtube_link','electricity_backup', 'flooring', 'block'];
         $columnNames=$this->getColumnNames();
         $property = new Property;
+        // The "block" field is now typed text, not a select of an existing
+        // blocks.id. Resolve it to a real block_id (creating one if this
+        // name is new for the phase) before anything below reads block_id.
+        $request->merge(['block_id' => $this->resolveBlockId($request->block, $request->phase_id)]);
         $clientid ="";
          if($request->clientdata == "user")
         {
@@ -1453,9 +1457,16 @@ public function updateIndex($property, $model, $town_id = null){
         }         
       }
 
-      $ignorelist =['_token','id','user_id','files','approved_by_id','address','video','images','clientdata','youtube_link','electricity_backup', 'flooring','myself','client_id','gallery','status'];
+      $ignorelist =['_token','id','user_id','files','approved_by_id','address','video','images','clientdata','youtube_link','electricity_backup', 'flooring','myself','client_id','gallery','status','block'];
       $columnNames=$this->getColumnNames();
       $property = Property::find($id);
+      // The "block" field is now typed text, not a select of an existing
+      // blocks.id. Resolve it to a real block_id (creating one if this
+      // name is new for the phase) before anything below reads block_id.
+      // Falls back to the property's current block_id when the field is
+      // left untouched, so editing other fields never disturbs it.
+      $resolvedBlockId = $this->resolveBlockId($request->block, $request->phase_id);
+      $request->merge(['block_id' => $resolvedBlockId ?: $property->block_id]);
       $clientid ="";
       if($request->clientdata == "user")
       {
@@ -4072,6 +4083,36 @@ public function upload_multiple_image($images_array,$folderName)
       $pro->to_marla=$this->convertToMarla($area_type, $area);
       $pro->update();
     }
+  }
+  /**
+   * The "block" field on the add/edit property forms used to be a <select>
+   * populated only with blocks already seeded for the chosen phase. It is
+   * now free text, but block_id is still what everything downstream reads
+   * (address string, town/phase price index, blocks.block_count) - so this
+   * resolves the typed name to a real blocks.id, matching case-insensitively
+   * against blocks that already exist under that phase, or creating one.
+   *
+   * Every typed block name that does not already exist becomes a permanent
+   * row in `blocks`, visible to other properties added under the same
+   * phase from then on - same as any other user-entered location value.
+   */
+  private function resolveBlockId($blockName, $phaseId){
+    $blockName = trim((string) $blockName);
+    if ($blockName === '' || empty($phaseId)) {
+      return null;
+    }
+    $existing = Block::where('phase_id', $phaseId)
+      ->whereRaw('LOWER(name) = ?', [mb_strtolower($blockName)])
+      ->first();
+    if ($existing) {
+      return $existing->id;
+    }
+    $block = new Block;
+    $block->phase_id = $phaseId;
+    $block->name = $blockName;
+    $block->block_count = 0;
+    $block->save();
+    return $block->id;
   }
   private function convertToMarla($area_type, $area){
     switch ($area_type) {

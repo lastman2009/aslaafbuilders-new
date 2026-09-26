@@ -748,19 +748,40 @@ display:none;"></div>
 									</div>
 								</div>
 								<div class="col-md-4 padding-left">
-									<div class="form-group">
-										<label class="control-label mb-10" for="email_de">select block:</label>
-										<select name="block_id" id="block" class="selectpicker" data-style="form-control btn-font btn-default btn-outline" title="--Nothing Selected--">
-											@foreach($blocks as $block)
-										@if($block->id == $property->block_id)
-
-											<option value="{{ $block->id }}" selected>{{$block->name}}</option>
-										@else
-											<option value="{{ $block->id }}">{{$block->name}}</option>
-											@endif
-											@endforeach
-										</select>
+									<div class="form-group" style="position: relative;">
+										<label class="control-label mb-10" for="block">block:</label>
+										<input type="text" id="block" name="block" class="form-control" autocomplete="off"
+											value="{{ old('block', optional($property->block)->name) }}"
+											placeholder="Type block name, e.g. Block A" />
+										<div id="block-suggest" class="block-suggest"></div>
+										@if ($errors->has('block'))
+										<div class="error" style="color: red">{{ $errors->first('block') }}</div>
+										@endif
 									</div>
+									<style>
+										/* Suggestion list for the block text field - matches the
+										   dark-theme dropdown pattern used elsewhere on this form. */
+										.block-suggest {
+											display: none;
+											position: absolute;
+											z-index: 1000;
+											left: 15px;
+											right: 15px;
+											top: 100%;
+											background: #2b2b2b;
+											border: 1px solid #444;
+											max-height: 200px;
+											overflow-y: auto;
+										}
+										.block-suggest div {
+											padding: 8px 12px;
+											cursor: pointer;
+											font-size: 13px;
+											color: #ddd;
+											border-bottom: 1px solid #3a3a3a;
+										}
+										.block-suggest div:hover { background: #3a3a3a; }
+									</style>
 								</div>
 								<div class="col-md-4 padding-left">
 									<div class="form-group">
@@ -1181,8 +1202,14 @@ $( '#c_name' ).attr( "disabled", "true" ).hide();
 
 } );
 
+// #block used to be a <select> populated with this phase's existing blocks.
+// It is now a free-text field (typing a new name is allowed and will
+// create a block record on save), but we still fetch the same list here to
+// show it as suggestions under the input.
 function loadBlocks() {
 phase_id = $( '#phase option:selected' ).val();
+$('#block').val('');
+$('#block-suggest').empty().hide();
 if(phase_id != ""){
     $.ajax( {
     url: '/townPhase/' + phase_id,
@@ -1192,13 +1219,42 @@ if(phase_id != ""){
     headers: {
     'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
     },
-    success: function ( json ) {
-    $( '#block' ).html( json );
-    $( '.selectpicker' ).selectpicker( 'refresh' );
+    success: function ( html ) {
+    var names = $.map($(html).filter('option'), function (opt) {
+        return $.trim($(opt).text());
+    });
+    renderBlockSuggestions(names);
     }
     });
 }
 }
+
+function renderBlockSuggestions(names) {
+    var $suggest = $('#block-suggest');
+    $suggest.empty();
+    if (!names || !names.length) {
+        $suggest.hide();
+        return;
+    }
+    $.each(names, function (_, name) {
+        if (!name) { return; }
+        $('<div></div>').text(name).on('click', function () {
+            $('#block').val(name);
+            $suggest.hide();
+        }).appendTo($suggest);
+    });
+}
+
+$('#block').on('focus', function () {
+    if ($('#block-suggest').children().length) {
+        $('#block-suggest').show();
+    }
+});
+$(document).on('click', function (e) {
+    if (!$(e.target).closest('#block, #block-suggest').length) {
+        $('#block-suggest').hide();
+    }
+});
 
 function loadPhases() {
 town_id = $( '#town option:selected' ).val();
@@ -1246,11 +1302,13 @@ $( '#city').change( function () {
 	loadTowns();
 
 	$('#phase').empty();
-	$('#block').empty();
+	$('#block').val('');
+	$('#block-suggest').empty().hide();
 
 });
 $( '#town').change( function () {
-	$('#block').empty();
+	$('#block').val('');
+	$('#block-suggest').empty().hide();
 	loadPhases();
 });
 $( '#phase').change( function () {

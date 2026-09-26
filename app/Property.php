@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Cache;
 use App\City;
 use App\Town;
@@ -12,7 +13,7 @@ use App\Property;
 use App\PropertyType;
 use \stdClass;
 use App\User;
-use App\Client; 
+use App\Client;
 use DateTime;
 use \Crypt;
 use App\Scheme;
@@ -20,6 +21,8 @@ use App\FloorPlan;
 use App\PaymentPlan;
 class Property extends Model
 {
+	use SoftDeletes;
+
 	protected $table = ['properties'];
     
     public function getColumns()
