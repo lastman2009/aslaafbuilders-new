@@ -9,8 +9,8 @@ use Illuminate\Http\Response;
 /**
  * XML sitemap for search engines, served at /sitemap.xml.
  *
- * Only published, non-future posts are listed, using the same
- * /blog/{id}/{slug} URL shape the site has always used so the sitemap agrees
+ * Only published, non-future posts are listed, using the slug-only
+ * /blog/{slug} URL shape (see Blog::getUrlAttribute()) so the sitemap agrees
  * with the canonical tags on the pages themselves.
  */
 class SitemapController extends Controller

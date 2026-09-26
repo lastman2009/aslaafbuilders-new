@@ -494,9 +494,28 @@ class BlogController extends Controller
 
         return preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
     }
-    public function view($id, $title, Request $request)
+    /**
+     * Legacy /blog/{id}/{title} URL, kept working for search engines that
+     * already have it indexed. The id is enough to resolve the post; always
+     * 301 to the slug-only canonical URL rather than rendering here, so
+     * link equity consolidates on one URL per post.
+     */
+    public function viewLegacy($id, $title)
     {
         $blog = Blog::find($id);
+        if ($blog === null) {
+            return abort(404);
+        }
+        if ((int) $blog->status !== Blog::STATUS_PUBLISHED
+            || ($blog->published_at && $blog->published_at->isFuture())) {
+            return abort(404);
+        }
+        return redirect($blog->url, 301);
+    }
+
+    public function view($slug, Request $request)
+    {
+        $blog = Blog::where('slug', $slug)->first();
         if($blog != null)
         {
             // Only published posts are publicly viewable; a scheduled post
@@ -506,17 +525,7 @@ class BlogController extends Controller
                 return abort(404);
             }
 
-            // The id resolves the post; the slug segment is cosmetic. When it
-            // does not match (a retitled post, or an older indexed URL), issue
-            // a 301 to the canonical URL instead of the previous hard 404 --
-            // that 404 silently dropped rankings every time a title changed.
-            $requestedSlug = str_slug(urldecode($title));
-            $canonicalSlug = $blog->effective_slug;
-
-            if ($requestedSlug !== $canonicalSlug) {
-                return redirect($blog->url, 301);
-            }
-
+            $id = $blog->id;
             {
                 $comments = BlogComment::where('blog_id', $id)->where('status', 1)->get();
                 $parentComments = BlogComment::where('blog_id', $id)->where('status', 1)->get();
@@ -531,7 +540,7 @@ class BlogController extends Controller
                 $blogsArchives= Blog::where('status', 1)
                 ->select(DB::raw("count(id) as count_blog, MONTH(created_at) as month, YEAR(created_at) as year"))
                 ->groupBy(DB::raw("MONTH(created_at)"))->groupBy(DB::raw("YEAR(created_at)"))->get();
-                
+
                 $years = Blog::where("status",1)->select(DB::raw("YEAR(created_at) as year"))->distinct()->get();
                 // dd($years);
                 $this->incrementView($blog);

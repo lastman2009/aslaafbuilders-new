@@ -144,14 +144,14 @@ $base_url = "https://www.rightdeed.com";
             $title = str_slug($blog->title);
             ?>
             <div class="col-md-6 col-sm-12 col-xs-12 bloglists">
-              <div class="blog-header"> <a href="/blog/{{$blog->id}}/{{$title}}">
+              <div class="blog-header"> <a href="{{$blog->url}}">
                 <img class="img-responsive" src="{{ ab_image('images/blogs_images/thumb_' . $blog->gallery, 'home_images/placeholders/area-' . (($loop->index % 5) + 1) . '.svg') }}" alt="{{ $blog->title }}"></a> </div>
               <div class="blog-description">
                 <div class="post-info">
                  Posted On<a class="extraspace"><strong>{{date('M jS, Y',strtotime($blog->created_at))}}</strong></a>
                </div>
 
-               <div class="post-title"><h3><a href="/blog/{{$blog->id}}/{{$title}}" title="{{$blog->title}}">{!! \Illuminate\Support\Str::words($blog->title, 14,'...')  !!}</a></h3></div>
+               <div class="post-title"><h3><a href="{{$blog->url}}" title="{{$blog->title}}">{!! \Illuminate\Support\Str::words($blog->title, 14,'...')  !!}</a></h3></div>
                <div class="post-text"><p><?php if(strlen(strip_tags($blog->contant)) > 30) echo substr(strip_tags(strip_tags($blog->contant)),0,30).'...'; else echo strip_tags($blog->contant); ?> </p></div>
 
                <div class="post-info lower">
@@ -164,7 +164,7 @@ $base_url = "https://www.rightdeed.com";
 
                   @endif</strong></a></li>
 
-                  <li class="pull-right"><a href="/blog/{{$blog->id}}/{{$title}}" class="read-more">Read More</a></li>
+                  <li class="pull-right"><a href="{{$blog->url}}" class="read-more">Read More</a></li>
                 </ul>
               </div> 
             </div>

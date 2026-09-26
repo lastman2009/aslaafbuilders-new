@@ -320,7 +320,7 @@ $areaStockPhotos = [
             </div>
             <div class="ab-grid">
                 @foreach($blogs->take(3) as $i => $blog)
-                @php $blogUrl = '/blog/' . $blog->id . '/' . str_slug($blog->title); @endphp
+                @php $blogUrl = $blog->url; @endphp
                 <div class="ab-card">
                     <a class="ab-ph" href="{{ $blogUrl }}">
                         <img src="{{ ab_image('images/blogs_images/' . $blog->gallery, 'home_images/placeholders/area-' . (($i % 5) + 1) . '.svg') }}" alt="{{ str_limit(strip_tags($blog->title), 60) }}">

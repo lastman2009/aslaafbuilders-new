@@ -114,7 +114,7 @@ $modifiedIso  = optional($blog->updated_at)->toAtomString();
                                     <ul class="social-blog-share pull-right">
                                         <li style="margin-right: 0;margin-left:5px;">
                                             <a class="share-button btn btn-facebook"
-                                               data-share-url="http://rightdeed.com/blog/{{$blog->id}}/{{str_slug($blog->title)}}"
+                                               data-share-url="{{$canonicalUrl}}"
                                                data-share-network="facebook" data-share-text="Share on Facebook"
                                                data-share-title="{{$blog->title}}" data-share-via="" data-share-tags=""
                                                data-share-media="http://rightdeed.com/images/blogs_images/thumb_{{$blog->gallery}}"
@@ -124,7 +124,7 @@ $modifiedIso  = optional($blog->updated_at)->toAtomString();
                                         </li>
                                         <li style="margin-right: 0;margin-left:5px;">
                                             <a class="share-button btn btn-twitter"
-                                               data-share-url="http://rightdeed.com/blog/{{$blog->id}}/{{str_slug($blog->title)}}"
+                                               data-share-url="{{$canonicalUrl}}"
                                                data-share-network="twitter" data-share-text="Share on twitter"
                                                data-share-title="{{$blog->title}}" data-share-via="jqueryscript"
                                                data-share-tags=""
@@ -135,7 +135,7 @@ $modifiedIso  = optional($blog->updated_at)->toAtomString();
                                         </li>
                                         <li style="margin-right: 0;margin-left:5px;">
                                             <a class="share-button btn btn-google"
-                                               data-share-url="http://rightdeed.com/blog/{{$blog->id}}/{{str_slug($blog->title)}}"
+                                               data-share-url="{{$canonicalUrl}}"
                                                data-share-network="googleplus" data-share-text="Share on Google+"
                                                data-share-title="{{$blog->title}}" data-share-via="" data-share-tags=""
                                                data-share-media="http://rightdeed.com/images/blogs_images/thumb_{{$blog->gallery}}"
@@ -145,7 +145,7 @@ $modifiedIso  = optional($blog->updated_at)->toAtomString();
                                         </li>
                                         <li style="margin-right: 0;margin-left:5px;">
                                             <a class="share-button btn btn-linkedin"
-                                               data-share-url="http://rightdeed.com/blog/{{$blog->id}}/{{str_slug($blog->title)}}"
+                                               data-share-url="{{$canonicalUrl}}"
                                                data-share-network="linkedin" data-share-text="Share on LinkedIn"
                                                data-share-title="{{$blog->title}}" data-share-via="" data-share-tags=""
                                                data-share-media="http://rightdeed.com/images/blogs_images/thumb_{{$blog->gallery}}"
@@ -155,7 +155,7 @@ $modifiedIso  = optional($blog->updated_at)->toAtomString();
                                         </li>
                                         <li style="margin-right: 0;margin-left:5px;">
                                             <a class="share-button btn btn-pinterest"
-                                               data-share-url="http://rightdeed.com/blog/{{$blog->id}}/{{str_slug($blog->title)}}"
+                                               data-share-url="{{$canonicalUrl}}"
                                                data-share-network="pinterest" data-share-text="Share on Pinterest"
                                                data-share-title="{{$blog->title}}" data-share-via="" data-share-tags=""
                                                data-share-media="http://rightdeed.com/images/blogs_images/thumb_{{$blog->gallery}}"

@@ -53,6 +53,16 @@ $publishedAt = old('published_at', $post->published_at ? $post->published_at->fo
     .pe-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
     .pe-errors { margin-bottom:20px; }
     .pe-sticky-save { position:sticky; top:16px; z-index:5; }
+
+    /* Summernote's dialogs now render in <body> (see dialogsInBody below) so
+       their "Open in new window" checkbox falls outside the admin theme's
+       `.note-editor .checkbox` override. The theme hides the real checkbox
+       input (opacity:0) and fakes the box with a `label::before`, but that
+       selector needs input+label as siblings -- Summernote nests the input
+       inside the label instead, so the fake box never reflects :checked.
+       Show the real input here rather than relying on the fake one. */
+    .link-dialog .checkbox input[type="checkbox"] { opacity: 1; position: static; width: auto; height: auto; margin-right: 6px; }
+    .link-dialog .checkbox label::before { display: none; }
 </style>
 
 <div class="page-wrapper">
@@ -98,7 +108,7 @@ $publishedAt = old('published_at', $post->published_at ? $post->published_at->fo
                             <div class="pe-field">
                                 <label for="pe-slug">Permalink</label>
                                 <div class="pe-url">
-                                    <span class="pe-url-prefix">{{ url('/blog') }}/{{ $isEdit ? $post->id : 'ID' }}/</span>
+                                    <span class="pe-url-prefix">{{ url('/blog') }}/</span>
                                     <input type="text" id="pe-slug" name="slug" class="form-control"
                                            value="{{ $val('slug', $post->slug) }}"
                                            placeholder="auto-generated-from-title">
@@ -311,6 +321,11 @@ $publishedAt = old('published_at', $post->published_at ? $post->published_at->fo
     if ($ && $.fn && $.fn.summernote) {
         $('#pe-editor').summernote({
             height: 420,
+            // The admin theme has a blanket `.note-frame.panel .modal-footer
+            // { display: none !important; }` rule that also hides Summernote's
+            // own dialog footers (Insert Link/Image/Video), so their buttons
+            // render invisible. Rendering dialogs in <body> sidesteps it.
+            dialogsInBody: true,
             toolbar: [
                 ['style', ['style']],
                 ['font', ['bold', 'italic', 'underline', 'clear']],

@@ -129,8 +129,15 @@ Route::get('/blog-search','BlogController@blogSearch');
 
 Route::any('/emailForm','HomeController@emailform');
 // /.//////////////////// BLOG ROUTES.............///////
-Route::any('/blog/{id}/{title}','BlogController@view');
+// Legacy two-segment URL: search engines already have these indexed, so it
+// stays working and 301s to the slug-only URL below instead of rendering.
+Route::any('/blog/{id}/{title}','BlogController@viewLegacy')->where('id', '[0-9]+');
 Route::any('/blog','BlogController@blogListing');
+// Slug-only URL. Constrained to slug-shaped segments so it cannot swallow
+// '/blog' (registered above, matched first) or a numeric legacy id (matched
+// by the two-segment route above, which Laravel tries by exact segment
+// count -- this one-segment route only ever sees single-segment /blog/x).
+Route::any('/blog/{slug}','BlogController@view')->where('slug', '[a-z0-9\-]+');
 Route::any('/news','BlogController@newsListing');
 
 Route::get('/blogslist/{year}/{month}','BlogController@blogListingYearMonth');

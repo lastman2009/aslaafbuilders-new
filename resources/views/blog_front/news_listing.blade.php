@@ -184,14 +184,14 @@
           ?>
           <div class="col-md-12 col-sm-12 col-xs-12 bloglists <?php echo ($i<4) ? "news-list-latest" : "news-list"; ?>">
   <div class="<?php echo ($i<4) ? "new-img col-md-12" : "news-thumb col-md-4"; ?> col-sm-4 col-xs-12"> 
-    <a href="/blog/{{$blog->id}}/{{$title}}">
+    <a href="{{$blog->url}}">
       <img class="<?php echo ($i<4) ? "img-responsive" : "img-thumbnail"; ?>" src="<?php echo ($i<4) ? ab_image("images/blogs_images/$blog->gallery", 'home_images/placeholders/area-' . (($i % 5) + 1) . '.svg') : ab_image("images/blogs_images/thumb_$blog->gallery", 'home_images/placeholders/area-' . (($i % 5) + 1) . '.svg'); ?>" alt="{{ $blog->title }}">
     </a> 
   </div>
   <div class="blog-description  <?php echo ($i<4) ? "col-md-12" : "col-md-8 col-sm-8"; ?>  col-xs-12">
     <div class="post-title">
       <h3>
-        <a href="/blog/{{$blog->id}}/{{$title}}" title="{{$blog->title}}">
+        <a href="{{$blog->url}}" title="{{$blog->title}}">
             @if($i<4)
                 {!! \Illuminate\Support\Str::words($blog->title, 100,'...')  !!}
             @else
@@ -230,7 +230,7 @@
           </a>
         </li>
         <li class="pull-right">
-          <a href="/blog/{{$blog->id}}/{{$title}}" class="read-more">Read More</a>
+          <a href="{{$blog->url}}" class="read-more">Read More</a>
         </li>
       </ul>
     </div> 

@@ -106,13 +106,14 @@ class Blog extends Model
     /**
      * Canonical path for this post.
      *
-     * Keeps the long-standing /blog/{id}/{slug} shape so every URL already
-     * indexed by search engines still resolves -- the id is what actually
-     * resolves the post, the slug segment is cosmetic and redirectable.
+     * Slug-only now: every row has a unique, populated slug (verified before
+     * this change), so it alone resolves the post. The old /blog/{id}/{title}
+     * URLs already indexed by search engines still work -- that route now
+     * 301s here instead of rendering directly.
      */
     public function getUrlAttribute(): string
     {
-        return '/blog/' . $this->id . '/' . $this->effective_slug;
+        return '/blog/' . $this->effective_slug;
     }
 
     /** Slug to use in URLs, falling back to the title for legacy rows. */
