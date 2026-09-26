@@ -31,7 +31,7 @@
             <div class="row marginleftandright">
                 <div class="col-md-12 aboutus-content">
 
-                    <h2>WHAT IS <span><b>RIGHTDEED.COM?</b></span></h2>
+                    <h2>WHAT IS <span><b>ASLAAF BUILDERS?</b></span></h2>
                   
                     <?= $content->first_area; ?>
 

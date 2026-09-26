@@ -61,13 +61,14 @@
          {
            "@context": "http://schema.org",
            "@type": "Person",
-           "name": "Right Deed",
-           "url": "https://www.rightdeed.com/",
+           "name": "Aslaaf Builders",
+           "url": "https://aslaafbuilders.com/",
            "sameAs": [
-             "https://www.facebook.com/RightdeedPropertyPortal/",
-             "https://twitter.com/right_deed",
-             "https://www.pinterest.com/rightdeed/",
-             "https://plus.google.com/116587637553760893275"
+             "https://www.facebook.com/profile.php?id=61591738263778",
+             "https://www.instagram.com/aslaafbuilders/?hl=en",
+             "https://www.tiktok.com/@aslaafbuilders",
+             "https://www.youtube.com/@AslaafBuilders",
+             "https://whatsapp.com/channel/0029VbDklr36xCSN7r3AJI2X"
            ]
          }
       </script>
@@ -75,7 +76,7 @@
          {
            "@context": "http://schema.org",
            "@type": "Organization",
-           "url": "https://www.rightdeed.com",
+           "url": "https://aslaafbuilders.com",
            "contactPoint": [
              { "@type": "ContactPoint",
                "telephone": "+923056666227",
@@ -88,11 +89,11 @@
          {
            "@context": "http://schema.org",
            "@type": "RealEstateAgent",
-           "name": "Right Deed",
-           "image": "https://www.rightdeed.com/assets/images/logo.webp",
+           "name": "Aslaaf Builders",
+           "image": "https://aslaafbuilders.com/assets/images/logo.webp",
            "@id": "",
-           "url": "https://www.rightdeed.com/",
-           "description": "Right Deed Real Estate’s is leading property Site and Portal in Pakistan. Offering the best Properties in Lahore, Islamabad, Karachi and all over in Pakistan.",
+           "url": "https://aslaafbuilders.com/",
+           "description": "Aslaaf Builders is a trusted name in real estate and property development in Pakistan, offering properties in Lahore, Islamabad, Karachi and across the country.",
            "telephone": "+(042) 35742250",
            "priceRange": "pkr",
            "address": {
@@ -122,13 +123,11 @@
              "closes": "23:59"
            },
            "sameAs": [
-             "https://www.facebook.com/RightdeedPropertyPortal/",
-             "https://twitter.com/right_deed",
-             "https://plus.google.com/116587637553760893275",
-             "https://www.instagram.com/right.deed/",
-             "https://www.youtube.com/channel/UC5ezcCw_8E2NOyBjDzSrbfw",
-             "https://www.linkedin.com/in/right-deed-80924a150/",
-             "https://www.pinterest.com/rightdeed/"
+             "https://www.facebook.com/profile.php?id=61591738263778",
+             "https://www.instagram.com/aslaafbuilders/?hl=en",
+             "https://www.tiktok.com/@aslaafbuilders",
+             "https://www.youtube.com/@AslaafBuilders",
+             "https://whatsapp.com/channel/0029VbDklr36xCSN7r3AJI2X"
            ]
          }
       </script>
@@ -161,7 +160,7 @@ https://www.facebook.com/tr?id=1277349889109020&ev=PageView&noscript=1
  gtag('config', 'AW-786395830');
 </script>
 
-<!-- Event snippet for Right Deed Leads conversion page
+<!-- Event snippet for Leads conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
 function gtag_report_conversion(url) {

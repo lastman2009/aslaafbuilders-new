@@ -19,7 +19,7 @@
                       <figure class="pull-left home-icon"><img src="/assets/images/signup.png"> </figure>
                       <div class="feature-heading pull-left">
                         <h2>Sign <span> Up</span></h2>
-                        <p class="pt-5">Login to RightDeed Property Portal</p>
+                        <p class="pt-5">Login to Aslaaf Builders Property Portal</p>
                       </div>
                     </div>
                   </div>

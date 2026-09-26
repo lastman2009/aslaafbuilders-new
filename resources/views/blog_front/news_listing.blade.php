@@ -271,12 +271,8 @@
               
             
             </div>
-                
-           
-            <div class="recent-blogs text-center">
-              <img src="/assets/images/sidebar_ad_1.jpg">
-            </div>
-         
+
+
             </div>
           </div>
           
