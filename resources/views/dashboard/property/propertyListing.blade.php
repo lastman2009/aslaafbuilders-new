@@ -183,7 +183,7 @@ $title = "All Properties List";
         {
             var current=$(this);
             var id = $(this).data('id');
-            var url ='trashProperty/'+id;
+            var url ='/trashProperty/'+id;
 
             if (confirm('Are you sure you want to trash this?')) {
                 $.ajax({
