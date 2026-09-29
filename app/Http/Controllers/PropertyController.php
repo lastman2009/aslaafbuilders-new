@@ -2718,7 +2718,7 @@ public function propertyBuy()
   users.id as user_id,users.first_name as username'))
     ->join('property_types',  'property_types.id', '=','properties.property_type_id')
     ->join('users',  'users.id', '=','properties.user_id')
-    ->where('properties.status',self::ACTIVE)->where('properties.purpose',1)->orderBy('properties.created_at', 'DESC')->paginate(9);  
+    ->where('properties.status',self::ACTIVE)->where('properties.purpose',1)->orderBy('properties.id', 'DESC')->paginate(9);
  // dd($properties);
 //     $properties =Property::select(DB::raw('properties.*,agency_websites.logo as agency_website_logo,agency_websites.url as agency_website_url, property_types.id as property_type_id,
 //   users.id as user_id,users.first_name as username'))
@@ -2761,8 +2761,8 @@ public function propertyRent()
 //           ->join('property_types',  'property_types.id', '=','properties.property_type_id')
 //           ->join('users',  'users.id', '=','properties.user_id')
 //           ->leftjoin('agency_websites','agency_websites.user_id','=' ,'properties.user_id')
- ->where('properties.status',self::ACTIVE)->where('properties.purpose',2)->orderBy('properties.created_at', 'DESC')->paginate(10);  
-  //$properties =Property::where('purpose',2)->where('status',self::ACTIVE)->orderBy('created_at','DESC')->paginate(10); 
+ ->where('properties.status',self::ACTIVE)->where('properties.purpose',2)->orderBy('properties.id', 'DESC')->paginate(10);
+  //$properties =Property::where('purpose',2)->where('status',self::ACTIVE)->orderBy('created_at','DESC')->paginate(10);
  $count =Property::where('purpose',2)->where('status',self::ACTIVE)->count();
  $meta=Meta::find(12);
  $title =$meta->meta_title;
@@ -2791,8 +2791,8 @@ public function propertyWanted()
            ->join('property_types',  'property_types.id', '=','properties.property_type_id')
            ->join('users',  'users.id', '=','properties.user_id')
            ->leftjoin('agency_websites','agency_websites.user_id','=' ,'properties.user_id')
- ->where('properties.purpose',3)->orderBy('properties.created_at', 'DESC')->paginate(10);  
- // $properties =Property::where('purpose',3)->where('status',self::ACTIVE)->orderBy('created_at','DESC')->paginate(5); 
+ ->where('properties.purpose',3)->orderBy('properties.id', 'DESC')->paginate(10);
+ // $properties =Property::where('purpose',3)->where('status',self::ACTIVE)->orderBy('created_at','DESC')->paginate(5);
  $count =Property::where('purpose',3)->where('status',self::ACTIVE)->count();
  $meta=Meta::find(9);
  $title =$meta->meta_title;
@@ -2822,7 +2822,7 @@ public function propertyProject()
 //           ->leftjoin('agency_websites','agency_websites.user_id','=' ,'properties.user_id')
 //           ->where('properties.purpose',4)->orderBy('properties.created_at','DESC')->paginate(10);
            
- $properties =Property::where('purpose',4)->where('status',self::ACTIVE)->orderBy('created_at','DESC')->paginate(5); 
+ $properties =Property::where('purpose',4)->where('status',self::ACTIVE)->orderBy('id','DESC')->paginate(5);
  $count =Property::where('purpose',4)->where('status',self::ACTIVE)->count();
  $meta=Meta::find(10);
  $title =$meta->meta_title;
