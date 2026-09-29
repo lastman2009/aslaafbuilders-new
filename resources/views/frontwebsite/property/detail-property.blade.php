@@ -843,6 +843,7 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
                               ></span></button>
                         </div>
                         <div class="prop-inquiry-sidebar">
+                           <div class="prop-inquiry-agent">
                            @if($prop != null && !empty($prop->logo))
                               @if(strpos($prop->logo ,'anything-logo') !== false)
                            <a href="/{{$prop->url}}"><span class="chatter_avatar_circle"
@@ -850,11 +851,13 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
                               {{ strtoupper(substr($prop->agency_name, 0, 1)) }}
                            </span></a>
                               @else
-                           <a href="#"><img id="myImg"  class="img-profile img-circle" src="{{ ab_image('image/logo/' . $prop->logo, 'assets_admin/dist/img/user_thumb.jpg') }}" ></a>
+                           <a href="#"><img id="myImg"  class="img-profile img-circle prop-inquiry-avatar" src="{{ ab_image('image/logo/' . $prop->logo, 'assets_admin/dist/img/user_thumb.jpg') }}" ></a>
                               @endif
 
+                              @elseif(!empty($data['image']))
+                           <a href="#"><img id="myImg"  class="img-profile img-circle prop-inquiry-avatar" src="{{ ab_image('image/profile/' . $data['image'], 'assets_admin/dist/img/user_thumb.jpg') }}" ></a>
                               @else
-                           <a href="#"><img id="myImg"  class="img-responsive" src="/assets_admin/dist/img/user_thumb.jpg" ></a>
+                           <a href="#"><img id="myImg"  class="img-responsive prop-inquiry-avatar" src="/assets_admin/dist/img/user_thumb.jpg" ></a>
                            @endif
                            <!-- <img src="/home_images/random-images/real-estate.jpg" class="img-responsive"> -->
                            <h4>{{$data['name']}}</h4>
@@ -875,6 +878,7 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
                                  </div>
                               </li>
                            </ul>
+                           </div>
                            <h3>Property Inquiry</h3>
                            <form role="form" action="/contactMessage" method="post">
                               {{csrf_field()}}

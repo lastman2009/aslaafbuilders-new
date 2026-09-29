@@ -2122,10 +2122,24 @@ Detail Page
   margin: 0 auto;
   box-shadow: 1px 2px 6px 1px #e0e3e3;
 }
+.prop-inquiry-agent {
+  margin-bottom: 20px;
+}
+.prop-inquiry-sidebar img.prop-inquiry-avatar {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+}
 .prop-inquiry-sidebar h4 {
   color: #2c3a4c;
   font-size: 22px;
   font-weight: bold;
+}
+.prop-inquiry-agent h4 {
+  margin: 14px 0 6px;
 }
 .prop-inquiry-sidebar ul {
   margin-top: 10px;

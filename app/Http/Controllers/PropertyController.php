@@ -194,29 +194,29 @@ class PropertyController extends Controller
           {
               $porperty_min_proce =$property->price - 500000;
               $porperty_max_proce =$property->price + 500000;
-              $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,1)->limit(4)->get ();
+              $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,1)->orderBy('id','DESC')->limit(4)->get ();
           }
           elseif($property->purpose == 2)
           {
               $porperty_min_proce =$property->price - 10000;
               $porperty_max_proce =$property->price + 10000;
-              $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,2)->limit(4)->get ();
+              $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,2)->orderBy('id','DESC')->limit(4)->get ();
 
           }
           else{
               $porperty_min_proce =$property->price - 100000;
               $porperty_max_proce =$property->price + 100000;
-              $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,3)->limit(4)->get ();
+              $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,3)->orderBy('id','DESC')->limit(4)->get ();
 
           }
           if($property->property_type_id == 25 | $property->property_type_id == 26 | $property->property_type_id == 27 | $property->property_type_id == 28 | $property->property_type_id == 29 | $property->property_type_id == 30 | $property->property_type_id == 31)
           {
-           
-            $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('status',1)->whereIn('property_type_id', [25,26,27,28,29,30,31])->limit(4)->get();
+
+            $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('status',1)->whereIn('property_type_id', [25,26,27,28,29,30,31])->orderBy('id','DESC')->limit(4)->get();
           }
           if($property->purpose !=4){
           $map_image=Phase::where('id',$property->phase_id)->first()->map_name;}
-          else{$map_image="";}       
+          else{$map_image="";}
 
 
           
@@ -259,7 +259,7 @@ class PropertyController extends Controller
     if($property != null && is_numeric($id)){
     $prop = Property::agencyinfo($property->user_id);
       // dd($property);
-      
+
     // if($property != null){
     //   $title_match=strtolower(implode('-',explode(' ',$property->title)));
       //////GEt relavent DAta for Current PRoperty ////////////
@@ -281,8 +281,22 @@ class PropertyController extends Controller
       {
         //   if($title_match == $title)
        if($current_url == $property->url)
-       {       
+       {
         $data =array();
+        // A property can be listed under the owner's own contact info,
+        // or under a specific Client the owner picked on the add/edit
+        // form (clientdata = an existing client's id). When a client was
+        // picked, show that client's name/number here instead of the
+        // owner's — otherwise the detail page always showed the owner
+        // (e.g. the admin) even when a different client was selected.
+        $selectedClient = !empty($property->client_id) ? Client::find($property->client_id) : null;
+        if($selectedClient != null)
+        {
+          $data['image'] ="";
+          $data['name'] =$selectedClient->name;
+          $data['mobile_no'] =$selectedClient->mobile_no;
+        }
+        else
         if($property->purpose != 4)
         {
           $user =User::find($property->user_id);
@@ -320,7 +334,7 @@ class PropertyController extends Controller
         else
         {
           $data['image'] ="";
-        }         
+        }
         $data['name'] =$user->first_name.' '.$user->last_name;
         if($user->mobile != "")
         {
@@ -1081,7 +1095,7 @@ public function searchForUser(Request $request)
 }
 public function allProperties($id)
 {
-  $properties = Property::where('user_id',$id)->whereIn('purpose', [1, 2, 3])->get();
+  $properties = Property::where('user_id',$id)->whereIn('purpose', [1, 2, 3])->orderBy('created_at','DESC')->get();
   return view('dashboard.property.allproperties',compact('properties'));
 }
 public function changeStatusofproperty(Request $request ,$status ,$id)
@@ -1685,29 +1699,29 @@ public function updateIndex($property, $model, $town_id = null){
    {
     $porperty_min_proce =$property->price - 500000;
     $porperty_max_proce =$property->price + 500000;
-    $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,1)->limit(4)->get ();
+    $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,1)->orderBy('id','DESC')->limit(4)->get ();
   }
   elseif($property->purpose == 2)
   {
     $porperty_min_proce =$property->price - 10000;
     $porperty_max_proce =$property->price + 10000;
-    $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,2)->limit(4)->get ();
+    $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,2)->orderBy('id','DESC')->limit(4)->get ();
 
   }
   else{
     $porperty_min_proce =$property->price - 100000;
     $porperty_max_proce =$property->price + 100000;
-    $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,3)->limit(4)->get ();
+    $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('purpose' ,3)->orderBy('id','DESC')->limit(4)->get ();
 
   }
   if($property->property_type_id == 25 | $property->property_type_id == 26 | $property->property_type_id == 27 | $property->property_type_id == 28 | $property->property_type_id == 29 | $property->property_type_id == 30 | $property->property_type_id == 31)
   {
 
-    $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('status',1)->whereIn('property_type_id', [25,26,27,28,29,30,31])->limit(4)->get();
+    $properties=Property::where('town_id',$property->town_id)->whereBetween('price', array($porperty_min_proce, $porperty_max_proce))->where('status',1)->whereIn('property_type_id', [25,26,27,28,29,30,31])->orderBy('id','DESC')->limit(4)->get();
   }
   if($property->purpose !=4){
     $map_image=Phase::where('id',$property->phase_id)->first()->map_name;}
-    else{$map_image="";}       
+    else{$map_image="";}
             //return view('frontwebsite.property.property-detail-page',compact('property','data','user_property_view','properties','map_image','prop'));
     return view('frontwebsite.property.detail-property',compact('property','data','user_property_view','properties','map_image','prop'));
   }
@@ -2822,7 +2836,7 @@ public function propertyProject()
 public function savedProperty()
 { 
   $properties=array();
-  $savedProperty =SaveProperty::where('user_id',Auth::id())->get();
+  $savedProperty =SaveProperty::where('user_id',Auth::id())->orderBy('created_at','DESC')->get();
   foreach($savedProperty as $property)
   {
     $data =Property::where('id',$property->property_id)->where('status',1)->first();

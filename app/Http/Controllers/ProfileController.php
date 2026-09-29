@@ -161,7 +161,7 @@ class ProfileController extends Controller
     // dd($checkedName);
         // dd($cities);
 
-    	return view('dashboard.editProfile',compact('all' ,'characterTypes','checked' ,'all','checkedName','interests','seletedInterests','selected','websiteCheck','cities'));
+    	return view('dashboard.editProfile',compact('all' ,'characterTypes','checked' ,'all','checkedName','interests','selected','websiteCheck','cities'));
     }
 
     protected function getName($id)
