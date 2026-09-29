@@ -11,6 +11,53 @@ $og_image    = $property->seoImage();
 @extends('layouts.masterindexNew')
 @section('body')
 <link rel="stylesheet" type="text/css" media="all" href="/js/tilezoom/jquery.tilezoom.css"/>
+<style>
+	/* .prop-view-price is shared with project-detail.blade.php, so these
+	   rules are scoped to the two price badges on THIS page only.
+	   The badge used to sit in a fixed-width Bootstrap column (col-md-3),
+	   which clipped the box itself once the price got long - the text
+	   stayed on one line but the orange background stopped short and cut
+	   the tail of the number off.
+	   width:auto (even !important) is silently ignored here - confirmed
+	   with a minimal isolated test, not just on this page - so the width
+	   is forced open with min-width instead, which does take effect.
+	   font-size: clamp(...) !important is also silently ignored by this
+	   Chrome build even though no later rule beats its specificity or
+	   !important flag (reproduced in isolation); a plain px !important
+	   value does apply correctly, so that is used instead, picked by
+	   price length so a huge number still fits without wrapping. */
+	.property-detail-price-badge {
+		display: inline-block !important;
+		width: max-content !important;
+		min-width: 100% !important;
+		max-width: none !important;
+		white-space: nowrap !important;
+		box-sizing: border-box !important;
+	}
+	.property-detail-price-badge.is-long  { font-size: 22px !important; }
+	.property-detail-price-badge.is-huge  { font-size: 16px !important; }
+	/* Single-image galleries have no thumbnail rail to navigate with, so the
+	   download button that normally sits over each slide is hidden and the
+	   image itself becomes clickable to open the same zoom popup instead. */
+	#prop-slider-1.single-image li .save-img {
+		display: none !important;
+	}
+	#prop-slider-1.single-image li img {
+		cursor: pointer;
+	}
+</style>
+@php
+// Picks a smaller font size once the formatted price gets long, so a
+// small price (PKR 410,000) keeps its normal large size and a very long
+// one still fits on one line without wrapping or being cut off.
+$formattedPrice = number_format($property->price);
+$priceBadgeClass = 'property-detail-price-badge';
+if (strlen($formattedPrice) > 13) {
+    $priceBadgeClass .= ' is-huge';
+} elseif (strlen($formattedPrice) > 9) {
+    $priceBadgeClass .= ' is-long';
+}
+@endphp
 @php
 $base = "https://www.rightdeed.com";
 @endphp
@@ -53,7 +100,7 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
                   <!-- Share Icon -->
                   <div class="col-md-3 prop-view-price no-padding">
                      @if($property->purpose != 4)
-                     <h4>PKR {{number_format($property->price)}}</h4>
+                     <h4 class="{{ $priceBadgeClass }}">PKR {{ $formattedPrice }}</h4>
                      @endif
                      <ul class="list-inline prop-ul">
                         <li>
@@ -280,7 +327,7 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
 
                      <li class="col-md-3 prop-view-price pull-right">
                         @if($property->purpose != 4)
-                        <h4>PKR {{number_format($property->price)}}</h4>
+                        <h4 class="{{ $priceBadgeClass }}">PKR {{ $formattedPrice }}</h4>
                         @endif
                         <span onclick="openNav()" class="detail-bar"><i class="fa fa-bars"></i> </span>
                      </li>
@@ -796,16 +843,16 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
                               ></span></button>
                         </div>
                         <div class="prop-inquiry-sidebar">
-                           @if($prop != null)
+                           @if($prop != null && !empty($prop->logo))
                               @if(strpos($prop->logo ,'anything-logo') !== false)
                            <a href="/{{$prop->url}}"><span class="chatter_avatar_circle"
                               style="background-color:#<?= substr(md5((string) $prop->agency_name), 0, 6) ?>">
                               {{ strtoupper(substr($prop->agency_name, 0, 1)) }}
                            </span></a>
                               @else
-                           <a href="#"><img id="myImg"  class="img-profile img-circle" src="/image/logo/{{$prop['logo']}}" ></a>
+                           <a href="#"><img id="myImg"  class="img-profile img-circle" src="{{ ab_image('image/logo/' . $prop->logo, 'assets_admin/dist/img/user_thumb.jpg') }}" ></a>
                               @endif
-                              
+
                               @else
                               @if($data['image'] != "")
                            <a href="#"><img id="myImg"  class="img-responsive" src="/image/profile/{{$data['image']}}" ></a>
@@ -972,17 +1019,30 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
 
 <!-- Property Image Slider Script -->
 <script>
-   $(document).ready(function() {   
+   $(document).ready(function() {
        $("#content-slider").lightSlider({
            loop:true,
            keyPress:true
        });
-   
-   
+
+   // lightSlider's gallery:true mode always reserves space for a thumbnail
+   // rail (vThumbWidth) and expects more than one slide to loop between -
+   // with a single property photo that left a blank gap where the thumbs
+   // would be and a broken-looking single-item loop. Both are switched off
+   // below when there's only one image; the popup zoom still works either way.
+   var slideCount = $('#prop-slider-1 > li').length;
+   var singleImage = slideCount <= 1;
+   $('#prop-slider-1').toggleClass('single-image', singleImage);
+   if (singleImage) {
+       $('#prop-slider-1 li img').css('cursor', 'pointer').on('click', function() {
+           $(this).siblings('a.save-img').trigger('click');
+       });
+   }
+
    var wWidth = $(window).width();
    if(wWidth >= 992 ){
        $('#prop-slider-1').lightSlider({
-           gallery:true,
+           gallery: !singleImage,
            item:1,
            vertical:true,
            verticalHeight:500,
@@ -991,10 +1051,11 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
            thumbMargin:7,
            slideMargin:0,
            galleryMargin:30,
-           onSliderLoad: function() {  
-				
-			$('#prop-slider-1').magnificPopup({ 
-				delegate: 'a', 
+           loop: !singleImage,
+           onSliderLoad: function() {
+
+			$('#prop-slider-1').magnificPopup({
+				delegate: 'a',
 				type: 'image',
 					gallery:{
 				    enabled:true,
@@ -1008,23 +1069,23 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
 				    easing: 'ease-in-out', // CSS transition easing function
 				}
 			});
-         } 
+         }
        });
-       
+
        }else{
        $('#prop-slider-1').lightSlider({
-        gallery:true,
+        gallery: !singleImage,
         item:1,
-        loop:true,
+        loop: !singleImage,
         thumbItem:3,
         galleryMargin:-12,
         slideMargin:0,
         enableDrag: false,
         currentPagerPosition:'left',
-        onSliderLoad: function() {  
-				
-			$('#prop-slider-1').magnificPopup({ 
-				delegate: 'a', 
+        onSliderLoad: function() {
+
+			$('#prop-slider-1').magnificPopup({
+				delegate: 'a',
 				type: 'image',
 					gallery:{
 				    enabled:true,
@@ -1038,8 +1099,8 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
 				    easing: 'ease-in-out', // CSS transition easing function
 				}
 			});
-         } 
-    });  
+         }
+    });
        }
    });
 </script>
