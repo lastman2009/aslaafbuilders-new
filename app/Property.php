@@ -279,9 +279,12 @@ class Property extends Model
     |---------------------------------------------------------------------
     | SEO
     |---------------------------------------------------------------------
-    | Every value is generated from the property's own data, so listings
-    | need no hand-written meta tags. Nothing here can return an empty
-    | string, because a blank meta tag is worse than a generated one.
+    | seoTitle()/seoDescription() use the admin-entered meta_title /
+    | meta_description when present (per-property or per-project SEO
+    | override, set from the add/edit forms). When either is left empty,
+    | that one falls back to the generated value below, same as before.
+    | Nothing here can return an empty string, because a blank meta tag
+    | is worse than a generated one.
     */
 
     /** Location as "Town, City", skipping parts that are missing. */
@@ -299,6 +302,10 @@ class Property extends Model
 
     public function seoTitle()
     {
+        $custom = trim((string) $this->meta_title);
+        if ($custom !== '') {
+            return $custom;
+        }
         $bits = array_filter([
             $this->title,
             'for ' . self::getPurpose($this->purpose),
@@ -309,6 +316,10 @@ class Property extends Model
 
     public function seoDescription()
     {
+        $custom = trim((string) $this->meta_description);
+        if ($custom !== '') {
+            return $custom;
+        }
         // The stored description is user-entered HTML, so flatten it before
         // it goes anywhere near a meta tag.
         $text = trim(preg_replace('/\s+/', ' ', strip_tags((string) $this->description)));

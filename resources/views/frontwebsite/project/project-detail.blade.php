@@ -1,5 +1,12 @@
 @php
-$title = "$property->title";
+// Only override title/description when the admin set meta_title /
+// meta_description for this project. Otherwise this page keeps behaving
+// exactly as before (just $title = $property->title, everything else
+// falls back to the site defaults in masterindexNew).
+$title = trim((string) $property->meta_title) !== '' ? $property->meta_title : $property->title;
+if (trim((string) $property->meta_description) !== '') {
+    $description = $property->meta_description;
+}
 @endphp
 @extends('layouts.masterindexNew')
 @section('body')

@@ -1073,6 +1073,33 @@ $title = "Property Add";
 </div>
 
 	<div class="row">
+		<div class="col-lg-12 padding-right theme-heading">
+			<div class="col-lg-12 col-md-12 col-sm-12 padding-left">
+				<div class="panel panel-default card-view">
+					<div class="panel-wrapper collapse in">
+						<div class="panel-body">
+							<h2>SEO</h2>
+							<p style="color:#9a9a9a;font-size:12px;">Optional. Leave blank to keep using the automatically generated title and description.</p>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="meta_title">Meta Title</label>
+									<input type="text" class="form-control" name="meta_title" value="" maxlength="255">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="meta_description">Meta Description</label>
+									<textarea class="form-control" name="meta_description" rows="3" maxlength="500"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
 		<div class="col-lg-12 padding-right theme-heading image-info-tab">
 			<div class="col-lg-12 col-md-12 col-sm-12 padding-left property-sectione add-property-img-uploader">
 				<div class="form-actions edit-form-submit">
