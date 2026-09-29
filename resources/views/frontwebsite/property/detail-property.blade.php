@@ -854,11 +854,7 @@ $Property_type_commercial=["13",'14','15','16','17','18','19','20','21','22','23
                               @endif
 
                               @else
-                              @if($data['image'] != "")
-                           <a href="#"><img id="myImg"  class="img-responsive" src="/image/profile/{{$data['image']}}" ></a>
-                              @else
                            <a href="#"><img id="myImg"  class="img-responsive" src="/assets_admin/dist/img/user_thumb.jpg" ></a>
-                              @endif
                            @endif
                            <!-- <img src="/home_images/random-images/real-estate.jpg" class="img-responsive"> -->
                            <h4>{{$data['name']}}</h4>
